@@ -6,140 +6,32 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Monthly Marketing Report | Wonderland RV + Outbound RVs</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;700&family=Roboto:wght@400;500;700;900&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
-<style>
-:root{
-  --wl:#DB7627; --wl-ink:#1D1D1B; --wl-grey:#F0F0F1; --wl-mid:#33373D;
-  --ob:#8B9B4D; --ob-ink:#252524; --ob-grey:#F2F2F3; --ob-mid:#333333;
-  --up:#2e7d52; --down:#b1442f; --hair:#e2e2e4;
-}
-*{margin:0;padding:0;box-sizing:border-box;border-radius:0!important}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.55;color:var(--wl-ink);background:#fff}
-.wl-display{font-family:'Archivo Black',sans-serif;text-transform:uppercase;letter-spacing:.02em}
-.ob-display{font-family:'Roboto Condensed','Roboto',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.22em}
-
-/* ===== top bar ===== */
-.topbar{background:var(--wl-ink);position:sticky;top:0;z-index:50;border-bottom:3px solid var(--wl)}
-.topbar-in{max-width:1220px;margin:0 auto;padding:0 26px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
-.tb-brand{display:flex;align-items:center;gap:12px;padding:15px 0}
-.tb-brand .sq{width:12px;height:30px;background:var(--wl)}
-.tb-brand h1{font-size:15px;color:#fff}.tb-brand h1 em{font-style:normal;color:var(--wl)}
-.tb-brand h1 .obm{color:var(--ob)}
-.tb-brand small{display:block;font-size:10px;letter-spacing:.18em;color:#9aa0a8;font-weight:500}
-.tabs{display:flex;gap:2px}
-.tab{background:none;border:none;color:#9aa0a8;font-family:'DM Sans';font-weight:700;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;padding:20px 18px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-3px}
-.tab.active{color:#fff}
-.tab.active.t-ov{border-color:#fff}
-.tab.active.t-wl{border-color:var(--wl);color:var(--wl)}
-.tab.active.t-ob{border-color:var(--ob);color:var(--ob)}
-.printbtn{background:var(--wl);border:none;color:#160d04;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:9px 16px;cursor:pointer}
-
-/* ===== month row ===== */
-.monthrow{background:#fff;border-bottom:1px solid var(--hair)}
-.monthrow-in{max-width:1220px;margin:0 auto;padding:14px 26px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.pill{background:#fff;border:1px solid #d5d5d8;color:#6a6f76;padding:8px 16px;font-size:12.5px;font-weight:700;cursor:pointer;letter-spacing:.03em}
-.pill.active{background:var(--wl-ink);border-color:var(--wl-ink);color:#fff}
-.pill .part{font-weight:400;opacity:.7;font-size:11px}
-.subnote{color:#8a8f96;font-size:12px;margin-left:auto}
-
-.wrap{max-width:1220px;margin:0 auto;padding:0 26px 70px}
-.pane{display:none}.pane.show{display:block;animation:fade .35s ease}
-@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-
-/* ===== shared blocks ===== */
-section{margin-top:42px}
-.band{padding:26px 28px;margin-top:42px}
-.sec-h{display:flex;align-items:baseline;gap:12px;margin-bottom:20px}
-.sec-h .no{font-size:11px;font-weight:700;letter-spacing:.16em;color:#9aa0a8}
-.sec-h h2{font-size:19px}
-.kgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(172px,1fr));gap:10px}
-.k{border:1px solid var(--hair);background:#fff;padding:15px 15px 13px}
-.k .n{font-family:'Archivo Black';font-size:23px;line-height:1.1;color:var(--wl-ink)}
-.k .l{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#8a8f96;font-weight:700;margin-top:5px}
-.k .d{font-size:11.5px;font-weight:700;margin-top:6px}
-.k .d.up{color:var(--up)}.k .d.down{color:var(--down)}.k .d.na{color:#9aa0a8;font-weight:400}
-.k.acc{background:var(--wl);border-color:var(--wl)}
-.k.acc .n{color:#fff}.k.acc .l{color:#3d2008}.k.acc .d.up{color:#12401f}.k.acc .d.down{color:#571708}.k.acc .d.na{color:#7c4515}
-.k.dark{background:var(--wl-ink);border-color:var(--wl-ink)}
-.k.dark .n{color:#fff}.k.dark .l{color:#9aa0a8}
-.duo{display:grid;grid-template-columns:1.35fr 1fr;gap:12px;margin-top:12px}
-.trio{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:12px}
-@media(max-width:950px){.duo,.trio{grid-template-columns:1fr}}
-.card{border:1px solid var(--hair);background:#fff;padding:18px 20px}
-.card h3{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a8f96;margin-bottom:13px;font-weight:700}
-.chartbox{position:relative;height:240px}
-.chartbox.tall{height:280px}
-table{width:100%;border-collapse:collapse;font-size:13px}
-th{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#8a8f96;text-align:left;padding:7px 9px;border-bottom:2px solid var(--wl)}
-td{padding:8px 9px;border-bottom:1px solid #ececee;color:#2c2f34}
-td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
-tr:last-child td{border-bottom:none}
-tr.totrow td{font-weight:700;border-top:2px solid var(--wl-ink);color:var(--wl-ink)}
-.chip{display:inline-block;width:9px;height:9px;margin-right:7px}
-.pos{color:var(--up);font-weight:700}.neg{color:var(--down);font-weight:700}
-.footnote{font-size:11.5px;color:#8a8f96;margin-top:10px;line-height:1.5}
-.heat{font-variant-numeric:tabular-nums;text-align:right}
-
-/* ===== WONDERLAND skin ===== */
-#pane-wl .band.dark{background:var(--wl-ink);color:#fff}
-#pane-wl .band.dark h2{color:#fff}
-#pane-wl .band.dark .sec-h .no{color:var(--wl)}
-#pane-wl .sec-h h2{font-family:'Archivo Black';text-transform:uppercase}
-#pane-wl .sec-h{border-bottom:3px solid var(--wl);padding-bottom:10px}
-
-/* ===== OUTBOUND skin ===== */
-#pane-ob{background:var(--ob-grey);margin:0 -26px;padding:0 26px 40px}
-#pane-ob .sec-h h2{font-family:'Roboto Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.18em}
-#pane-ob .sec-h{border-bottom:3px solid var(--ob);padding-bottom:10px}
-#pane-ob .k .n{font-family:'Roboto';font-weight:900}
-#pane-ob .k.acc{background:var(--ob);border-color:var(--ob)}
-#pane-ob .k.acc .l{color:#20260e}.k-ob-note{color:#20260e}
-#pane-ob .k.acc .d.up{color:#16330d}#pane-ob .k.acc .d.down{color:#571708}#pane-ob .k.acc .d.na{color:#4c552a}
-#pane-ob .k.dark{background:var(--ob-ink);border-color:var(--ob-ink)}
-#pane-ob th{border-bottom-color:var(--ob)}
-#pane-ob .pill.active{background:var(--ob-ink)}
-#pane-ob tr.totrow td{border-top-color:var(--ob-ink)}
-
-/* ===== OVERVIEW skin ===== */
-#pane-ov .hero{background:var(--wl-ink);color:#fff;padding:34px 30px;margin-top:26px}
-#pane-ov .hero h2{font-family:'Archivo Black';text-transform:uppercase;font-size:22px;margin-bottom:4px}
-#pane-ov .hero p{color:#9aa0a8;font-size:13px}
-#pane-ov .split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
-@media(max-width:950px){#pane-ov .split{grid-template-columns:1fr}}
-.bhead{display:flex;align-items:center;gap:10px;margin-bottom:12px}
-.bhead .bsq{width:10px;height:24px}
-.bhead h3{font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-family:'Archivo Black'}
-.bhead.obh h3{font-family:'Roboto Condensed';letter-spacing:.2em}
-.headlines{margin-top:12px}
-.headlines li{list-style:none;border-left:4px solid var(--wl);background:#fff;border-top:1px solid var(--hair);border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:12px 16px;margin-bottom:8px;font-size:14px}
-.headlines li.ob{border-left-color:var(--ob)}
-.headlines li.crm{border-left-color:var(--wl-ink)}
-
-/* ===== print: boardroom pack ===== */
-@media print{
-  .topbar,.monthrow{position:static}
-  .tabs,.printbtn{display:none}
-  .pane{display:block!important;page-break-after:always}
-  #pane-ob{margin:0;background:#fff}
-  .chartbox{height:200px}
-  body{font-size:12px}
-}
-</style>
 </head>
-<body>
+<body class="wl-page">
 <div class="topbar"><div class="topbar-in">
-  <div class="tb-brand"><div class="sq"></div>
-    <div><h1 class="wl-display">Wonderland <em>RV</em> <span style="color:#5c626b">·</span> <span class="obm ob-display" style="font-size:13px">Outbound RVs</span></h1>
-    <small>MONTHLY MARKETING REPORT</small></div></div>
-  <div class="tabs">
-    <button class="tab t-ov active" data-pane="ov">Overview</button>
-    <button class="tab t-wl" data-pane="wl">Wonderland RV</button>
-    <button class="tab t-ob" data-pane="ob">Outbound RVs</button>
+  <div class="tb-logo">
+    <img src="assets/img/wl-logo.svg" alt="Wonderland RV">
+    <div><small>Monthly Marketing Report</small></div>
   </div>
-  <button class="printbtn" onclick="window.print()">Print pack</button>
+  <nav class="navlinks">
+    <a href="index.html" class="cur-ov">Overview</a>
+    <a href="wonderland.html">Wonderland RV</a>
+    <a href="outbound.html">Outbound RVs</a>
+  </nav>
+  <button class="printbtn" onclick="window.print()">Print</button>
 </div></div>
+
+<div class="ovhero">
+  <div class="bg" style="background-image:url('assets/img/wl-hero.jpg')"></div>
+  <div class="in">
+    <h1 class="wl-display">Executive summary</h1>
+    <p id="ov-period"></p>
+    <div class="kgrid" id="ov-kpis"></div>
+  </div>
+</div>
 
 <div class="monthrow"><div class="monthrow-in">
   <div id="months" style="display:flex;gap:8px;flex-wrap:wrap"></div>
@@ -147,254 +39,39 @@ tr.totrow td{font-weight:700;border-top:2px solid var(--wl-ink);color:var(--wl-i
 </div></div>
 
 <div class="wrap">
-
-  <!-- ============ OVERVIEW ============ -->
-  <div class="pane show" id="pane-ov">
-    <div class="hero">
-      <h2>Executive summary</h2>
-      <p id="ov-period"></p>
-      <div class="kgrid" id="ov-kpis" style="margin-top:20px"></div>
+  <section>
+    <div class="sec-h"><span class="no">BRANDS</span><h2>This month by brand</h2></div>
+    <div class="duo" style="grid-template-columns:1fr 1fr">
+      <a class="brandlink wl" href="wonderland.html">
+        <div class="im" style="background-image:url('assets/img/wl-hero.jpg')"></div>
+        <div class="bd">
+          <h3 class="wl-display">Wonderland RV</h3>
+          <p>Social media, CRM, email and the state-by-state sales funnel.</p>
+          <div class="kgrid" id="ov-wl" style="margin-top:12px"></div>
+          <span class="go">Open full report →</span>
+        </div>
+      </a>
+      <a class="brandlink obl" href="outbound.html">
+        <div class="im" style="background-image:url('assets/img/ob-hero.jpg')"></div>
+        <div class="bd">
+          <h3 class="ob-display">Outbound RVs</h3>
+          <p>Facebook and Instagram growth for the dealership brand.</p>
+          <div class="kgrid" id="ov-ob" style="margin-top:12px"></div>
+          <span class="go">Open full report →</span>
+        </div>
+      </a>
     </div>
-    <div class="split">
-      <div class="card"><div class="bhead"><div class="bsq" style="background:var(--wl)"></div><h3>Wonderland RV</h3></div><div class="kgrid" id="ov-wl"></div></div>
-      <div class="card"><div class="bhead obh"><div class="bsq" style="background:var(--ob)"></div><h3>Outbound RVs</h3></div><div class="kgrid" id="ov-ob"></div></div>
-    </div>
-    <section>
-      <div class="sec-h"><span class="no">HEADLINES</span></div>
-      <ul class="headlines" id="ov-headlines"></ul>
-    </section>
-  </div>
-
-  <!-- ============ WONDERLAND ============ -->
-  <div class="pane" id="pane-wl">
-    <section>
-      <div class="sec-h"><span class="no">01</span><h2>Social media</h2></div>
-      <div class="kgrid" id="wl-social-kpis"></div>
-      <div class="footnote">Saves and direct messages tracked from June 2026. Bio link clicks are not exposed by the platform APIs; recommend UTM-tagged bio links measured in GA4.</div>
-      <div class="duo">
-        <div class="card"><h3>Daily impressions · all channels</h3><div class="chartbox"><canvas id="wl-line"></canvas></div></div>
-        <div class="card"><h3>Follower growth by channel</h3><div class="chartbox"><canvas id="wl-bars"></canvas></div></div>
-      </div>
-      <div class="card" style="margin-top:12px"><h3>Channel breakdown</h3><div style="overflow-x:auto"><table id="wl-table"></table></div></div>
-    </section>
-
-    <section>
-      <div class="sec-h"><span class="no">02</span><h2>Leads &amp; CRM</h2></div>
-      <div class="kgrid" id="wl-crm-kpis"></div>
-      <div class="trio">
-        <div class="card"><h3>Leads by state</h3><div class="chartbox"><canvas id="wl-states"></canvas></div></div>
-        <div class="card"><h3>Lead sources</h3><div class="chartbox"><canvas id="wl-sources"></canvas></div></div>
-        <div class="card"><h3>Brochure downloads by model</h3><div class="chartbox"><canvas id="wl-brochures"></canvas></div></div>
-      </div>
-      <div class="card" style="margin-top:12px"><h3>Email marketing · activity this month</h3><table id="wl-camps"></table></div>
-    </section>
-
-    <section>
-      <div class="sec-h"><span class="no">03</span><h2>Sales funnel</h2></div>
-      <div class="kgrid" id="wl-flow-kpis"></div>
-      <div class="card" style="margin-top:12px"><h3>Pipeline snapshot · open deals right now, by state</h3>
-        <div style="overflow-x:auto"><table id="wl-funnel"></table></div>
-        <div class="footnote" id="wl-funnel-note"></div>
-      </div>
-    </section>
-  </div>
-
-  <!-- ============ OUTBOUND ============ -->
-  <div class="pane" id="pane-ob">
-    <section>
-      <div class="sec-h"><span class="no">01</span><h2>Social media</h2></div>
-      <div class="kgrid" id="ob-social-kpis"></div>
-      <div class="footnote">Outbound RVs runs Facebook and Instagram. Saves and direct messages tracked from June 2026.</div>
-      <div class="duo">
-        <div class="card"><h3>Daily impressions</h3><div class="chartbox"><canvas id="ob-line"></canvas></div></div>
-        <div class="card"><h3>Channel breakdown</h3><div style="overflow-x:auto"><table id="ob-table"></table></div></div>
-      </div>
-    </section>
-  </div>
-
-  <footer style="margin-top:60px;border-top:1px solid var(--hair);padding-top:16px;color:#8a8f96;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px">
+  </section>
+  <section>
+    <div class="sec-h"><span class="no">HEADLINES</span><h2>What happened</h2></div>
+    <ul class="headlines" id="ov-headlines"></ul>
+  </section>
+  <footer>
     <div>Wonderland RV Pty Ltd · internal marketing report · aggregate data only</div>
     <div id="gen"></div>
   </footer>
 </div>
-
-<script>
-const WLC='#DB7627', OBC='#8B9B4D', INK='#1D1D1B';
-const CHCOL={facebook:'#4d79c9',instagram:'#c94d8f',youtube:'#c9564d',linkedin:'#4da3c9',tiktok:'#7d6ee0',pinterest:'#b3a13c'};
-const fmt=n=>(n==null||isNaN(n))?'–':Math.round(n).toLocaleString('en-AU');
-const charts=[]; let DATA=null, sel=0;
-
-/* tabs */
-document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
-  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===t));
-  document.querySelectorAll('.pane').forEach(p=>p.classList.remove('show'));
-  document.getElementById('pane-'+t.dataset.pane).classList.add('show');
-  // charts created while a pane was hidden have zero size — rebuild on reveal
-  // (synchronous: rAF is suspended in background tabs and never fires there)
-  if(DATA) render();
-});
-
-fetch('data/report.json?v='+Date.now()).then(r=>r.json()).then(d=>{
-  DATA=d;
-  document.getElementById('gen').textContent='Updated '+d.generated+' · Vista Social + ActiveCampaign';
-  sel=d.months.length-1;
-  for(let i=d.months.length-1;i>=0;i--){ if(!d.months[i].partial){ sel=i; break; } }
-  const mrow=document.getElementById('months');
-  d.months.forEach((m,i)=>{
-    const b=document.createElement('button');
-    b.className='pill'+(i===sel?' active':'');
-    b.innerHTML=m.label.replace(/\((.*)\)/,'<span class="part">($1)</span>');
-    b.onclick=()=>{sel=i;document.querySelectorAll('.pill').forEach((p,j)=>p.classList.toggle('active',j===sel));render();};
-    mrow.appendChild(b);
-  });
-  render();
-});
-
-function delta(cur,prev,label){
-  if(prev==null||cur==null||prev===0) return '<div class="d na">'+(label||'baseline month')+'</div>';
-  const ch=cur-prev,pct=Math.round(ch/Math.abs(prev)*100);
-  return `<div class="d ${ch>=0?'up':'down'}">${ch>=0?'▲':'▼'} ${fmt(Math.abs(ch))} (${pct>=0?'+':''}${pct}%)</div>`;
-}
-function k(n,l,d,cls){return `<div class="k ${cls||''}"><div class="n">${n}</div><div class="l">${l}</div>${d||''}</div>`;}
-function sum(o){return Object.values(o||{}).reduce((a,b)=>a+(b||0),0);}
-
-function render(){
-  charts.forEach(c=>c.destroy()); charts.length=0;
-  const m=DATA.months[sel], p=sel>0?DATA.months[sel-1]:null;
-  const w=m.wl,o=m.ob,a=m.ac, pw=p&&p.wl,po=p&&p.ob,pa=p&&p.ac;
-  const per=m.label+(m.partial?' — partial month, numbers still accumulating':'');
-  document.getElementById('subnote').textContent='Reporting period: '+per;
-  document.getElementById('ov-period').textContent=per;
-
-  /* ---------- OVERVIEW ---------- */
-  const leads=sum(a.leads_by_state), pleads=pa?sum(pa.leads_by_state):null;
-  const deposits=sum(a.deposits_flow), handovers=sum(a.handovers_flow);
-  document.getElementById('ov-kpis').innerHTML=
-    k(fmt(w.totals.impressions+o.totals.impressions),'Impressions · both brands',delta(w.totals.impressions+o.totals.impressions,p&&(pw.totals.impressions+po.totals.impressions)),'acc')+
-    k('+'+fmt(w.totals.follower_change+o.totals.follower_change),'New followers',delta(w.totals.follower_change+o.totals.follower_change,p&&(pw.totals.follower_change+po.totals.follower_change)),'dark')+
-    k(fmt(leads),'Sales leads created',delta(leads,pleads),'dark')+
-    k(fmt(deposits),'Deposits received',delta(deposits,pa&&sum(pa.deposits_flow)),'dark')+
-    k(fmt(handovers),'Handovers completed',delta(handovers,pa&&sum(pa.handovers_flow)),'dark')+
-    k(fmt(a.new_contacts),'New CRM contacts',delta(a.new_contacts,pa&&pa.new_contacts),'dark');
-  document.getElementById('ov-wl').innerHTML=
-    k(fmt(w.totals.impressions),'Impressions',delta(w.totals.impressions,pw&&pw.totals.impressions))+
-    k('+'+fmt(w.totals.follower_change),'Followers',delta(w.totals.follower_change,pw&&pw.totals.follower_change))+
-    k(w.totals.engagement_rate+'%','Engagement rate','')+
-    k(fmt(a.ad_enquiries),'Ad enquiries',delta(a.ad_enquiries,pa&&pa.ad_enquiries));
-  document.getElementById('ov-ob').innerHTML=
-    k(fmt(o.totals.impressions),'Impressions',delta(o.totals.impressions,po&&po.totals.impressions))+
-    k('+'+fmt(o.totals.follower_change),'Followers',delta(o.totals.follower_change,po&&po.totals.follower_change))+
-    k(o.totals.engagement_rate+'%','Engagement rate','')+
-    k(fmt(o.totals.messages||null),'Messages received','');
-  /* headlines */
-  const topState=Object.entries(a.leads_by_state||{}).sort((x,y)=>y[1]-x[1])[0];
-  const wlCh=Object.entries(w.channels).sort((x,y)=>y[1].impressions-x[1].impressions)[0];
-  const peakI=w.daily.impressions.length?Math.max(...w.daily.impressions):0;
-  const peakD=w.daily.dates[w.daily.impressions.indexOf(peakI)];
-  document.getElementById('ov-headlines').innerHTML=
-    `<li><strong>Wonderland RV</strong> reached ${fmt(w.totals.impressions)} impressions; top channel was ${wlCh?wlCh[0]:'–'} and the peak day was ${peakD||'–'} (${fmt(peakI)} impressions).</li>`+
-    `<li class="ob"><strong>Outbound RVs</strong> reached ${fmt(o.totals.impressions)} impressions and added ${fmt(o.totals.follower_change)} followers, with an engagement rate of ${o.totals.engagement_rate}%.</li>`+
-    `<li class="crm"><strong>Sales:</strong> ${fmt(leads)} leads created${topState?' ('+topState[0]+' leading with '+fmt(topState[1])+')':''}, ${fmt(deposits)} deposits received and ${fmt(handovers)} handovers completed.</li>`;
-
-  /* ---------- WONDERLAND ---------- */
-  const gm=[['impressions','Impressions'],['engagement','Engagements'],['likes','Likes'],['comments','Comments'],['shares','Shares'],['saves','Saves'],['messages','Messages'],['profile_views','Profile visits'],['followers','Total followers']];
-  document.getElementById('wl-social-kpis').innerHTML=gm.map(([key,lab],i)=>{
-    const cur=w.totals[key], prev=pw&&pw.totals[key];
-    const d=(key==='saves'||key==='messages')&&(!prev)?delta(cur,null,'tracked from Jun 2026'):
-            key==='followers'?`<div class="d ${w.totals.follower_change>=0?'up':'down'}">${w.totals.follower_change>=0?'▲':'▼'} ${fmt(Math.abs(w.totals.follower_change))} this month</div>`:
-            delta(cur,prev);
-    return k(fmt(cur),lab,d,i===0?'acc':'');
-  }).join('')+k(w.totals.engagement_rate+'%','Engagement rate',pw?delta(w.totals.engagement_rate,pw.totals.engagement_rate):'','dark');
-  lineChart('wl-line',w.daily,WLC);
-  barChart('wl-bars',Object.keys(w.channels),Object.keys(w.channels).map(c=>w.channels[c].follower_change),Object.keys(w.channels).map(c=>CHCOL[c]));
-  chanTable('wl-table',w.channels,true);
-
-  document.getElementById('wl-crm-kpis').innerHTML=
-    k(fmt(leads),'Sales leads created',delta(leads,pleads),'acc')+
-    k(fmt(a.new_contacts),'New CRM contacts',delta(a.new_contacts,pa&&pa.new_contacts))+
-    k(fmt(a.ad_enquiries),'Meta / Google ad enquiries',delta(a.ad_enquiries,pa&&pa.ad_enquiries))+
-    k(fmt(sum(a.brochures_by_model)),'Brochure downloads',delta(sum(a.brochures_by_model),pa&&sum(pa.brochures_by_model)))+
-    k(fmt(DATA.total_contacts_now),'Total CRM contacts','<div class="d na">live database size</div>','dark');
-  const st=a.leads_by_state||{};
-  barChart('wl-states',Object.keys(st),Object.values(st),Object.keys(st).map(()=>WLC),true);
-  donut('wl-sources',a.deals_by_type,['#DB7627','#1D1D1B','#8B9B4D','#4d79c9','#c94d8f','#999']);
-  barChart('wl-brochures',Object.keys(a.brochures_by_model||{}),Object.values(a.brochures_by_model||{}),Object.keys(a.brochures_by_model||{}).map(()=>'#33373D'));
-  campTable('wl-camps',a.campaigns);
-
-  document.getElementById('wl-flow-kpis').innerHTML=
-    k(fmt(deposits),'Deposits received this month',flowStates(a.deposits_flow),'acc')+
-    k(fmt(handovers),'Handovers completed this month',flowStates(a.handovers_flow),'dark')+
-    k(fmt((DATA.funnel_snapshot.find(f=>f.stage==='Deposit Received')||{}).total),'Deposits currently held','<div class="d na">pipeline snapshot</div>')+
-    k(fmt((DATA.funnel_snapshot.find(f=>f.stage==='In Production')||{}).total+((DATA.funnel_snapshot.find(f=>f.stage==='Order Finalised')||{}).total||0)),'Orders in build','<div class="d na">finalised + in production</div>')+
-    k(fmt((DATA.funnel_snapshot.find(f=>f.stage==='Handover Booked / Ready')||{}).total),'Ready / booked for handover','<div class="d na">pipeline snapshot</div>');
-  funnelTable();
-
-  /* ---------- OUTBOUND ---------- */
-  document.getElementById('ob-social-kpis').innerHTML=gm.map(([key,lab],i)=>{
-    const cur=o.totals[key], prev=po&&po.totals[key];
-    const d=(key==='saves'||key==='messages')&&(!prev)?delta(cur,null,'tracked from Jun 2026'):
-            key==='followers'?`<div class="d ${o.totals.follower_change>=0?'up':'down'}">${o.totals.follower_change>=0?'▲':'▼'} ${fmt(Math.abs(o.totals.follower_change))} this month</div>`:
-            delta(cur,prev);
-    return k(fmt(cur),lab,d,i===0?'acc':'');
-  }).join('')+k(o.totals.engagement_rate+'%','Engagement rate',po?delta(o.totals.engagement_rate,po.totals.engagement_rate):'','dark');
-  lineChart('ob-line',o.daily,OBC);
-  chanTable('ob-table',o.channels,true);
-}
-
-function flowStates(f){
-  const e=Object.entries(f||{}).filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]);
-  return e.length?`<div class="d na">${e.map(x=>x[0]+' '+x[1]).join(' · ')}</div>`:'<div class="d na">none this month</div>';
-}
-function funnelTable(){
-  const states=DATA.funnel_states;
-  const max=Math.max(...DATA.funnel_snapshot.map(f=>f.total));
-  const rows=DATA.funnel_snapshot.map(f=>{
-    const cells=states.map(s=>{const v=f.by_state[s]||0;const al=Math.min(.85,v/(max*.6));
-      return `<td class="heat" style="background:rgba(219,118,39,${v?Math.max(.06,al):0})">${v||''}</td>`;}).join('');
-    return `<tr><td>${f.stage}</td>${cells}<td class="num" style="font-weight:700">${f.total}</td></tr>`;
-  }).join('');
-  document.getElementById('wl-funnel').innerHTML=
-    `<thead><tr><th>Stage</th>${states.map(s=>'<th class="num">'+s+'</th>').join('')}<th class="num">Total</th></tr></thead><tbody>${rows}</tbody>`;
-  document.getElementById('wl-funnel-note').textContent='Snapshot of open deals in ActiveCampaign sales pipelines right now. "This month" flow figures are based on deals whose latest activity falls in the reporting month. Handover Complete totals accumulate over time.';
-}
-function chanTable(id,ch,ext){
-  const keys=Object.keys(ch).sort((a,b)=>ch[b].impressions-ch[a].impressions);
-  const rows=keys.map(nm=>{const c=ch[nm],g=c.follower_change;
-    return `<tr><td style="white-space:nowrap"><span class="chip" style="background:${CHCOL[nm]||'#888'}"></span>${nm[0].toUpperCase()+nm.slice(1)}</td>
-    <td class="num">${fmt(c.followers)}</td><td class="num ${g>0?'pos':g<0?'neg':''}">${g>0?'+':''}${fmt(g)}</td>
-    <td class="num">${fmt(c.impressions)}</td><td class="num">${fmt(c.engagement)}</td>
-    <td class="num">${fmt(c.likes)}</td><td class="num">${fmt(c.saves||null)}</td><td class="num">${fmt(c.messages||null)}</td><td class="num">${fmt(c.profile_views||null)}</td></tr>`;}).join('');
-  const t=Object.keys(ch).reduce((acc,nm)=>{const c=ch[nm];['followers','follower_change','impressions','engagement','likes','saves','messages','profile_views'].forEach(f=>acc[f]=(acc[f]||0)+(c[f]||0));return acc;},{});
-  document.getElementById(id).innerHTML=
-    `<thead><tr><th>Channel</th><th class="num">Followers</th><th class="num">Growth</th><th class="num">Impr.</th><th class="num">Engage.</th><th class="num">Likes</th><th class="num">Saves</th><th class="num">Msgs</th><th class="num">Profile visits</th></tr></thead>
-    <tbody>${rows}<tr class="totrow"><td>Total</td><td class="num">${fmt(t.followers)}</td><td class="num">${t.follower_change>0?'+':''}${fmt(t.follower_change)}</td><td class="num">${fmt(t.impressions)}</td><td class="num">${fmt(t.engagement)}</td><td class="num">${fmt(t.likes)}</td><td class="num">${fmt(t.saves)}</td><td class="num">${fmt(t.messages)}</td><td class="num">${fmt(t.profile_views)}</td></tr></tbody>`;
-}
-function campTable(id,camps){
-  if(!camps||!camps.length){document.getElementById(id).innerHTML='<tbody><tr><td style="color:#8a8f96">No campaign sends recorded this month</td></tr></tbody>';return;}
-  const rows=camps.sort((a,b)=>b.sends-a.sends).slice(0,10).map(c=>{
-    const or_=c.sends?Math.round(c.opens/c.sends*100):0, cr=c.sends?Math.round(c.clicks/c.sends*100):0;
-    return `<tr><td>${c.name}</td><td class="num">${fmt(c.sends)}</td><td class="num">${or_}%</td><td class="num">${cr}%</td></tr>`;}).join('');
-  document.getElementById(id).innerHTML=`<thead><tr><th>Campaign</th><th class="num">Sends</th><th class="num">Open rate</th><th class="num">Click rate</th></tr></thead><tbody>${rows}</tbody>`;
-}
-function lineChart(id,daily,color){
-  charts.push(new Chart(document.getElementById(id),{type:'line',
-    data:{labels:daily.dates,datasets:[{data:daily.impressions,borderColor:color,backgroundColor:color+'26',fill:true,tension:.35,pointRadius:0,borderWidth:2}]},
-    options:{maintainAspectRatio:false,plugins:{legend:{display:false}},
-      scales:{x:{ticks:{color:'#8a8f96',maxTicksLimit:8},grid:{display:false}},y:{ticks:{color:'#8a8f96'},grid:{color:'#ececee'}}}}}));
-}
-function barChart(id,labels,vals,cols,horizontal){
-  charts.push(new Chart(document.getElementById(id),{type:'bar',
-    data:{labels:labels.map(s=>s[0].toUpperCase()+s.slice(1)),datasets:[{data:vals,backgroundColor:cols}]},
-    options:{indexAxis:horizontal?'y':'x',maintainAspectRatio:false,plugins:{legend:{display:false}},
-      scales:{x:{ticks:{color:'#8a8f96'},grid:{color:horizontal?'#ececee':'transparent'}},y:{ticks:{color:'#8a8f96'},grid:{color:horizontal?'transparent':'#ececee'}}}}}));
-}
-function donut(id,types,cols){
-  const names=Object.keys(types||{});
-  if(!names.length) return;
-  charts.push(new Chart(document.getElementById(id),{type:'doughnut',
-    data:{labels:names,datasets:[{data:names.map(n=>types[n]),backgroundColor:cols,borderColor:'#fff',borderWidth:3}]},
-    options:{maintainAspectRatio:false,cutout:'60%',plugins:{legend:{position:'right',labels:{color:'#2c2f34',boxWidth:11,padding:12}}}}}));
-}
-</script>
+<script>const PAGE='ov';</script>
+<script src="assets/app.js"></script>
 </body>
 </html>
