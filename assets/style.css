@@ -210,3 +210,16 @@ footer{margin-top:64px;border-top:1px solid var(--hair);padding-top:16px;color:v
 .vanchip .st{font-size:9.5px;font-weight:700;letter-spacing:.08em;background:var(--wl-ink);color:#fff;padding:2px 7px}
 .vanchip .st.VIC{background:#C97625}.vanchip .st.WA{background:#4d79c9}.vanchip .st.NSW{background:#2e7d52}.vanchip .st.SA{background:#8B9B4D}.vanchip .st.QLD{background:#7d6ee0}
 @media print{.boardwrap{grid-template-columns:repeat(5,1fr)}}
+
+/* ============ v7: WL sub-tabs (Social / CRM) with month pills inside ============ */
+.subtabbar{background:#fff;border-bottom:1px solid var(--hair);position:sticky;top:63px;z-index:40}
+.subtabbar-in{max-width:1240px;margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:4px}
+.subtab{background:none;border:none;font-family:'Aviano Sans',sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:14px;color:var(--mut);padding:18px 20px;cursor:pointer;border-bottom:4px solid transparent;margin-bottom:-1px;transition:color .15s}
+.subtab:hover{color:var(--wl-ink)}
+.subtab.active{color:var(--wl-ink);border-bottom-color:var(--wl)}
+.subtabbar .subnote{margin-left:auto}
+.subpane{display:none}
+.subpane.show{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.months-holder{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 4px}
+@media print{.subpane{display:block!important}.subtabbar{position:static}.subtab{display:none}}

@@ -477,11 +477,12 @@
    "ac": {
     "new_contacts": 236,
     "ad_enquiries": 0,
-    "deals_created": 361,
+    "deals_created": 220,
     "deals_by_type": {
      "Brochure downloads": 79,
+     "Shows & events": 59,
      "Configurator": 43,
-     "Other": 235,
+     "Sales-entered / other": 35,
      "Virtual consults": 4
     },
     "campaigns": [
@@ -1087,12 +1088,14 @@
    "ac": {
     "new_contacts": 227,
     "ad_enquiries": 40,
-    "deals_created": 392,
+    "deals_created": 278,
     "deals_by_type": {
-     "Ad enquiries": 7,
-     "Other": 267,
-     "Configurator": 45,
      "Brochure downloads": 72,
+     "Campaign offers": 72,
+     "Shows & events": 51,
+     "Configurator": 45,
+     "Sales-entered / other": 30,
+     "Ad enquiries": 7,
      "Virtual consults": 1
     },
     "campaigns": [
@@ -1459,11 +1462,11 @@
    "ac": {
     "new_contacts": 41,
     "ad_enquiries": 11,
-    "deals_created": 14,
+    "deals_created": 10,
     "deals_by_type": {
-     "Ad enquiries": 3,
      "Configurator": 5,
-     "Other": 5,
+     "Ad enquiries": 3,
+     "Campaign offers": 1,
      "Brochure downloads": 1
     },
     "campaigns": [

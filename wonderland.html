@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>Wonderland RV | Monthly Marketing Report</title>
-<link rel="stylesheet" href="assets/style.css?v=6">
+<link rel="stylesheet" href="assets/style.css?v=7">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
 </head>
 <body class="wl-page">
@@ -32,16 +32,19 @@
   </div>
 </div>
 
-<div class="monthrow"><div class="monthrow-in">
-  <div id="months" style="display:flex;gap:8px;flex-wrap:wrap"></div>
+<div class="subtabbar"><div class="subtabbar-in">
+  <button class="subtab active" data-pane="social">Social media</button>
+  <button class="subtab" data-pane="crm">CRM &amp; sales</button>
   <div class="subnote" id="subnote"></div>
 </div></div>
 
 <div class="wrap">
 
   <!-- 01 SOCIAL MEDIA -->
+  <div class="subpane show" id="pane-social">
   <section>
     <div class="sec-h"><span class="no">01</span><h2>Social media</h2></div>
+    <div class="months-holder"></div>
     <p class="sec-cap">Everything the brand earned across Facebook, Instagram, YouTube, LinkedIn, TikTok and Pinterest this month, compared with the month before.</p>
     <div class="kgrid" id="wl-social-kpis"></div>
     <div class="footnote">Saves are reported by Instagram and TikTok; direct messages by Facebook and Instagram. Both tracked from June 2026. Bio link clicks are not exposed by the platform APIs; recommend UTM-tagged bio links measured in GA4.</div>
@@ -56,10 +59,13 @@
   </section>
 
   <div class="photoband" style="background-image:url('assets/img/divider-lifestyle.jpg')"><div class="cap">2026 RANGE · <b>LIFESTYLE</b></div></div>
+  </div><!-- /pane-social -->
 
   <!-- 02 CRM -->
+  <div class="subpane" id="pane-crm">
   <section>
     <div class="sec-h"><span class="no">02</span><h2>CRM &amp; sales</h2></div>
+    <div class="months-holder"></div>
     <p class="sec-cap">Everything in ActiveCampaign: email marketing performance, lead acquisition by state and source, and the reconciled sales pipeline from first enquiry to deposit and handover.</p>
 
     <h3 class="subhead">Email marketing</h3>
@@ -92,6 +98,7 @@
     <h3 class="subhead">Data quality watch</h3>
     <div id="wl-dq"></div>
   </section>
+  </div><!-- /pane-crm -->
 
   <footer>
     <div>Wonderland RV Pty Ltd · internal marketing report · aggregate data only</div>
@@ -99,6 +106,6 @@
   </footer>
 </div>
 <script>const PAGE='wl';</script>
-<script src="assets/app.js?v=6"></script>
+<script src="assets/app.js?v=7"></script>
 </body>
 </html>

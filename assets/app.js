@@ -15,13 +15,25 @@ Promise.all([
   const g=$('gen'); if(g) g.textContent='Updated '+d.generated+' · Vista Social + ActiveCampaign';
   sel=d.months.length-1;
   for(let i=d.months.length-1;i>=0;i--){ if(!d.months[i].partial){ sel=i; break; } }
-  const mrow=$('months');
-  d.months.forEach((m,i)=>{
-    const b=document.createElement('button');
-    b.className='pill'+(i===sel?' active':'');
-    b.innerHTML=m.label.replace(/\((.*)\)/,'<span class="part">($1)</span>');
-    b.onclick=()=>{sel=i;document.querySelectorAll('.pill').forEach((p,j)=>p.classList.toggle('active',j===sel));render();};
-    mrow.appendChild(b);
+  // month pills go into every holder on the page (#months and/or .months-holder), kept in sync
+  const holders=[...document.querySelectorAll('#months, .months-holder')];
+  holders.forEach(h=>{
+    d.months.forEach((m,i)=>{
+      const b=document.createElement('button');
+      b.className='pill'+(i===sel?' active':'');
+      b.dataset.mi=i;
+      b.innerHTML=m.label.replace(/\((.*)\)/,'<span class="part">($1)</span>');
+      b.onclick=()=>{sel=i;document.querySelectorAll('.pill').forEach(p=>p.classList.toggle('active',+p.dataset.mi===sel));render();};
+      h.appendChild(b);
+    });
+  });
+  // WL sub-tabs (Social media / CRM & sales)
+  document.querySelectorAll('.subtab').forEach(t=>t.onclick=()=>{
+    document.querySelectorAll('.subtab').forEach(x=>x.classList.toggle('active',x===t));
+    document.querySelectorAll('.subpane').forEach(p=>p.classList.remove('show'));
+    const pane=document.getElementById('pane-'+t.dataset.pane);
+    if(pane) pane.classList.add('show');
+    render(); // synchronous rebuild so charts size correctly in the revealed pane
   });
   render();
 }).catch(e=>{
