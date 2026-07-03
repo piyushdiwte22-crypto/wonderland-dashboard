@@ -3,11 +3,15 @@ const WLC='#C97625', OBC='#8B9B4D', INK='#1D1D1B';
 const CHCOL={facebook:'#4d79c9',instagram:'#c94d8f',youtube:'#c9564d',linkedin:'#4da3c9',tiktok:'#7d6ee0',pinterest:'#b3a13c'};
 const VANIMG={Solara:'assets/img/van-solara.webp',XTR:'assets/img/van-xtr.webp',Hornet:'assets/img/van-hornet.webp',Amaroo:'assets/img/van-amaroo.webp'};
 const fmt=n=>(n==null||isNaN(n))?'–':Math.round(n).toLocaleString('en-AU');
-const charts=[]; let DATA=null, sel=0;
+const charts=[]; let DATA=null, DEMO=null, sel=0;
 const $=id=>document.getElementById(id);
+const REDUCED=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-fetch('data/report.json?v='+Date.now()).then(r=>r.json()).then(d=>{
-  DATA=d;
+Promise.all([
+  fetch('data/report.json?v='+Date.now()).then(r=>r.json()),
+  fetch('data/demographics.json?v='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null)
+]).then(([d,demo])=>{
+  DATA=d; DEMO=demo;
   const g=$('gen'); if(g) g.textContent='Updated '+d.generated+' · Vista Social + ActiveCampaign';
   sel=d.months.length-1;
   for(let i=d.months.length-1;i>=0;i--){ if(!d.months[i].partial){ sel=i; break; } }
@@ -20,7 +24,29 @@ fetch('data/report.json?v='+Date.now()).then(r=>r.json()).then(d=>{
     mrow.appendChild(b);
   });
   render();
+}).catch(e=>{
+  const g=$('gen'); if(g) g.textContent='Data failed to load: '+e.message;
 });
+
+/* count-up animation for KPI numbers */
+function countUp(el){
+  if(REDUCED) return;
+  const txt=el.textContent;
+  const num=parseFloat(txt.replace(/[^0-9.]/g,''));
+  if(isNaN(num)||num===0) return;
+  const prefix=txt.match(/^[+\-]/)?txt[0]:'';
+  const suffix=/%$/.test(txt)?'%':'';
+  const dec=/\./.test(txt)?1:0;
+  const t0=performance.now(), dur=650;
+  function step(t){
+    const p=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-p,3);
+    const v=num*e;
+    el.textContent=prefix+(dec?v.toFixed(1):Math.round(v).toLocaleString('en-AU'))+suffix;
+    if(p<1) requestAnimationFrame(step); else el.textContent=txt;
+  }
+  requestAnimationFrame(step);
+}
+function animateKpis(scope){ (scope||document).querySelectorAll('.k .n, .bs .n').forEach(countUp); }
 
 function delta(cur,prev,label){
   if(prev==null||cur==null||prev===0) return '<div class="d na">'+(label||'baseline month')+'</div>';
@@ -73,8 +99,10 @@ function render(){
     const wlCh=Object.entries(w.channels).sort((x,y)=>y[1].impressions-x[1].impressions)[0];
     const peakI=w.daily.impressions.length?Math.max(...w.daily.impressions):0;
     const peakD=w.daily.dates[w.daily.impressions.indexOf(peakI)];
+    const topPost=(w.top_posts||[])[0];
     $('ov-headlines').innerHTML=
       `<li><strong>Wonderland RV</strong> reached ${fmt(w.totals.impressions)} impressions; top channel was ${wlCh?wlCh[0]:'–'} and the peak day was ${peakD||'–'} (${fmt(peakI)} impressions).</li>`+
+      (topPost?`<li><strong>Top post:</strong> "${topPost.msg}" (${topPost.network} ${topPost.type}) — ${fmt(topPost.impressions)} impressions, ${fmt(topPost.shares)} shares, ${fmt(topPost.saves)} saves.</li>`:'')+
       `<li class="ob"><strong>Outbound RVs</strong> reached ${fmt(o.totals.impressions)} impressions and added ${fmt(o.totals.follower_change)} followers at a ${o.totals.engagement_rate}% engagement rate.</li>`+
       `<li class="crm"><strong>Sales:</strong> ${fmt(leads)} leads created${topState?' ('+topState[0]+' leading with '+fmt(topState[1])+')':''}, ${fmt(deposits)} deposits received and ${fmt(handovers)} handovers completed.</li>`;
   }
@@ -84,6 +112,8 @@ function render(){
     lineChart('wl-line',w.daily,WLC);
     barChart('wl-bars',Object.keys(w.channels),Object.keys(w.channels).map(c=>w.channels[c].follower_change),Object.keys(w.channels).map(c=>CHCOL[c]));
     chanTable('wl-table',w.channels);
+    postsTable('wl-posts',w.top_posts);
+    audience(w);
     $('wl-crm-kpis').innerHTML=
       k(fmt(leads),'Sales leads created',delta(leads,pleads),'acc')+
       k(fmt(a.new_contacts),'New CRM contacts',delta(a.new_contacts,pa&&pa.new_contacts))+
@@ -108,7 +138,9 @@ function render(){
     goalBand('ob-social-kpis',o.totals,po&&po.totals);
     lineChart('ob-line',o.daily,OBC);
     chanTable('ob-table',o.channels);
+    postsTable('ob-posts',o.top_posts,true);
   }
+  animateKpis();
 }
 function snap(stage){return DATA.funnel_snapshot.find(f=>f.stage===stage);}
 function flowStates(f){
@@ -121,6 +153,49 @@ function vanGrid(id,models){
   if(!names.length){$(id).innerHTML='<div class="footnote">No brochure downloads recorded this month</div>';return;}
   $(id).innerHTML='<div class="vangrid">'+names.map(n=>
     `<div class="van">${VANIMG[n]?'<img src="'+VANIMG[n]+'" alt="'+n+'" loading="lazy">':''}<div class="vn">${models[n]}</div><div class="vm">${n}</div></div>`).join('')+'</div>';
+}
+function postsTable(id,posts,ob){
+  const el=$(id); if(!el) return;
+  if(!posts||!posts.length){el.innerHTML='<div class="footnote">Top-post data begins June 2026. Select June or a later month.</div>';return;}
+  const rows=posts.map((t,i)=>
+    `<tr><td style="color:${ob?OBC:WLC};font-weight:700">${i+1}</td>
+    <td><a class="postlink" href="${t.link}" target="_blank" rel="noopener">${t.msg}</a></td>
+    <td><span class="netchip" style="background:${CHCOL[t.network]||'#888'}">${t.network}</span></td>
+    <td>${t.type}</td><td>${t.date}</td>
+    <td class="num">${fmt(t.impressions)}</td><td class="num">${fmt(t.engagement)}</td>
+    <td class="num">${fmt(t.shares)}</td><td class="num">${fmt(t.saves)}</td></tr>`).join('');
+  el.innerHTML=`<thead><tr><th>#</th><th>Post</th><th>Channel</th><th>Type</th><th>Date</th><th class="num">Impressions</th><th class="num">Engagement</th><th class="num">Shares</th><th class="num" title="Saves are reported by Instagram and TikTok only">Saves</th></tr></thead><tbody>${rows}</tbody>`;
+}
+function audience(w){
+  const box=$('wl-audience'); if(!box) return;
+  const tt=w.tiktok_audience;
+  let html='';
+  if(tt){
+    html+='<div class="card"><h3>TikTok audience · geography (impression-weighted)</h3><div class="audbars">'+
+      tt.countries.map(c=>`<div class="row"><div class="lab">${c.c}</div><div class="track"><div class="fill" style="width:${c.pct}%"></div></div><div class="pct">${c.pct}%</div></div>`).join('')+
+      '</div><div class="footnote">Sampled across '+fmt(tt.impressions_sampled)+' TikTok impressions this month.</div></div>';
+    html+='<div class="card"><h3>TikTok audience · who is watching</h3><div class="bigstat">'+
+      `<div class="bs"><div class="n">${tt.gender.male}%</div><div class="l">Male</div></div>`+
+      `<div class="bs"><div class="n">${tt.gender.female}%</div><div class="l">Female</div></div>`+
+      `<div class="bs"><div class="n">${tt.non_follower_pct}%</div><div class="l">Non-followers</div></div>`+
+      `<div class="bs"><div class="n">${tt.new_viewers_pct}%</div><div class="l">New viewers</div></div>`+
+      '</div><div class="footnote">A high non-follower share means TikTok is working as a discovery channel, putting Wonderland RV in front of people who have never seen the brand.</div></div>';
+  }
+  let meta='';
+  if(DEMO&&(DEMO.instagram||DEMO.facebook)){
+    meta='<div class="card"><h3>Meta audience · Facebook + Instagram</h3>';
+    for(const net of ['instagram','facebook']){
+      const dd=DEMO[net]; if(!dd) continue;
+      meta+='<div style="margin-bottom:10px"><strong style="text-transform:capitalize">'+net+':</strong> '+
+        (dd.top_locations?('Top locations: '+dd.top_locations.join(', ')+'. '):'')+
+        (dd.gender?('Gender: '+dd.gender.male+'% male / '+dd.gender.female+'% female. '):'')+
+        (dd.top_age?('Largest age group: '+dd.top_age+'.'):'')+'</div>';
+    }
+    meta+='<div class="footnote">Source: Meta Business Suite audience export'+(DEMO.updated?' · updated '+DEMO.updated:'')+'</div></div>';
+  } else {
+    meta='<div class="pendingcard"><b>Facebook + Instagram demographics:</b> Meta does not expose audience age, gender or location through the reporting API we use. To show them here, export Audience insights from Meta Business Suite once a month and drop the numbers into <b>data/demographics.json</b> in the dashboard repo (the file explains the format), or ask Claude to do it from a screenshot of the Insights page.</div>';
+  }
+  box.innerHTML=html+meta;
 }
 function funnelTable(){
   const states=DATA.funnel_states;
@@ -143,7 +218,7 @@ function chanTable(id,ch){
     <td class="num">${fmt(c.likes)}</td><td class="num">${fmt(c.saves||null)}</td><td class="num">${fmt(c.messages||null)}</td><td class="num">${fmt(c.profile_views||null)}</td></tr>`;}).join('');
   const t=keys.reduce((acc,nm)=>{const c=ch[nm];['followers','follower_change','impressions','engagement','likes','saves','messages','profile_views'].forEach(f=>acc[f]=(acc[f]||0)+(c[f]||0));return acc;},{});
   $(id).innerHTML=
-    `<thead><tr><th>Channel</th><th class="num">Followers</th><th class="num">Growth</th><th class="num">Impr.</th><th class="num">Engage.</th><th class="num">Likes</th><th class="num">Saves</th><th class="num">Msgs</th><th class="num">Profile visits</th></tr></thead>
+    `<thead><tr><th>Channel</th><th class="num">Followers</th><th class="num">Growth</th><th class="num">Impr.</th><th class="num">Engage.</th><th class="num">Likes</th><th class="num" title="Saves are reported by Instagram and TikTok only">Saves</th><th class="num" title="Direct messages received (Facebook + Instagram)">Msgs</th><th class="num">Profile visits</th></tr></thead>
     <tbody>${rows}<tr class="totrow"><td>Total</td><td class="num">${fmt(t.followers)}</td><td class="num">${t.follower_change>0?'+':''}${fmt(t.follower_change)}</td><td class="num">${fmt(t.impressions)}</td><td class="num">${fmt(t.engagement)}</td><td class="num">${fmt(t.likes)}</td><td class="num">${fmt(t.saves)}</td><td class="num">${fmt(t.messages)}</td><td class="num">${fmt(t.profile_views)}</td></tr></tbody>`;
 }
 function campTable(id,camps){

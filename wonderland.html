@@ -41,18 +41,25 @@
   <!-- 01 SOCIAL MEDIA -->
   <section>
     <div class="sec-h"><span class="no">01</span><h2>Social media</h2></div>
+    <p class="sec-cap">Everything the brand earned across Facebook, Instagram, YouTube, LinkedIn, TikTok and Pinterest this month, compared with the month before.</p>
     <div class="kgrid" id="wl-social-kpis"></div>
-    <div class="footnote">Saves and direct messages tracked from June 2026. Bio link clicks are not exposed by the platform APIs; recommend UTM-tagged bio links measured in GA4.</div>
+    <div class="footnote">Saves are reported by Instagram and TikTok; direct messages by Facebook and Instagram. Both tracked from June 2026. Bio link clicks are not exposed by the platform APIs; recommend UTM-tagged bio links measured in GA4.</div>
     <div class="duo">
       <div class="card"><h3>Daily impressions · all channels</h3><div class="chartbox"><canvas id="wl-line"></canvas></div></div>
       <div class="card"><h3>Follower growth by channel</h3><div class="chartbox"><canvas id="wl-bars"></canvas></div></div>
     </div>
     <div class="card" style="margin-top:12px"><h3>Channel breakdown</h3><div style="overflow-x:auto"><table id="wl-table"></table></div></div>
+    <div class="card" style="margin-top:12px"><h3>Top posts of the month</h3><div style="overflow-x:auto"><table id="wl-posts"></table></div>
+      <div class="footnote">Reel saves and shares are strong intent signals: a save means "I want to come back to this van", a share means "someone I know needs to see it".</div></div>
+    <div class="halves" id="wl-audience"></div>
   </section>
+
+  <div class="photoband" style="background-image:url('assets/img/divider-lifestyle.jpg')"><div class="cap">2026 RANGE · <b>LIFESTYLE</b></div></div>
 
   <!-- 02 CRM -->
   <section>
     <div class="sec-h"><span class="no">02</span><h2>CRM &amp; sales</h2></div>
+    <p class="sec-cap">Leads flowing into ActiveCampaign, where they come from, which vans they want, and how they progress through each state's sales pipeline to deposit and handover.</p>
     <div class="kgrid" id="wl-crm-kpis"></div>
     <div class="duo">
       <div class="card"><h3>Leads by state</h3><div class="chartbox"><canvas id="wl-states"></canvas></div></div>

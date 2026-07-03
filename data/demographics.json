@@ -1,0 +1,6 @@
+{
+ "note": "Meta (Facebook/Instagram) audience demographics are not exposed by the Vista Social API. Export from Meta Business Suite > Insights > Audience monthly and fill this file, or leave null.",
+ "instagram": null,
+ "facebook": null,
+ "updated": null
+}
