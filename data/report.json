@@ -1,0 +1,887 @@
+{
+ "generated": "03 Jul 2026, 09:19 PM AEST",
+ "total_contacts_now": 9867,
+ "months": [
+  {
+   "key": "2026-05",
+   "label": "May 2026",
+   "partial": false,
+   "wl": {
+    "channels": {
+     "youtube": {
+      "followers": 712,
+      "follower_change": 29,
+      "impressions": 13570,
+      "engagement": 167
+     },
+     "linkedin": {
+      "followers": 158,
+      "follower_change": 4,
+      "impressions": 149,
+      "engagement": 15
+     },
+     "tiktok": {
+      "followers": 471,
+      "follower_change": 25,
+      "impressions": 9427,
+      "engagement": 221
+     },
+     "facebook": {
+      "followers": 24441,
+      "follower_change": 20,
+      "impressions": 715342,
+      "engagement": 503
+     },
+     "instagram": {
+      "followers": 8631,
+      "follower_change": 206,
+      "impressions": 147178,
+      "engagement": 1906
+     },
+     "pinterest": {
+      "followers": 16,
+      "follower_change": 0,
+      "impressions": 18407,
+      "engagement": 885
+     }
+    },
+    "totals": {
+     "followers": 34429,
+     "follower_change": 284,
+     "impressions": 904073,
+     "engagement": 3697
+    },
+    "daily": {
+     "dates": [
+      "05/01",
+      "05/02",
+      "05/03",
+      "05/04",
+      "05/05",
+      "05/06",
+      "05/07",
+      "05/08",
+      "05/09",
+      "05/10",
+      "05/11",
+      "05/12",
+      "05/13",
+      "05/14",
+      "05/15",
+      "05/16",
+      "05/17",
+      "05/18",
+      "05/19",
+      "05/20",
+      "05/21",
+      "05/22",
+      "05/23",
+      "05/24",
+      "05/25",
+      "05/26",
+      "05/27",
+      "05/28",
+      "05/29",
+      "05/30"
+     ],
+     "impressions": [
+      34124,
+      31819,
+      32621,
+      32670,
+      30867,
+      29243,
+      28697,
+      32514,
+      31369,
+      32381,
+      38776,
+      32341,
+      32248,
+      33016,
+      26278,
+      35038,
+      34398,
+      28929,
+      31054,
+      26888,
+      27223,
+      28139,
+      33773,
+      29532,
+      29973,
+      23935,
+      23225,
+      23033,
+      24360,
+      25609
+     ],
+     "engagement": [
+      189,
+      137,
+      131,
+      99,
+      151,
+      76,
+      104,
+      144,
+      78,
+      103,
+      192,
+      163,
+      88,
+      129,
+      115,
+      183,
+      145,
+      70,
+      90,
+      90,
+      123,
+      129,
+      257,
+      106,
+      132,
+      73,
+      114,
+      90,
+      91,
+      105
+     ]
+    }
+   },
+   "ob": {
+    "channels": {
+     "facebook": {
+      "followers": 1130,
+      "follower_change": 8,
+      "impressions": 389915,
+      "engagement": 72
+     },
+     "instagram": {
+      "followers": 684,
+      "follower_change": 64,
+      "impressions": 22552,
+      "engagement": 402
+     }
+    },
+    "totals": {
+     "followers": 1814,
+     "follower_change": 72,
+     "impressions": 412467,
+     "engagement": 474
+    },
+    "daily": {
+     "dates": [
+      "05/01",
+      "05/02",
+      "05/03",
+      "05/04",
+      "05/05",
+      "05/06",
+      "05/07",
+      "05/08",
+      "05/09",
+      "05/10",
+      "05/11",
+      "05/12",
+      "05/13",
+      "05/14",
+      "05/15",
+      "05/16",
+      "05/17",
+      "05/18",
+      "05/19",
+      "05/20",
+      "05/21",
+      "05/22",
+      "05/23",
+      "05/24",
+      "05/25",
+      "05/26",
+      "05/27",
+      "05/28",
+      "05/29",
+      "05/30"
+     ],
+     "impressions": [
+      15649,
+      14387,
+      16869,
+      12144,
+      12958,
+      14210,
+      12760,
+      12728,
+      14099,
+      13763,
+      15487,
+      13495,
+      13081,
+      14527,
+      12514,
+      15990,
+      19023,
+      14935,
+      14455,
+      14078,
+      10678,
+      12576,
+      15042,
+      17551,
+      10785,
+      14213,
+      11433,
+      12114,
+      10399,
+      10524
+     ],
+     "engagement": [
+      12,
+      16,
+      5,
+      7,
+      16,
+      18,
+      6,
+      10,
+      1,
+      5,
+      6,
+      4,
+      9,
+      34,
+      13,
+      28,
+      14,
+      11,
+      16,
+      26,
+      7,
+      11,
+      19,
+      8,
+      49,
+      17,
+      42,
+      26,
+      13,
+      25
+     ]
+    }
+   },
+   "ac": {
+    "new_contacts": 236,
+    "ad_enquiries": 0,
+    "deals_created": 361,
+    "deals_by_type": {
+     "Brochure downloads": 79,
+     "Configurator": 43,
+     "Other": 235,
+     "Virtual consults": 4
+    },
+    "campaigns": [
+     {
+      "name": "VIC - Bendigo Show",
+      "sends": 367,
+      "opens": 149,
+      "clicks": 16,
+      "date": "2026-05-27"
+     },
+     {
+      "name": "QLD - Mackay Outdoor Adventure plus Home & Lifestyle Expo!",
+      "sends": 353,
+      "opens": 131,
+      "clicks": 12,
+      "date": "2026-05-21"
+     },
+     {
+      "name": "Demo 24/25 Plate Sale",
+      "sends": 1336,
+      "opens": 218,
+      "clicks": 57,
+      "date": "2026-05-05"
+     },
+     {
+      "name": "Demo 24/25 Plate Sale",
+      "sends": 2496,
+      "opens": 1213,
+      "clicks": 368,
+      "date": "2026-05-01"
+     }
+    ]
+   }
+  },
+  {
+   "key": "2026-06",
+   "label": "June 2026",
+   "partial": false,
+   "wl": {
+    "channels": {
+     "youtube": {
+      "followers": 737,
+      "follower_change": 22,
+      "impressions": 24154,
+      "engagement": 165
+     },
+     "linkedin": {
+      "followers": 164,
+      "follower_change": 7,
+      "impressions": 1071,
+      "engagement": 151
+     },
+     "tiktok": {
+      "followers": 506,
+      "follower_change": 35,
+      "impressions": 10502,
+      "engagement": 282
+     },
+     "facebook": {
+      "followers": 24460,
+      "follower_change": 22,
+      "impressions": 607840,
+      "engagement": 420
+     },
+     "instagram": {
+      "followers": 9131,
+      "follower_change": 546,
+      "impressions": 258175,
+      "engagement": 5884
+     },
+     "pinterest": {
+      "followers": 18,
+      "follower_change": 1,
+      "impressions": 18821,
+      "engagement": 1023
+     }
+    },
+    "totals": {
+     "followers": 35016,
+     "follower_change": 633,
+     "impressions": 920563,
+     "engagement": 7925
+    },
+    "daily": {
+     "dates": [
+      "06/01",
+      "06/02",
+      "06/03",
+      "06/04",
+      "06/05",
+      "06/06",
+      "06/07",
+      "06/08",
+      "06/09",
+      "06/10",
+      "06/11",
+      "06/12",
+      "06/13",
+      "06/14",
+      "06/15",
+      "06/16",
+      "06/17",
+      "06/18",
+      "06/19",
+      "06/20",
+      "06/21",
+      "06/22",
+      "06/23",
+      "06/24",
+      "06/25",
+      "06/26",
+      "06/27",
+      "06/28",
+      "06/29",
+      "06/30"
+     ],
+     "impressions": [
+      27087,
+      36175,
+      34171,
+      31265,
+      24729,
+      38336,
+      31563,
+      34133,
+      28407,
+      28197,
+      26145,
+      27959,
+      27075,
+      26061,
+      24643,
+      28698,
+      27346,
+      26646,
+      26852,
+      20006,
+      20013,
+      28686,
+      28132,
+      27534,
+      21966,
+      24813,
+      38211,
+      80228,
+      34802,
+      40684
+     ],
+     "engagement": [
+      155,
+      216,
+      204,
+      156,
+      188,
+      128,
+      114,
+      181,
+      110,
+      128,
+      146,
+      162,
+      177,
+      91,
+      105,
+      99,
+      250,
+      151,
+      208,
+      132,
+      140,
+      474,
+      313,
+      230,
+      139,
+      160,
+      633,
+      1637,
+      597,
+      501
+     ]
+    }
+   },
+   "ob": {
+    "channels": {
+     "facebook": {
+      "followers": 1140,
+      "follower_change": 10,
+      "impressions": 6201,
+      "engagement": 65
+     },
+     "instagram": {
+      "followers": 733,
+      "follower_change": 80,
+      "impressions": 88045,
+      "engagement": 3240
+     }
+    },
+    "totals": {
+     "followers": 1873,
+     "follower_change": 90,
+     "impressions": 94246,
+     "engagement": 3305
+    },
+    "daily": {
+     "dates": [
+      "06/01",
+      "06/02",
+      "06/03",
+      "06/04",
+      "06/05",
+      "06/06",
+      "06/07",
+      "06/08",
+      "06/09",
+      "06/10",
+      "06/11",
+      "06/12",
+      "06/13",
+      "06/14",
+      "06/15",
+      "06/16",
+      "06/17",
+      "06/18",
+      "06/19",
+      "06/20",
+      "06/21",
+      "06/22",
+      "06/23",
+      "06/24",
+      "06/25",
+      "06/26",
+      "06/27",
+      "06/28",
+      "06/29",
+      "06/30"
+     ],
+     "impressions": [
+      1687,
+      1365,
+      421,
+      321,
+      1062,
+      734,
+      408,
+      1559,
+      443,
+      1501,
+      529,
+      643,
+      447,
+      538,
+      360,
+      278,
+      2888,
+      1734,
+      1916,
+      1555,
+      614,
+      3623,
+      2866,
+      2191,
+      950,
+      1130,
+      11807,
+      39578,
+      6441,
+      4657
+     ],
+     "engagement": [
+      65,
+      34,
+      9,
+      7,
+      21,
+      9,
+      4,
+      45,
+      16,
+      43,
+      14,
+      3,
+      4,
+      5,
+      7,
+      3,
+      98,
+      46,
+      50,
+      14,
+      15,
+      94,
+      77,
+      50,
+      29,
+      20,
+      500,
+      1380,
+      388,
+      255
+     ]
+    }
+   },
+   "ac": {
+    "new_contacts": 227,
+    "ad_enquiries": 40,
+    "deals_created": 392,
+    "deals_by_type": {
+     "Ad enquiries": 7,
+     "Other": 267,
+     "Configurator": 45,
+     "Brochure downloads": 72,
+     "Virtual consults": 1
+    },
+    "campaigns": [
+     {
+      "name": "About Solara - Construction Focus",
+      "sends": 2217,
+      "opens": 962,
+      "clicks": 214,
+      "date": "2026-06-30"
+     },
+     {
+      "name": " Sales Email #3 \u2013 Your Wonderland RV Order Confirmation",
+      "sends": 26,
+      "opens": 21,
+      "clicks": 1,
+      "date": "2026-06-29"
+     },
+     {
+      "name": " Sales Email #7 \u2013 Happy Handover Day!",
+      "sends": 13,
+      "opens": 10,
+      "clicks": 7,
+      "date": "2026-06-28"
+     },
+     {
+      "name": " Sales Email #6 \u2013 It's Ready",
+      "sends": 13,
+      "opens": 10,
+      "clicks": 9,
+      "date": "2026-06-28"
+     },
+     {
+      "name": "June Newsletter",
+      "sends": 2661,
+      "opens": 1068,
+      "clicks": 146,
+      "date": "2026-06-26"
+     },
+     {
+      "name": "June Newsletter test",
+      "sends": 7,
+      "opens": 7,
+      "clicks": 3,
+      "date": "2026-06-26"
+     },
+     {
+      "name": " Sales Email #1 \u2013 Built for Adventure Crafted for Comfort",
+      "sends": 15,
+      "opens": 12,
+      "clicks": 8,
+      "date": "2026-06-16"
+     },
+     {
+      "name": "EOFYS 2026 - Amaroo",
+      "sends": 2619,
+      "opens": 1108,
+      "clicks": 128,
+      "date": "2026-06-12"
+     },
+     {
+      "name": "EOFYS 2026 (Copy)",
+      "sends": 3,
+      "opens": 3,
+      "clicks": 1,
+      "date": "2026-06-12"
+     },
+     {
+      "name": "May Newsletter 2026 ",
+      "sends": 2577,
+      "opens": 1382,
+      "clicks": 255,
+      "date": "2026-06-02"
+     },
+     {
+      "name": "QLD - Let's Go Queensland Caravan & Camping Supershow",
+      "sends": 363,
+      "opens": 146,
+      "clicks": 17,
+      "date": "2026-06-01"
+     },
+     {
+      "name": "QLD - Let's Go Queensland Caravan & Camping Supershow (Copy)",
+      "sends": 19,
+      "opens": 5,
+      "clicks": 0,
+      "date": "2026-06-01"
+     },
+     {
+      "name": "QLD - Let's Go Queensland Caravan & Camping Supershow (Copy) (Copy)",
+      "sends": 509,
+      "opens": 204,
+      "clicks": 20,
+      "date": "2026-06-01"
+     }
+    ]
+   }
+  },
+  {
+   "key": "2026-07",
+   "label": "July 2026 (to 3 Jul)",
+   "partial": true,
+   "wl": {
+    "channels": {
+     "youtube": {
+      "followers": 738,
+      "follower_change": 0,
+      "impressions": 0,
+      "engagement": 0
+     },
+     "linkedin": {
+      "followers": 164,
+      "follower_change": 0,
+      "impressions": 53,
+      "engagement": 1
+     },
+     "tiktok": {
+      "followers": 507,
+      "follower_change": 0,
+      "impressions": 364,
+      "engagement": 12
+     },
+     "facebook": {
+      "followers": 24460,
+      "follower_change": 0,
+      "impressions": 36707,
+      "engagement": 25
+     },
+     "instagram": {
+      "followers": 9186,
+      "follower_change": 26,
+      "impressions": 84170,
+      "engagement": 2680
+     },
+     "pinterest": {
+      "followers": 18,
+      "follower_change": 0,
+      "impressions": 0,
+      "engagement": 0
+     }
+    },
+    "totals": {
+     "followers": 35073,
+     "follower_change": 26,
+     "impressions": 121294,
+     "engagement": 2718
+    },
+    "daily": {
+     "dates": [
+      "07/01",
+      "07/02",
+      "07/03"
+     ],
+     "impressions": [
+      40076,
+      81218,
+      0
+     ],
+     "engagement": [
+      407,
+      2310,
+      1
+     ]
+    }
+   },
+   "ob": {
+    "channels": {
+     "facebook": {
+      "followers": 1140,
+      "follower_change": 0,
+      "impressions": 349,
+      "engagement": 6
+     },
+     "instagram": {
+      "followers": 747,
+      "follower_change": 6,
+      "impressions": 30707,
+      "engagement": 1224
+     }
+    },
+    "totals": {
+     "followers": 1887,
+     "follower_change": 6,
+     "impressions": 31056,
+     "engagement": 1230
+    },
+    "daily": {
+     "dates": [
+      "07/01",
+      "07/02",
+      "07/03"
+     ],
+     "impressions": [
+      5190,
+      25866,
+      0
+     ],
+     "engagement": [
+      240,
+      990,
+      0
+     ]
+    }
+   },
+   "ac": {
+    "new_contacts": 41,
+    "ad_enquiries": 11,
+    "deals_created": 14,
+    "deals_by_type": {
+     "Ad enquiries": 3,
+     "Configurator": 5,
+     "Other": 5,
+     "Brochure downloads": 1
+    },
+    "campaigns": [
+     {
+      "name": "Stock Clearance | Thank you",
+      "sends": 23,
+      "opens": 13,
+      "clicks": 1,
+      "date": "2026-07-03"
+     },
+     {
+      "name": "About Solara - Layout Focus",
+      "sends": 1919,
+      "opens": 732,
+      "clicks": 143,
+      "date": "2026-07-02"
+     },
+     {
+      "name": "Paid Ad - Meta & Google | Thank you for your inquiry | Wonderland RV",
+      "sends": 16,
+      "opens": 11,
+      "clicks": 2,
+      "date": "2026-07-02"
+     },
+     {
+      "name": "About Solara - Detail Focus ",
+      "sends": 2001,
+      "opens": 791,
+      "clicks": 139,
+      "date": "2026-07-02"
+     },
+     {
+      "name": " Sales Email #5 \u2013 Book your Handover",
+      "sends": 30,
+      "opens": 22,
+      "clicks": 12,
+      "date": "2026-07-02"
+     },
+     {
+      "name": "Thanks for your interest in the Amaroo EOFY offer",
+      "sends": 78,
+      "opens": 57,
+      "clicks": 51,
+      "date": "2026-07-02"
+     },
+     {
+      "name": "About Solara - Travel & Terrain Focus",
+      "sends": 2133,
+      "opens": 851,
+      "clicks": 96,
+      "date": "2026-07-01"
+     },
+     {
+      "name": " Sales Email #2 \u2013 Let's Plan your Perfect Wonderland",
+      "sends": 10,
+      "opens": 7,
+      "clicks": 16,
+      "date": "2026-07-01"
+     },
+     {
+      "name": " Sales Email #8 \u2013 How was your Experience?",
+      "sends": 12,
+      "opens": 12,
+      "clicks": 7,
+      "date": "2026-07-01"
+     },
+     {
+      "name": "Thank you \u2013 Newsletter Subscription ",
+      "sends": 489,
+      "opens": 301,
+      "clicks": 98,
+      "date": "2026-07-01"
+     },
+     {
+      "name": " Sales Email #4 \u2013 Get Ready for Your Wonderland RV Adventure!",
+      "sends": 29,
+      "opens": 26,
+      "clicks": 16,
+      "date": "2026-07-01"
+     }
+    ]
+   }
+  }
+ ]
+}

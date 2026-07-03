@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Marketing Report | Wonderland RV + Outbound RVs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  --wl:#C97625; --ob:#8B9B4D; --ink:#101216; --panel:#16181d; --panel2:#1c1f26;
+  --mut:#8a919c; --line:#262a33; --up:#4caf7d; --down:#d06550; --paper:#f4f1ec;
+}
+*{margin:0;padding:0;box-sizing:border-box;border-radius:0 !important}
+body{background:var(--ink);color:#eceef2;font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px 80px}
+.display{font-family:'Archivo Black',sans-serif;text-transform:uppercase;letter-spacing:.02em}
+
+/* header */
+header{border-bottom:1px solid var(--line);background:#0a0a0a}
+.head-in{max-width:1180px;margin:0 auto;padding:26px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.brandmark{display:flex;align-items:center;gap:14px}
+.brandmark .sq{width:14px;height:34px;background:var(--wl)}
+.brandmark h1{font-size:19px;color:#fff}.brandmark h1 span{color:var(--wl)}
+.brandmark small{display:block;font-family:'DM Sans';font-weight:500;text-transform:none;letter-spacing:.08em;color:var(--mut);font-size:11px;margin-top:2px}
+.head-actions{display:flex;gap:10px;align-items:center}
+.btn{background:var(--wl);color:#0a0a0a;font-weight:700;border:none;padding:10px 18px;font-size:13px;cursor:pointer;letter-spacing:.04em;text-transform:uppercase}
+.btn:hover{filter:brightness(1.1)}
+
+/* month pills */
+.months{display:flex;gap:8px;margin:30px 0 8px;flex-wrap:wrap}
+.pill{background:var(--panel);border:1px solid var(--line);color:var(--mut);padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer;letter-spacing:.03em}
+.pill.active{background:var(--wl);border-color:var(--wl);color:#0a0a0a}
+.pill .part{font-weight:400;opacity:.75;font-size:11px}
+.subnote{color:var(--mut);font-size:12px;margin-bottom:26px}
+
+/* sections */
+section{margin-top:44px}
+.sec-head{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid var(--wl);padding-bottom:10px;margin-bottom:22px}
+.sec-head.ob{border-color:var(--ob)}
+.sec-head.ac{border-color:#c2c7d0}
+.sec-head h2{font-size:17px;color:#fff}
+.sec-head .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);font-weight:700}
+
+/* kpis */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.kpi{background:var(--panel);border:1px solid var(--line);padding:18px 18px 15px;position:relative}
+.kpi.hero{background:var(--wl);border-color:var(--wl)}
+.kpi.hero .n,.kpi.hero .l{color:#0f0a05}
+.kpi.hero-ob{background:var(--ob);border-color:var(--ob)}
+.kpi.hero-ob .n,.kpi.hero-ob .l{color:#101208}
+.kpi .n{font-family:'Archivo Black';font-size:27px;color:#fff;line-height:1.1}
+.kpi .l{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:700;margin-top:6px}
+.kpi .d{font-size:12px;font-weight:700;margin-top:7px}
+.kpi .d.up{color:var(--up)}.kpi .d.down{color:var(--down)}.kpi .d.na{color:var(--mut);font-weight:400}
+.kpi.hero .d.up{color:#0d3d24}.kpi.hero .d.down{color:#5c1d10}.kpi.hero .d.na{color:#54360f}
+.kpi.hero-ob .d.up{color:#1d3312}.kpi.hero-ob .d.down{color:#5c1d10}.kpi.hero-ob .d.na{color:#3c4224}
+
+/* grid layouts */
+.duo{display:grid;grid-template-columns:1.35fr 1fr;gap:14px;margin-top:14px}
+@media(max-width:900px){.duo{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);padding:20px}
+.card h3{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-bottom:14px;font-weight:700}
+.chartbox{position:relative;height:250px}
+
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);text-align:left;padding:8px 10px;border-bottom:2px solid var(--wl)}
+.ob-table th{border-bottom-color:var(--ob)}
+.ac-table th{border-bottom-color:#c2c7d0}
+td{padding:9px 10px;border-bottom:1px solid var(--line);color:#dfe3e9}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+td .chip{display:inline-block;width:9px;height:9px;margin-right:8px}
+tr:last-child td{border-bottom:none}
+.pos{color:var(--up);font-weight:700}.neg{color:var(--down);font-weight:700}
+
+footer{margin-top:60px;border-top:1px solid var(--line);padding-top:18px;color:var(--mut);font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+/* print — boardroom handout */
+@media print{
+  body{background:#fff;color:#111}
+  .months,.head-actions{display:none}
+  header{background:#fff;border-bottom:3px solid var(--wl)}
+  .brandmark h1{color:#111}
+  .kpi,.card{background:#fff;border:1px solid #ddd}
+  .kpi .n{color:#111}
+  .kpi.hero{background:var(--wl)} .kpi.hero .n{color:#fff}
+  .kpi.hero-ob{background:var(--ob)} .kpi.hero-ob .n{color:#fff}
+  td{color:#222;border-bottom-color:#e5e5e5}
+  .sec-head h2{color:#111}
+  section{break-inside:avoid}
+  footer{color:#666}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="head-in">
+    <div class="brandmark">
+      <div class="sq"></div>
+      <div>
+        <h1 class="display">Wonderland <span>RV</span> <span style="color:var(--mut);font-size:13px">+</span> <span style="color:var(--ob)">Outbound RVs</span></h1>
+        <small>MONTHLY MARKETING REPORT · SOCIAL + CRM</small>
+      </div>
+    </div>
+    <div class="head-actions">
+      <button class="btn" onclick="window.print()">Print report</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="months" id="months"></div>
+  <div class="subnote" id="subnote"></div>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <section>
+    <div class="sec-head"><span class="tag">01</span><h2 class="display">Executive summary</h2></div>
+    <div class="kpis" id="exec"></div>
+  </section>
+
+  <!-- WONDERLAND SOCIAL -->
+  <section>
+    <div class="sec-head"><span class="tag">02</span><h2 class="display">Wonderland RV · Social</h2></div>
+    <div class="kpis" id="wl-kpis"></div>
+    <div class="duo">
+      <div class="card"><h3>Daily impressions</h3><div class="chartbox"><canvas id="wl-line"></canvas></div></div>
+      <div class="card"><h3>Follower growth by channel</h3><div class="chartbox"><canvas id="wl-bars"></canvas></div></div>
+    </div>
+    <div class="card" style="margin-top:14px"><h3>Channel breakdown</h3><table id="wl-table"></table></div>
+  </section>
+
+  <!-- OUTBOUND SOCIAL -->
+  <section>
+    <div class="sec-head ob"><span class="tag">03</span><h2 class="display" style="color:var(--ob)">Outbound RVs · Social</h2></div>
+    <div class="kpis" id="ob-kpis"></div>
+    <div class="duo">
+      <div class="card"><h3>Daily impressions</h3><div class="chartbox"><canvas id="ob-line"></canvas></div></div>
+      <div class="card"><h3>Channel breakdown</h3><table class="ob-table" id="ob-table"></table></div>
+    </div>
+  </section>
+
+  <!-- ACTIVECAMPAIGN -->
+  <section>
+    <div class="sec-head ac"><span class="tag">04</span><h2 class="display">CRM &amp; Email · ActiveCampaign</h2></div>
+    <div class="kpis" id="ac-kpis"></div>
+    <div class="duo">
+      <div class="card"><h3>Email activity this month</h3><table class="ac-table" id="ac-camps"></table></div>
+      <div class="card"><h3>Leads by source</h3><div class="chartbox"><canvas id="ac-donut"></canvas></div></div>
+    </div>
+  </section>
+
+  <footer>
+    <div>Wonderland RV Pty Ltd · Internal marketing report</div>
+    <div id="gen"></div>
+  </footer>
+</div>
+
+<script>
+const WLC='#C97625', OBC='#8B9B4D';
+const CHCOL={facebook:'#4d79c9',instagram:'#c94d8f',youtube:'#c9564d',linkedin:'#4da3c9',tiktok:'#9c8df2',pinterest:'#c9b44d'};
+const fmt=n=>n==null?'–':n.toLocaleString('en-AU');
+const charts=[];
+let DATA=null, sel=0;
+
+fetch('data/report.json?v='+Date.now()).then(r=>r.json()).then(d=>{
+  DATA=d;
+  document.getElementById('gen').textContent='Updated '+d.generated+' · Sources: Vista Social + ActiveCampaign';
+  // default month = latest complete one
+  sel=d.months.length-1;
+  for(let i=d.months.length-1;i>=0;i--){ if(!d.months[i].partial){ sel=i; break; } }
+  const mrow=document.getElementById('months');
+  d.months.forEach((m,i)=>{
+    const b=document.createElement('button');
+    b.className='pill'+(i===sel?' active':'');
+    b.innerHTML=m.label.replace(/\((.*)\)/,'<span class="part">($1)</span>');
+    b.onclick=()=>{sel=i;document.querySelectorAll('.pill').forEach((p,j)=>p.classList.toggle('active',j===sel));render();};
+    mrow.appendChild(b);
+  });
+  render();
+});
+
+function delta(cur,prev,invert){
+  if(prev==null||cur==null||prev===0) return '<div class="d na">no prior month</div>';
+  const ch=cur-prev, pct=Math.round(ch/Math.abs(prev)*100);
+  const up=ch>=0?!invert:!!invert;
+  const arrow=ch>=0?'▲':'▼';
+  return `<div class="d ${up?'up':'down'}">${arrow} ${fmt(Math.abs(ch))} (${pct>=0?'+':''}${pct}%) vs prior month</div>`;
+}
+function kpi(n,l,d,cls){ return `<div class="kpi ${cls||''}"><div class="n">${n}</div><div class="l">${l}</div>${d||''}</div>`; }
+
+function render(){
+  charts.forEach(c=>c.destroy()); charts.length=0;
+  const m=DATA.months[sel], p=sel>0?DATA.months[sel-1]:null;
+  const partialNote=m.partial?' — partial month, numbers still accumulating':'';
+  document.getElementById('subnote').textContent='Reporting period: '+m.label+partialNote;
+
+  // exec summary
+  const imps=m.wl.totals.impressions+m.ob.totals.impressions;
+  const pImps=p?(p.wl.totals.impressions+p.ob.totals.impressions):null;
+  const foll=m.wl.totals.follower_change+m.ob.totals.follower_change;
+  const pFoll=p?(p.wl.totals.follower_change+p.ob.totals.follower_change):null;
+  document.getElementById('exec').innerHTML=
+    kpi(fmt(imps),'Total impressions · both brands',delta(imps,pImps),'hero')+
+    kpi((foll>=0?'+':'')+fmt(foll),'New followers · both brands',delta(foll,pFoll))+
+    kpi(fmt(m.ac.new_contacts),'New CRM contacts',delta(m.ac.new_contacts,p&&p.ac.new_contacts))+
+    kpi(fmt(m.ac.deals_created),'Deals created',delta(m.ac.deals_created,p&&p.ac.deals_created));
+
+  // WL
+  const w=m.wl, pw=p&&p.wl;
+  document.getElementById('wl-kpis').innerHTML=
+    kpi(fmt(w.totals.followers),'Total followers','','hero')+
+    kpi((w.totals.follower_change>=0?'+':'')+fmt(w.totals.follower_change),'Follower growth',delta(w.totals.follower_change,pw&&pw.totals.follower_change))+
+    kpi(fmt(w.totals.impressions),'Impressions',delta(w.totals.impressions,pw&&pw.totals.impressions))+
+    kpi(fmt(w.totals.engagement),'Engagements',delta(w.totals.engagement,pw&&pw.totals.engagement));
+  lineChart('wl-line',w.daily,WLC);
+  barChart('wl-bars',w.channels);
+  channelTable('wl-table',w.channels,pw&&pw.channels);
+
+  // OB
+  const o=m.ob, po=p&&p.ob;
+  document.getElementById('ob-kpis').innerHTML=
+    kpi(fmt(o.totals.followers),'Total followers','','hero-ob')+
+    kpi((o.totals.follower_change>=0?'+':'')+fmt(o.totals.follower_change),'Follower growth',delta(o.totals.follower_change,po&&po.totals.follower_change))+
+    kpi(fmt(o.totals.impressions),'Impressions',delta(o.totals.impressions,po&&po.totals.impressions))+
+    kpi(fmt(o.totals.engagement),'Engagements',delta(o.totals.engagement,po&&po.totals.engagement));
+  lineChart('ob-line',o.daily,OBC);
+  channelTable('ob-table',o.channels,po&&po.channels,true);
+
+  // AC
+  const a=m.ac, pa=p&&p.ac;
+  document.getElementById('ac-kpis').innerHTML=
+    kpi(fmt(a.new_contacts),'New contacts','','hero')+
+    kpi(fmt(a.ad_enquiries),'Meta / Google ad enquiries',delta(a.ad_enquiries,pa&&pa.ad_enquiries))+
+    kpi(fmt(a.deals_created),'Deals created',delta(a.deals_created,pa&&pa.deals_created))+
+    kpi(fmt(DATA.total_contacts_now),'Total CRM contacts (today)','<div class="d na">live database size</div>');
+  campTable('ac-camps',a.campaigns);
+  donut('ac-donut',a.deals_by_type);
+}
+
+function lineChart(id,daily,color){
+  charts.push(new Chart(document.getElementById(id),{type:'line',
+    data:{labels:daily.dates,datasets:[{data:daily.impressions,borderColor:color,backgroundColor:color+'22',fill:true,tension:.35,pointRadius:0,borderWidth:2}]},
+    options:{maintainAspectRatio:false,plugins:{legend:{display:false}},
+      scales:{x:{ticks:{color:'#8a919c',maxTicksLimit:8},grid:{display:false}},
+              y:{ticks:{color:'#8a919c'},grid:{color:'#262a33'}}}}}));
+}
+function barChart(id,channels){
+  const names=Object.keys(channels);
+  charts.push(new Chart(document.getElementById(id),{type:'bar',
+    data:{labels:names.map(n=>n[0].toUpperCase()+n.slice(1)),datasets:[{data:names.map(n=>channels[n].follower_change),backgroundColor:names.map(n=>CHCOL[n]||'#888')}]},
+    options:{maintainAspectRatio:false,plugins:{legend:{display:false}},
+      scales:{x:{ticks:{color:'#8a919c'},grid:{display:false}},y:{ticks:{color:'#8a919c'},grid:{color:'#262a33'}}}}}));
+}
+function channelTable(id,ch,prev,ob){
+  const rows=Object.keys(ch).sort((a,b)=>ch[b].impressions-ch[a].impressions).map(n=>{
+    const c=ch[n], g=c.follower_change;
+    return `<tr><td><span class="chip" style="background:${CHCOL[n]||'#888'}"></span>${n[0].toUpperCase()+n.slice(1)}</td>
+      <td class="num">${fmt(c.followers)}</td>
+      <td class="num ${g>0?'pos':g<0?'neg':''}">${g>0?'+':''}${fmt(g)}</td>
+      <td class="num">${fmt(c.impressions)}</td>
+      <td class="num">${fmt(c.engagement)}</td></tr>`;}).join('');
+  document.getElementById(id).innerHTML=
+    `<thead><tr><th>Channel</th><th class="num">Followers</th><th class="num">Growth</th><th class="num">Impressions</th><th class="num">Engagement</th></tr></thead><tbody>${rows}</tbody>`;
+}
+function campTable(id,camps){
+  if(!camps||!camps.length){document.getElementById(id).innerHTML='<tbody><tr><td style="color:var(--mut)">No campaign sends recorded this month</td></tr></tbody>';return;}
+  const rows=camps.sort((a,b)=>b.sends-a.sends).slice(0,10).map(c=>{
+    const or_=c.sends?Math.round(c.opens/c.sends*100):0, cr=c.sends?Math.round(c.clicks/c.sends*100):0;
+    return `<tr><td>${c.name}</td><td class="num">${fmt(c.sends)}</td><td class="num">${or_}%</td><td class="num">${cr}%</td></tr>`;}).join('');
+  document.getElementById(id).innerHTML=
+    `<thead><tr><th>Campaign</th><th class="num">Sends</th><th class="num">Open rate</th><th class="num">Click rate</th></tr></thead><tbody>${rows}</tbody>`;
+}
+function donut(id,types){
+  const names=Object.keys(types||{});
+  if(!names.length){return;}
+  const cols=['#C97625','#8B9B4D','#4d79c9','#c94d8f','#9c8df2','#888'];
+  charts.push(new Chart(document.getElementById(id),{type:'doughnut',
+    data:{labels:names,datasets:[{data:names.map(n=>types[n]),backgroundColor:cols,borderColor:'#16181d',borderWidth:3}]},
+    options:{maintainAspectRatio:false,cutout:'62%',plugins:{legend:{position:'right',labels:{color:'#dfe3e9',boxWidth:12,padding:14}}}}}));
+}
+</script>
+</body>
+</html>
