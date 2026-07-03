@@ -1,5 +1,5 @@
 {
- "generated": "04 Jul 2026, 02:14 AM AEST",
+ "generated": "04 Jul 2026, 02:48 AM AEST",
  "total_contacts_now": 9867,
  "funnel_snapshot": [
   {
@@ -600,7 +600,8 @@
      "WL1186 AM2106",
      "WL1206 HO2206EW-F4.3  Ana"
     ],
-    "configurator_note": "unreliable"
+    "configurator_note": "unreliable",
+    "configurator_leads": 41
    },
    "metrics_note": "saves and messages tracked from June 2026"
   },
@@ -1287,7 +1288,8 @@
      "WL1280 SANDY XTR",
      "WL1241 AM1709RL ROGERS"
     ],
-    "configurator_note": "unreliable"
+    "configurator_note": "unreliable",
+    "configurator_leads": 41
    },
    "metrics_note": null
   },
@@ -1595,7 +1597,8 @@
     "handovers_names": [
      "WL1209 David Campbell -  "
     ],
-    "configurator_note": "unreliable"
+    "configurator_note": "unreliable",
+    "configurator_leads": 4
    },
    "metrics_note": null
   }
@@ -1767,5 +1770,27 @@
     }
    ]
   }
- ]
+ ],
+ "configurator": {
+  "sessions_alltime": 5514,
+  "submitters_alltime": 1826,
+  "by_state": {
+   "VIC": 395,
+   "NSW": 379,
+   "Other": 94,
+   "QLD": 82,
+   "WA": 58,
+   "SA": 20,
+   "TAS": 15,
+   "NZ": 1
+  },
+  "conversion": {
+   "In conversation": 90,
+   "Back to market": 62,
+   "Quote sent": 6,
+   "Deposit+ (committed)": 2,
+   "Won / Sold": 1,
+   "New / other": 1
+  }
+ }
 }
