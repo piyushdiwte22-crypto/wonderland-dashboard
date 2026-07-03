@@ -1617,5 +1617,152 @@
    "duplicate_deals": 45
   },
   "note": "Configurator > Create Deal (automation 39) fires far more often than real submissions and creates deals with blank names and duplicates; several lead records sit in Deposit/Handover stages. Deposits and handovers on this dashboard only count deals carrying a WL chassis number."
- }
+ },
+ "delivery_board": [
+  {
+   "stage": "Deposit Received",
+   "count": 2,
+   "items": [
+    {
+     "chassis": "WL1270",
+     "name": "Solara Brochure Lead",
+     "state": "NSW"
+    },
+    {
+     "chassis": "WL969",
+     "name": "",
+     "state": "WA"
+    }
+   ]
+  },
+  {
+   "stage": "Plans & Specs",
+   "count": 4,
+   "items": [
+    {
+     "chassis": "WL1282",
+     "name": "DUNN XT2100K-F2",
+     "state": "SA"
+    },
+    {
+     "chassis": "WL1309",
+     "name": "Murfet AM1709R_L",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1317",
+     "name": "XTR- Andreas Sonder",
+     "state": "WA"
+    },
+    {
+     "chassis": "WL1345",
+     "name": "kim & andrea",
+     "state": "WA"
+    }
+   ]
+  },
+  {
+   "stage": "Order Finalised",
+   "count": 10,
+   "items": [
+    {
+     "chassis": "WL1268",
+     "name": "Minogue",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1278",
+     "name": "SO1806ML Aiden Brockma",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1285",
+     "name": "Darling XT2106",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1310",
+     "name": "Shell HO2106Q-M-SC CUS",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1316",
+     "name": "HURLEY",
+     "state": "WA"
+    },
+    {
+     "chassis": "WL1321",
+     "name": "SQUIRE SO22RCA",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1335",
+     "name": "BURKE",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1343",
+     "name": "SCRIVEN AM1806",
+     "state": "WA"
+    },
+    {
+     "chassis": "WL1357",
+     "name": "BIFFIN",
+     "state": "WA"
+    },
+    {
+     "chassis": "WL1358",
+     "name": "Dyson",
+     "state": "WA"
+    }
+   ]
+  },
+  {
+   "stage": "In Production",
+   "count": 2,
+   "items": [
+    {
+     "chassis": "WL1273",
+     "name": "CROXFORD AM21000M_L_XL",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1288",
+     "name": "JOWETT HO2100-M-XLE",
+     "state": "VIC"
+    }
+   ]
+  },
+  {
+   "stage": "Ready / Handover Booked",
+   "count": 5,
+   "items": [
+    {
+     "chassis": "WL1154",
+     "name": "",
+     "state": "WA"
+    },
+    {
+     "chassis": "WL1248",
+     "name": "DINGLEY XT1906",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1283",
+     "name": "ROSS Solara 1806Q-M-L",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1290",
+     "name": "\u00a0Andrew & Karen Simpso",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1332",
+     "name": "PAGE AM2107EW-F2.4",
+     "state": "VIC"
+    }
+   ]
+  }
+ ]
 }

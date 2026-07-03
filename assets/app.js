@@ -162,6 +162,35 @@ function render(){
     }
   }
 
+  if(PAGE==='ho'){
+    const board=DATA.delivery_board||[];
+    const pipeTotal=board.reduce((s,b)=>s+b.count,0);
+    const ready=(board.find(b=>/Ready/.test(b.stage))||{}).count||0;
+    $('ho-kpis').innerHTML=
+      k(fmt(handovers),'Handovers completed this month',flowStates(a.handovers_flow),'acc')+
+      k(fmt(deposits),'Deposits received this month',flowStates(a.deposits_flow),'dark')+
+      k(fmt(pipeTotal),'Vans in the delivery pipeline','<div class="d na">chassis-verified, live</div>')+
+      k(fmt(ready),'Ready or booked for handover','<div class="d na">next out the door</div>')+
+      k(fmt((board.find(b=>b.stage==='In Production')||{}).count)+' + '+fmt((board.find(b=>b.stage==='Order Finalised')||{}).count),'In production + order finalised','<div class="d na">the build queue</div>');
+    $('ho-detail').innerHTML=
+      `<div class="flownames"><h4>Handed over this month</h4>${(a.handovers_names||[]).map(n=>'<span class="tag">'+n+'</span>').join('')||'<span class="footnote">none this month</span>'}</div>`+
+      `<div class="flownames"><h4>Deposits taken this month</h4>${(a.deposits_names||[]).map(n=>'<span class="tag">'+n+'</span>').join('')||'<span class="footnote">none this month</span>'}</div>`;
+    $('ho-board').innerHTML=board.map(b=>
+      `<div class="bcol"><div class="bh"><div class="bt">${b.stage}</div><div class="bc">${b.count}</div></div>
+       <div class="bi">${b.items.map(i=>`<div class="vanchip"><span class="ch">${i.chassis}</span><span style="flex:1;margin:0 8px;color:#5c6167;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${i.name||''}</span><span class="st ${i.state}">${i.state}</span></div>`).join('')||'<div class="footnote">empty</div>'}</div></div>`).join('');
+    // trend across all months
+    const labels=DATA.months.map(x=>x.label.split(' ')[0]);
+    charts.push(new Chart($('ho-trend'),{type:'bar',
+      data:{labels,datasets:[
+        {label:'Handovers',data:DATA.months.map(x=>sum(x.ac.handovers_flow)),backgroundColor:INK},
+        {label:'Deposits',data:DATA.months.map(x=>sum(x.ac.deposits_flow)),backgroundColor:WLC}]},
+      options:{maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{color:'#2c2f34',boxWidth:12}}},
+        scales:{x:{ticks:{color:'#8a8f96'},grid:{display:false}},y:{ticks:{color:'#8a8f96',precision:0},grid:{color:'#ececee'}}}}}));
+    const hs=a.handovers_flow||{};
+    barChart('ho-states',Object.keys(hs).length?Object.keys(hs):['—'],Object.keys(hs).length?Object.values(hs):[0],Object.keys(hs).map(()=>WLC),true);
+    $('ho-read').innerHTML=`<b>The read</b>${fmt(pipeTotal)} chassis-numbered vans are on the delivery journey right now: ${board.map(b=>b.count+' at '+b.stage.toLowerCase()).join(', ')}. ${fmt(handovers)} handed over in ${m.label.split(' (')[0]}${ready?', and '+fmt(ready)+' are ready or booked, so next month\\u2019s handover number is already visible':''}.`;
+  }
+
   if(PAGE==='ob'){
     goalBand('ob-social-kpis',o.totals,po&&po.totals);
     lineChart('ob-line',o.daily,OBC);
