@@ -119,13 +119,27 @@ function render(){
       `<li class="crm"><strong>Sales:</strong> ${fmt(leads)} leads created${topState?' ('+topState[0]+' leading with '+fmt(topState[1])+')':''}, ${fmt(deposits)} deposits received and ${fmt(handovers)} handovers completed.</li>`;
   }
 
-  if(PAGE==='wl'){
+  if($('wl-social-kpis')){
+    if($('wl-ov')) $('wl-ov').innerHTML=
+      k(fmt(w.totals.impressions),'Impressions',delta(w.totals.impressions,pw&&pw.totals.impressions),'acc')+
+      k('+'+fmt(w.totals.follower_change),'New followers',delta(w.totals.follower_change,pw&&pw.totals.follower_change))+
+      k(w.totals.engagement_rate+'%','Engagement rate','')+
+      k(fmt(w.totals.saves||null),'Saves','')+
+      k(fmt(w.totals.messages||null),'Messages','');
     goalBand('wl-social-kpis',w.totals,pw&&pw.totals);
     lineChart('wl-line',w.daily,WLC);
     barChart('wl-bars',Object.keys(w.channels),Object.keys(w.channels).map(c=>w.channels[c].follower_change),Object.keys(w.channels).map(c=>CHCOL[c]));
     chanTable('wl-table',w.channels);
     postsTable('wl-posts',w.top_posts);
     audience(w);
+  }
+  if($('wl-email-kpis')){
+    if($('crm-ov')) $('crm-ov').innerHTML=
+      k(fmt(a.new_contacts),'New leads',delta(a.new_contacts,pa&&pa.new_contacts),'acc')+
+      k(fmt(leads),'New sales deals',delta(leads,pleads))+
+      k(fmt(a.configurator_leads),'Configurator leads',delta(a.configurator_leads,pa&&pa.configurator_leads))+
+      k(fmt(deposits),'Deposits',delta(deposits,pa&&sum(pa.deposits_flow)))+
+      k(fmt(handovers),'Handovers',delta(handovers,pa&&sum(pa.handovers_flow)));
     /* Email marketing */
     const em=a.emails||{}, pem=pa&&pa.emails||{};
     $('wl-email-kpis').innerHTML=

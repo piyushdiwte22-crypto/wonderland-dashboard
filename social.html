@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Wonderland RV · Social Media | Monthly Report</title>
+<link rel="stylesheet" href="assets/style.css?v=9">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<body class="wl-page">
+<div class="topbar"><div class="topbar-in">
+  <div class="tb-logo">
+    <img src="assets/img/wl-logo.svg" alt="Wonderland RV">
+    <div><small>Monthly Marketing Report</small></div>
+  </div>
+  <nav class="navlinks">
+    <a href="index.html">Overview</a>
+    <a href="social.html" class="cur-wl">Social Media</a>
+    <a href="crm.html">CRM &amp; Sales</a>
+    <a href="outbound.html">Outbound RVs</a>
+    <a href="handovers.html">Handovers</a>
+  </nav>
+  <button class="printbtn" onclick="window.print()">Print</button>
+</div></div>
+
+<div class="brandhero">
+  <div class="bg" style="background-image:url('assets/img/wl-hero.jpg')"></div>
+  <div class="in">
+    <div class="accentbar"></div>
+    <h1 class="wl-display">Wonderland RV · Social</h1>
+    <p>Adventure your way · Facebook · Instagram · YouTube · LinkedIn · TikTok · Pinterest</p>
+  </div>
+</div>
+
+<div class="monthrow"><div class="monthrow-in">
+  <div id="months" style="display:flex;gap:8px;flex-wrap:wrap"></div>
+  <div class="subnote" id="subnote"></div>
+</div></div>
+
+<div class="wrap">
+  <section>
+    <div class="sec-h"><span class="no">OVERVIEW</span><h2>This month at a glance</h2></div>
+    <div class="kgrid" id="wl-ov"></div>
+  </section>
+
+  <section>
+    <div class="sec-h"><span class="no">01</span><h2>Social media</h2></div>
+    <p class="sec-cap">Everything the brand earned across Facebook, Instagram, YouTube, LinkedIn, TikTok and Pinterest this month, compared with the month before.</p>
+    <div class="kgrid" id="wl-social-kpis"></div>
+    <div class="footnote">Saves are reported by Instagram and TikTok; direct messages by Facebook and Instagram. Both tracked from June 2026. Bio link clicks are not exposed by the platform APIs; recommend UTM-tagged bio links measured in GA4.</div>
+    <div class="duo">
+      <div class="card"><h3>Daily impressions · all channels</h3><div class="chartbox"><canvas id="wl-line"></canvas></div></div>
+      <div class="card"><h3>Follower growth by channel</h3><div class="chartbox"><canvas id="wl-bars"></canvas></div></div>
+    </div>
+    <div class="card" style="margin-top:12px"><h3>Channel breakdown</h3><div style="overflow-x:auto"><table id="wl-table"></table></div></div>
+    <div class="card" style="margin-top:12px"><h3>Top posts of the month</h3><div style="overflow-x:auto"><table id="wl-posts"></table></div>
+      <div class="footnote">Reel saves and shares are strong intent signals: a save means "I want to come back to this van", a share means "someone I know needs to see it".</div></div>
+    <div class="halves" id="wl-audience"></div>
+  </section>
+
+  <div class="photoband" style="background-image:url('assets/img/divider-lifestyle.jpg')"><div class="cap">2026 RANGE · <b>LIFESTYLE</b></div></div>
+
+  <footer>
+    <div>Wonderland RV Pty Ltd · internal marketing report · aggregate data only</div>
+    <div id="gen"></div>
+  </footer>
+</div>
+<script>const PAGE='wl-social';</script>
+<script src="assets/app.js?v=9"></script>
+</body>
+</html>

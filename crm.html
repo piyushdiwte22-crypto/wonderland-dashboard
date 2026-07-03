@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Wonderland RV · CRM &amp; Sales | Monthly Report</title>
+<link rel="stylesheet" href="assets/style.css?v=9">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<body class="wl-page">
+<div class="topbar"><div class="topbar-in">
+  <div class="tb-logo">
+    <img src="assets/img/wl-logo.svg" alt="Wonderland RV">
+    <div><small>Monthly Marketing Report</small></div>
+  </div>
+  <nav class="navlinks">
+    <a href="index.html">Overview</a>
+    <a href="social.html">Social Media</a>
+    <a href="crm.html" class="cur-wl">CRM &amp; Sales</a>
+    <a href="outbound.html">Outbound RVs</a>
+    <a href="handovers.html">Handovers</a>
+  </nav>
+  <button class="printbtn" onclick="window.print()">Print</button>
+</div></div>
+
+<div class="brandhero">
+  <div class="bg" style="background-image:url('assets/img/divider-config.jpg')"></div>
+  <div class="in">
+    <div class="accentbar"></div>
+    <h1 class="wl-display">Wonderland RV · CRM &amp; Sales</h1>
+    <p>ActiveCampaign · leads · email · configurator · sales pipeline</p>
+  </div>
+</div>
+
+<div class="monthrow"><div class="monthrow-in">
+  <div id="months" style="display:flex;gap:8px;flex-wrap:wrap"></div>
+  <div class="subnote" id="subnote"></div>
+</div></div>
+
+<div class="wrap">
+  <section>
+    <div class="sec-h"><span class="no">OVERVIEW</span><h2>This month at a glance</h2></div>
+    <div class="kgrid" id="crm-ov"></div>
+  </section>
+
+  <section>
+    <div class="sec-h"><span class="no">01</span><h2>Email marketing</h2></div>
+    <div class="kgrid" id="wl-email-kpis"></div>
+    <div class="card" style="margin-top:12px"><h3>Broadcast campaigns this month</h3><table id="wl-camps"></table>
+      <div class="footnote">Broadcast sends only. Automated confirmations and follow-ups are excluded from the averages and shown in the Automated card above.</div></div>
+  </section>
+
+  <section>
+    <div class="sec-h"><span class="no">02</span><h2>Leads &amp; acquisition</h2></div>
+    <div class="kgrid" id="wl-crm-kpis"></div>
+    <div class="duo">
+      <div class="card"><h3>New leads by state · contact records</h3><div class="chartbox"><canvas id="wl-states"></canvas></div>
+        <div class="footnote">State comes from the enquiry form's State field, normalised. "Other / blank" are enquiries that skipped the field (being cleaned up — see the data quality note below).</div></div>
+      <div class="card"><h3>New sales deals by pipeline</h3><div class="chartbox"><canvas id="wl-dealstates"></canvas></div></div>
+    </div>
+    <div class="duo">
+      <div class="card"><h3>Lead sources · deal types</h3><div class="chartbox"><canvas id="wl-sources"></canvas></div></div>
+      <div class="card"><h3>Brochure downloads by model</h3><div id="wl-brochures"></div>
+        <div class="footnote">Download events from the brochure automations, including repeat downloads and existing contacts.</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-h"><span class="no">03</span><h2>Build Your Caravan · configurator</h2></div>
+    <p class="sec-cap">The strongest inbound signal there is: someone who sat down and spec'd their own van. These leads convert far better than a brochure download.</p>
+    <div class="kgrid" id="wl-cfg-kpis"></div>
+    <div class="duo">
+      <div class="card"><h3>Where configurator leads are now</h3><div class="chartbox"><canvas id="wl-cfg-conv"></canvas></div>
+        <div class="footnote">Pipeline stage of every named configurator lead (mis-staged and no-name automation records excluded).</div></div>
+      <div class="card"><h3>Configurator submitters by state</h3><div class="chartbox"><canvas id="wl-cfg-state"></canvas></div></div>
+    </div>
+    <div id="wl-cfg-model"></div>
+  </section>
+
+  <section>
+    <div class="sec-h"><span class="no">04</span><h2>Sales &amp; conversion · reconciled</h2></div>
+    <div class="kgrid" id="wl-flow-kpis"></div>
+    <div class="halves" id="wl-flow-detail"></div>
+    <div class="card" style="margin-top:12px"><h3>Pipeline snapshot · open deals right now, by state</h3>
+      <div style="overflow-x:auto"><table id="wl-funnel"></table></div>
+      <div class="footnote" id="wl-funnel-note"></div>
+    </div>
+    <div id="wl-read" class="readcard"></div>
+  </section>
+
+  <section>
+    <div class="sec-h"><span class="no">05</span><h2>Data quality watch</h2></div>
+    <div id="wl-dq"></div>
+  </section>
+
+  <footer>
+    <div>Wonderland RV Pty Ltd · internal marketing report · aggregate data only</div>
+    <div id="gen"></div>
+  </footer>
+</div>
+<script>const PAGE='wl-crm';</script>
+<script src="assets/app.js?v=9"></script>
+</body>
+</html>
