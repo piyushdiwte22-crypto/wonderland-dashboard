@@ -59,21 +59,37 @@
   <!-- 02 CRM -->
   <section>
     <div class="sec-h"><span class="no">02</span><h2>CRM &amp; sales</h2></div>
-    <p class="sec-cap">Leads flowing into ActiveCampaign, where they come from, which vans they want, and how they progress through each state's sales pipeline to deposit and handover.</p>
+    <p class="sec-cap">Everything in ActiveCampaign: email marketing performance, lead acquisition by state and source, and the reconciled sales pipeline from first enquiry to deposit and handover.</p>
+
+    <h3 class="subhead">Email marketing</h3>
+    <div class="kgrid" id="wl-email-kpis"></div>
+    <div class="card" style="margin-top:12px"><h3>Broadcast campaigns this month</h3><table id="wl-camps"></table>
+      <div class="footnote">Broadcast sends only. Automated confirmations and follow-ups are excluded from the averages and shown in the Automated card above.</div></div>
+
+    <h3 class="subhead">Leads · acquisition</h3>
     <div class="kgrid" id="wl-crm-kpis"></div>
     <div class="duo">
-      <div class="card"><h3>Leads by state</h3><div class="chartbox"><canvas id="wl-states"></canvas></div></div>
-      <div class="card"><h3>Lead sources</h3><div class="chartbox"><canvas id="wl-sources"></canvas></div></div>
+      <div class="card"><h3>New leads by state · contact records</h3><div class="chartbox"><canvas id="wl-states"></canvas></div>
+        <div class="footnote">State comes from the enquiry form's State field, normalised. "Other / blank" are enquiries that skipped the field.</div></div>
+      <div class="card"><h3>New sales deals by pipeline</h3><div class="chartbox"><canvas id="wl-dealstates"></canvas></div></div>
     </div>
-    <div class="card" style="margin-top:12px"><h3>Brochure downloads by model</h3><div id="wl-brochures"></div></div>
-    <div class="card" style="margin-top:12px"><h3>Email marketing · activity this month</h3><table id="wl-camps"></table></div>
-    <div style="margin-top:26px">
-      <div class="kgrid" id="wl-flow-kpis"></div>
-      <div class="card" style="margin-top:12px"><h3>Pipeline snapshot · open deals right now, by state</h3>
-        <div style="overflow-x:auto"><table id="wl-funnel"></table></div>
-        <div class="footnote" id="wl-funnel-note"></div>
-      </div>
+    <div class="duo">
+      <div class="card"><h3>Lead sources · deal types</h3><div class="chartbox"><canvas id="wl-sources"></canvas></div></div>
+      <div class="card"><h3>Brochure downloads by model</h3><div id="wl-brochures"></div>
+        <div class="footnote">Download events from the brochure automations, including repeat downloads and existing contacts.</div></div>
     </div>
+
+    <h3 class="subhead">Sales &amp; conversion · reconciled</h3>
+    <div class="kgrid" id="wl-flow-kpis"></div>
+    <div class="halves" id="wl-flow-detail"></div>
+    <div class="card" style="margin-top:12px"><h3>Pipeline snapshot · open deals right now, by state</h3>
+      <div style="overflow-x:auto"><table id="wl-funnel"></table></div>
+      <div class="footnote" id="wl-funnel-note"></div>
+    </div>
+    <div id="wl-read" class="readcard"></div>
+
+    <h3 class="subhead">Data quality watch</h3>
+    <div id="wl-dq"></div>
   </section>
 
   <footer>

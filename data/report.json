@@ -1,5 +1,5 @@
 {
- "generated": "03 Jul 2026, 09:36 PM AEST",
+ "generated": "04 Jul 2026, 02:14 AM AEST",
  "total_contacts_now": 9867,
  "funnel_snapshot": [
   {
@@ -524,18 +524,82 @@
      "HQ Walk-ins": 5
     },
     "brochures_by_model": {
-     "Other": 51,
-     "Solara": 23,
-     "XTR": 27,
-     "Amaroo": 20,
-     "Hornet": 9
+     "XTR": 34,
+     "Solara": 31,
+     "Amaroo": 24,
+     "Hornet": 11,
+     "COTY": 2
     },
     "deposits_flow": {
-     "NSW": 2
+     "NSW": 1
     },
     "handovers_flow": {
      "VIC": 2
-    }
+    },
+    "emails": {
+     "broadcast_count": 4,
+     "sent": 4552,
+     "avg_open_pct": 37.6,
+     "avg_click_pct": 10.0,
+     "automated_sends": 0,
+     "broadcasts": [
+      {
+       "name": "Demo 24/25 Plate Sale",
+       "sends": 2496,
+       "opens": 1213,
+       "clicks": 368,
+       "date": "2026-05-01"
+      },
+      {
+       "name": "Demo 24/25 Plate Sale",
+       "sends": 1336,
+       "opens": 218,
+       "clicks": 57,
+       "date": "2026-05-05"
+      },
+      {
+       "name": "VIC - Bendigo Show",
+       "sends": 367,
+       "opens": 149,
+       "clicks": 16,
+       "date": "2026-05-27"
+      },
+      {
+       "name": "QLD - Mackay Outdoor Adventure plus Home & Lifestyle Expo!",
+       "sends": 353,
+       "opens": 131,
+       "clicks": 12,
+       "date": "2026-05-21"
+      }
+     ]
+    },
+    "contacts_by_state": {
+     "NSW": 90,
+     "QLD": 45,
+     "Other/blank": 35,
+     "VIC": 24,
+     "WA": 24,
+     "SA": 12,
+     "TAS": 5,
+     "NT": 1
+    },
+    "deals_by_state": {
+     "VIC": 39,
+     "NSW": 95,
+     "QLD": 46,
+     "SA": 13,
+     "WA": 22,
+     "NZ": 0,
+     "HQ Walk-ins": 5
+    },
+    "deposits_names": [
+     "WL1270 - Solara Brochure "
+    ],
+    "handovers_names": [
+     "WL1186 AM2106",
+     "WL1206 HO2206EW-F4.3  Ana"
+    ],
+    "configurator_note": "unreliable"
    },
    "metrics_note": "saves and messages tracked from June 2026"
   },
@@ -1134,21 +1198,93 @@
      "HQ Walk-ins": 3
     },
     "brochures_by_model": {
-     "Solara": 27,
-     "Amaroo": 26,
-     "Hornet": 10,
-     "XTR": 10
+     "Solara": 47,
+     "Amaroo": 33,
+     "XTR": 31,
+     "Hornet": 14
     },
     "deposits_flow": {
-     "QLD": 1,
-     "WA": 2,
-     "NSW": 2,
+     "WA": 1,
      "SA": 1
     },
     "handovers_flow": {
-     "VIC": 7,
-     "NSW": 1
-    }
+     "VIC": 6
+    },
+    "emails": {
+     "broadcast_count": 5,
+     "sent": 8729,
+     "avg_open_pct": 44.8,
+     "avg_click_pct": 6.5,
+     "automated_sends": 2313,
+     "broadcasts": [
+      {
+       "name": "June Newsletter",
+       "sends": 2661,
+       "opens": 1071,
+       "clicks": 146,
+       "date": "2026-06-26"
+      },
+      {
+       "name": "EOFYS 2026 - Amaroo",
+       "sends": 2619,
+       "opens": 1108,
+       "clicks": 128,
+       "date": "2026-06-12"
+      },
+      {
+       "name": "May Newsletter 2026 ",
+       "sends": 2577,
+       "opens": 1382,
+       "clicks": 255,
+       "date": "2026-06-02"
+      },
+      {
+       "name": "QLD - Let's Go Queensland Caravan & Camping Supershow (Copy) (Copy)",
+       "sends": 509,
+       "opens": 204,
+       "clicks": 20,
+       "date": "2026-06-01"
+      },
+      {
+       "name": "QLD - Let's Go Queensland Caravan & Camping Supershow",
+       "sends": 363,
+       "opens": 146,
+       "clicks": 17,
+       "date": "2026-06-01"
+      }
+     ]
+    },
+    "contacts_by_state": {
+     "QLD": 85,
+     "Other/blank": 41,
+     "NSW": 38,
+     "WA": 26,
+     "VIC": 26,
+     "TAS": 6,
+     "SA": 5
+    },
+    "deals_by_state": {
+     "VIC": 86,
+     "NSW": 48,
+     "QLD": 104,
+     "SA": 5,
+     "WA": 31,
+     "NZ": 1,
+     "HQ Walk-ins": 3
+    },
+    "deposits_names": [
+     "WL969 ",
+     "WL1277 Miller AM2107EWF"
+    ],
+    "handovers_names": [
+     "WL1035 ",
+     "WL1196 LOVE AM2311Q-F4.3",
+     "WL1243 Rennae & Mark Rugg",
+     "WL899 Della-Mina AM1709R",
+     "WL1280 SANDY XTR",
+     "WL1241 AM1709RL ROGERS"
+    ],
+    "configurator_note": "unreliable"
    },
    "metrics_note": null
   },
@@ -1419,14 +1555,67 @@
      "HQ Walk-ins": 0
     },
     "brochures_by_model": {
-     "Amaroo": 1
+     "XTR": 2,
+     "Amaroo": 2,
+     "Solara": 1
     },
     "deposits_flow": {},
     "handovers_flow": {
-     "VIC": 2
-    }
+     "VIC": 1
+    },
+    "emails": {
+     "broadcast_count": 0,
+     "sent": 0,
+     "avg_open_pct": 0,
+     "avg_click_pct": 0,
+     "automated_sends": 6740,
+     "broadcasts": []
+    },
+    "contacts_by_state": {
+     "Other/blank": 29,
+     "QLD": 5,
+     "NSW": 3,
+     "VIC": 2,
+     "WA": 1,
+     "TAS": 1
+    },
+    "deals_by_state": {
+     "VIC": 5,
+     "NSW": 1,
+     "QLD": 3,
+     "SA": 0,
+     "WA": 1,
+     "NZ": 0,
+     "HQ Walk-ins": 0
+    },
+    "deposits_names": [],
+    "handovers_names": [
+     "WL1209 David Campbell -  "
+    ],
+    "configurator_note": "unreliable"
    },
    "metrics_note": null
   }
- ]
+ ],
+ "data_quality": {
+  "mis_staged_money_stage": {
+   "count": 14,
+   "sample": [
+    "Configurator:\u00a0Danielle Old \u2192 Handover Complete",
+    "Wl1178 -Rosehill lead \u2192 Handover Complete",
+    "Francesco & Candice Ienco \u2192 Handover Complete",
+    "Philip Andrew Clark \u2192 Handover Complete",
+    "B2ME TEST DEAL \u2192 Handover Complete",
+    "BARRY \u2192 Handover Complete"
+   ]
+  },
+  "configurator": {
+   "deals_total": 224,
+   "automation39_entries": 1504,
+   "real_submissions_alltime_approx": 56,
+   "no_name_deals": 37,
+   "duplicate_deals": 45
+  },
+  "note": "Configurator > Create Deal (automation 39) fires far more often than real submissions and creates deals with blank names and duplicates; several lead records sit in Deposit/Handover stages. Deposits and handovers on this dashboard only count deals carrying a WL chassis number."
+ }
 }

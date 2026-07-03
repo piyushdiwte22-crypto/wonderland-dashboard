@@ -114,24 +114,52 @@ function render(){
     chanTable('wl-table',w.channels);
     postsTable('wl-posts',w.top_posts);
     audience(w);
+    /* Email marketing */
+    const em=a.emails||{}, pem=pa&&pa.emails||{};
+    $('wl-email-kpis').innerHTML=
+      k(fmt(em.sent),'Emails sent · broadcasts',delta(em.sent,pem.sent),'acc')+
+      k((em.avg_open_pct||0)+'%','Average open rate',pem.sent?`<div class="d ${em.avg_open_pct>=pem.avg_open_pct?'up':'down'}">${em.avg_open_pct>=pem.avg_open_pct?'▲':'▼'} ${Math.abs(em.avg_open_pct-pem.avg_open_pct).toFixed(1)} pts vs prior</div>`:'<div class="d na">baseline month</div>')+
+      k((em.avg_click_pct||0)+'%','Average click rate',pem.sent?`<div class="d ${em.avg_click_pct>=pem.avg_click_pct?'up':'down'}">${em.avg_click_pct>=pem.avg_click_pct?'▲':'▼'} ${Math.abs(em.avg_click_pct-pem.avg_click_pct).toFixed(1)} pts vs prior</div>`:'<div class="d na">baseline month</div>')+
+      k(fmt(em.broadcast_count),'Broadcasts sent','')+
+      k(fmt(em.automated_sends),'Automated sends','<div class="d na">confirmations + follow-ups</div>','dark');
+    campTable('wl-camps',em.broadcasts||a.campaigns);
+    /* Leads acquisition */
     $('wl-crm-kpis').innerHTML=
-      k(fmt(leads),'Sales leads created',delta(leads,pleads),'acc')+
-      k(fmt(a.new_contacts),'New CRM contacts',delta(a.new_contacts,pa&&pa.new_contacts))+
+      k(fmt(a.new_contacts),'New leads · contacts created',delta(a.new_contacts,pa&&pa.new_contacts),'acc')+
+      k(fmt(leads),'New sales deals',delta(leads,pleads))+
       k(fmt(a.ad_enquiries),'Meta / Google ad enquiries',delta(a.ad_enquiries,pa&&pa.ad_enquiries))+
       k(fmt(sum(a.brochures_by_model)),'Brochure downloads',delta(sum(a.brochures_by_model),pa&&sum(pa.brochures_by_model)))+
       k(fmt(DATA.total_contacts_now),'Total CRM contacts','<div class="d na">live database size</div>','dark');
-    const st=a.leads_by_state||{};
-    barChart('wl-states',Object.keys(st),Object.values(st),Object.keys(st).map(()=>WLC),true);
+    const cst=a.contacts_by_state||a.leads_by_state||{};
+    barChart('wl-states',Object.keys(cst),Object.values(cst),Object.keys(cst).map(()=>WLC),true);
+    const dst=a.deals_by_state||a.leads_by_state||{};
+    barChart('wl-dealstates',Object.keys(dst),Object.values(dst),Object.keys(dst).map(()=>INK),true);
     donut('wl-sources',a.deals_by_type,['#C97625','#1D1D1B','#8B9B4D','#4d79c9','#c94d8f','#999']);
     vanGrid('wl-brochures',a.brochures_by_model);
-    campTable('wl-camps',a.campaigns);
+    /* Sales & conversion (reconciled) */
     $('wl-flow-kpis').innerHTML=
       k(fmt(deposits),'Deposits received this month',flowStates(a.deposits_flow),'acc')+
       k(fmt(handovers),'Handovers completed this month',flowStates(a.handovers_flow),'dark')+
       k(fmt((snap('Deposit Received')||{}).total),'Deposits currently held','<div class="d na">pipeline snapshot</div>')+
       k(fmt(((snap('In Production')||{}).total||0)+((snap('Order Finalised')||{}).total||0)),'Orders in build','<div class="d na">finalised + in production</div>')+
       k(fmt((snap('Handover Booked / Ready')||{}).total),'Ready / booked for handover','<div class="d na">pipeline snapshot</div>');
+    $('wl-flow-detail').innerHTML=
+      `<div class="flownames"><h4>Deposits · chassis-verified</h4>${(a.deposits_names||[]).map(n=>'<span class="tag">'+n+'</span>').join('')||'<span class="footnote">none this month</span>'}</div>`+
+      `<div class="flownames"><h4>Handovers · chassis-verified</h4>${(a.handovers_names||[]).map(n=>'<span class="tag">'+n+'</span>').join('')||'<span class="footnote">none this month</span>'}</div>`;
     funnelTable();
+    /* THE READ — auto insight */
+    const conv=(snap('In Conversation')||{}).total||0, quo=(snap('Quote Sent')||{}).total||0;
+    const topC=Object.entries(cst).filter(x=>x[0]!=='Other/blank').sort((x,y)=>y[1]-x[1])[0];
+    $('wl-read').innerHTML=`<b>The read</b>${fmt(conv)} deals sit in In Conversation against ${fmt(quo)} at Quote Sent${quo?` (${Math.round(conv/quo)} conversations per quote)`:''} — moving that middle along is the biggest sales lever. ${topC?topC[0]+' led lead acquisition with '+fmt(topC[1])+' new contacts.':''} Deposits and handovers above count only chassis-numbered deals, so lead records mis-staged in the pipeline cannot inflate them.`;
+    /* Data quality watch */
+    const dq=DATA.data_quality;
+    if(dq){
+      const c=dq.configurator||{};
+      $('wl-dq').innerHTML=`<div class="dqcard"><b>Known CRM data issues (aggregates on this page are already corrected for them):</b><ul>`+
+        `<li><b>Configurator automation is over-firing:</b> "Configurator &gt; Create Deal" has run ${fmt(c.automation39_entries)} times against roughly ${fmt(c.real_submissions_alltime_approx)} real submissions, creating ${fmt(c.deals_total)} deals — including ${fmt(c.no_name_deals)} with no name and ${fmt(c.duplicate_deals)} duplicates. Configurator lead and deal counts are unreliable until the automation trigger is fixed in ActiveCampaign.</li>`+
+        `<li><b>${fmt(dq.mis_staged_money_stage.count)} lead records sit in money stages</b> (Deposit Received / Handover Complete etc.) without a chassis number, e.g. ${dq.mis_staged_money_stage.sample.slice(0,3).map(s=>'"'+s+'"').join(', ')}. These should be moved back to an early stage.</li>`+
+        `</ul></div>`;
+    }
   }
 
   if(PAGE==='ob'){
