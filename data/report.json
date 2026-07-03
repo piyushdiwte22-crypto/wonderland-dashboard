@@ -1,6 +1,148 @@
 {
- "generated": "03 Jul 2026, 09:19 PM AEST",
+ "generated": "03 Jul 2026, 09:36 PM AEST",
  "total_contacts_now": 9867,
+ "funnel_snapshot": [
+  {
+   "stage": "Brochure Download",
+   "by_state": {
+    "VIC": 0,
+    "NSW": 337,
+    "QLD": 171,
+    "SA": 0,
+    "WA": 0,
+    "NZ": 0
+   },
+   "total": 508
+  },
+  {
+   "stage": "New / To Contact",
+   "by_state": {
+    "VIC": 2,
+    "NSW": 13,
+    "QLD": 36,
+    "SA": 0,
+    "WA": 0,
+    "NZ": 0
+   },
+   "total": 51
+  },
+  {
+   "stage": "In Conversation",
+   "by_state": {
+    "VIC": 24,
+    "NSW": 89,
+    "QLD": 134,
+    "SA": 7,
+    "WA": 13,
+    "NZ": 2
+   },
+   "total": 269
+  },
+  {
+   "stage": "Quote Sent",
+   "by_state": {
+    "VIC": 6,
+    "NSW": 12,
+    "QLD": 9,
+    "SA": 1,
+    "WA": 2,
+    "NZ": 0
+   },
+   "total": 30
+  },
+  {
+   "stage": "Pending Decision",
+   "by_state": {
+    "VIC": 5,
+    "NSW": 0,
+    "QLD": 1,
+    "SA": 2,
+    "WA": 0,
+    "NZ": 0
+   },
+   "total": 8
+  },
+  {
+   "stage": "Deposit Received",
+   "by_state": {
+    "VIC": 0,
+    "NSW": 3,
+    "QLD": 1,
+    "SA": 0,
+    "WA": 2,
+    "NZ": 0
+   },
+   "total": 6
+  },
+  {
+   "stage": "Plans & Specs",
+   "by_state": {
+    "VIC": 3,
+    "NSW": 0,
+    "QLD": 0,
+    "SA": 2,
+    "WA": 2,
+    "NZ": 0
+   },
+   "total": 7
+  },
+  {
+   "stage": "Order Finalised",
+   "by_state": {
+    "VIC": 9,
+    "NSW": 0,
+    "QLD": 0,
+    "SA": 0,
+    "WA": 4,
+    "NZ": 0
+   },
+   "total": 13
+  },
+  {
+   "stage": "In Production",
+   "by_state": {
+    "VIC": 2,
+    "NSW": 0,
+    "QLD": 0,
+    "SA": 0,
+    "WA": 0,
+    "NZ": 0
+   },
+   "total": 2
+  },
+  {
+   "stage": "Handover Booked / Ready",
+   "by_state": {
+    "VIC": 4,
+    "NSW": 0,
+    "QLD": 0,
+    "SA": 0,
+    "WA": 1,
+    "NZ": 0
+   },
+   "total": 5
+  },
+  {
+   "stage": "Handover Complete",
+   "by_state": {
+    "VIC": 72,
+    "NSW": 1,
+    "QLD": 2,
+    "SA": 2,
+    "WA": 1,
+    "NZ": 0
+   },
+   "total": 78
+  }
+ ],
+ "funnel_states": [
+  "VIC",
+  "NSW",
+  "QLD",
+  "SA",
+  "WA",
+  "NZ"
+ ],
  "months": [
   {
    "key": "2026-05",
@@ -12,44 +154,87 @@
       "followers": 712,
       "follower_change": 29,
       "impressions": 13570,
-      "engagement": 167
+      "engagement": 167,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
      },
      "linkedin": {
       "followers": 158,
       "follower_change": 4,
       "impressions": 149,
-      "engagement": 15
+      "engagement": 15,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
      },
      "tiktok": {
       "followers": 471,
       "follower_change": 25,
       "impressions": 9427,
-      "engagement": 221
+      "engagement": 221,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
      },
      "facebook": {
       "followers": 24441,
       "follower_change": 20,
       "impressions": 715342,
-      "engagement": 503
+      "engagement": 503,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
      },
      "instagram": {
       "followers": 8631,
       "follower_change": 206,
       "impressions": 147178,
-      "engagement": 1906
+      "engagement": 1906,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
      },
      "pinterest": {
       "followers": 16,
       "follower_change": 0,
       "impressions": 18407,
-      "engagement": 885
+      "engagement": 885,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
      }
     },
     "totals": {
      "followers": 34429,
      "follower_change": 284,
      "impressions": 904073,
-     "engagement": 3697
+     "engagement": 3697,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "profile_views": 0,
+     "saves": 0,
+     "messages": 0,
+     "engagement_rate": 0.41
     },
     "daily": {
      "dates": [
@@ -156,20 +341,39 @@
       "followers": 1130,
       "follower_change": 8,
       "impressions": 389915,
-      "engagement": 72
+      "engagement": 72,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
      },
      "instagram": {
       "followers": 684,
       "follower_change": 64,
       "impressions": 22552,
-      "engagement": 402
+      "engagement": 402,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
      }
     },
     "totals": {
      "followers": 1814,
      "follower_change": 72,
      "impressions": 412467,
-     "engagement": 474
+     "engagement": 474,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "profile_views": 0,
+     "saves": 0,
+     "messages": 0,
+     "engagement_rate": 0.11
     },
     "daily": {
      "dates": [
@@ -309,8 +513,31 @@
       "clicks": 368,
       "date": "2026-05-01"
      }
-    ]
-   }
+    ],
+    "leads_by_state": {
+     "VIC": 39,
+     "NSW": 95,
+     "QLD": 46,
+     "SA": 13,
+     "WA": 22,
+     "NZ": 0,
+     "HQ Walk-ins": 5
+    },
+    "brochures_by_model": {
+     "Other": 51,
+     "Solara": 23,
+     "XTR": 27,
+     "Amaroo": 20,
+     "Hornet": 9
+    },
+    "deposits_flow": {
+     "NSW": 2
+    },
+    "handovers_flow": {
+     "VIC": 2
+    }
+   },
+   "metrics_note": "saves and messages tracked from June 2026"
   },
   {
    "key": "2026-06",
@@ -322,44 +549,87 @@
       "followers": 737,
       "follower_change": 22,
       "impressions": 24154,
-      "engagement": 165
+      "engagement": 165,
+      "likes": 134,
+      "comments": 3,
+      "shares": 15,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
      },
      "linkedin": {
       "followers": 164,
       "follower_change": 7,
       "impressions": 1071,
-      "engagement": 151
+      "engagement": 151,
+      "likes": 44,
+      "comments": 4,
+      "shares": 3,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
      },
      "tiktok": {
       "followers": 506,
       "follower_change": 35,
       "impressions": 10502,
-      "engagement": 282
+      "engagement": 282,
+      "likes": 229,
+      "comments": 6,
+      "shares": 23,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
      },
      "facebook": {
       "followers": 24460,
       "follower_change": 22,
       "impressions": 607840,
-      "engagement": 420
+      "engagement": 420,
+      "likes": 399,
+      "comments": 16,
+      "shares": 5,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 29
      },
      "instagram": {
       "followers": 9131,
       "follower_change": 546,
       "impressions": 258175,
-      "engagement": 5884
+      "engagement": 5884,
+      "likes": 3084,
+      "comments": 209,
+      "shares": 1034,
+      "profile_views": 3333,
+      "saves": 415,
+      "messages": 54
      },
      "pinterest": {
       "followers": 18,
       "follower_change": 1,
       "impressions": 18821,
-      "engagement": 1023
+      "engagement": 1023,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
      }
     },
     "totals": {
      "followers": 35016,
      "follower_change": 633,
      "impressions": 920563,
-     "engagement": 7925
+     "engagement": 7925,
+     "likes": 3890,
+     "comments": 238,
+     "shares": 1080,
+     "profile_views": 3333,
+     "saves": 415,
+     "messages": 83,
+     "engagement_rate": 0.86
     },
     "daily": {
      "dates": [
@@ -466,20 +736,39 @@
       "followers": 1140,
       "follower_change": 10,
       "impressions": 6201,
-      "engagement": 65
+      "engagement": 65,
+      "likes": 56,
+      "comments": 6,
+      "shares": 3,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 7
      },
      "instagram": {
       "followers": 733,
       "follower_change": 80,
       "impressions": 88045,
-      "engagement": 3240
+      "engagement": 3240,
+      "likes": 1428,
+      "comments": 61,
+      "shares": 731,
+      "profile_views": 179,
+      "saves": 285,
+      "messages": 4
      }
     },
     "totals": {
      "followers": 1873,
      "follower_change": 90,
      "impressions": 94246,
-     "engagement": 3305
+     "engagement": 3305,
+     "likes": 1484,
+     "comments": 67,
+     "shares": 734,
+     "profile_views": 179,
+     "saves": 285,
+     "messages": 11,
+     "engagement_rate": 3.51
     },
     "daily": {
      "dates": [
@@ -683,8 +972,34 @@
       "clicks": 20,
       "date": "2026-06-01"
      }
-    ]
-   }
+    ],
+    "leads_by_state": {
+     "VIC": 86,
+     "NSW": 48,
+     "QLD": 104,
+     "SA": 5,
+     "WA": 31,
+     "NZ": 1,
+     "HQ Walk-ins": 3
+    },
+    "brochures_by_model": {
+     "Solara": 27,
+     "Amaroo": 26,
+     "Hornet": 10,
+     "XTR": 10
+    },
+    "deposits_flow": {
+     "QLD": 1,
+     "WA": 2,
+     "NSW": 2,
+     "SA": 1
+    },
+    "handovers_flow": {
+     "VIC": 7,
+     "NSW": 1
+    }
+   },
+   "metrics_note": null
   },
   {
    "key": "2026-07",
@@ -696,44 +1011,87 @@
       "followers": 738,
       "follower_change": 0,
       "impressions": 0,
-      "engagement": 0
+      "engagement": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
      },
      "linkedin": {
       "followers": 164,
       "follower_change": 0,
       "impressions": 53,
-      "engagement": 1
+      "engagement": 1,
+      "likes": 1,
+      "comments": 0,
+      "shares": 0,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
      },
      "tiktok": {
       "followers": 507,
       "follower_change": 0,
       "impressions": 364,
-      "engagement": 12
+      "engagement": 12,
+      "likes": 9,
+      "comments": 0,
+      "shares": 3,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
      },
      "facebook": {
       "followers": 24460,
       "follower_change": 0,
       "impressions": 36707,
-      "engagement": 25
+      "engagement": 25,
+      "likes": 23,
+      "comments": 2,
+      "shares": 0,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
      },
      "instagram": {
       "followers": 9186,
       "follower_change": 26,
       "impressions": 84170,
-      "engagement": 2680
+      "engagement": 2680,
+      "likes": 876,
+      "comments": 18,
+      "shares": 776,
+      "profile_views": 680,
+      "saves": 0,
+      "messages": 0
      },
      "pinterest": {
       "followers": 18,
       "follower_change": 0,
       "impressions": 0,
-      "engagement": 0
+      "engagement": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
      }
     },
     "totals": {
      "followers": 35073,
      "follower_change": 26,
      "impressions": 121294,
-     "engagement": 2718
+     "engagement": 2718,
+     "likes": 909,
+     "comments": 20,
+     "shares": 779,
+     "profile_views": 680,
+     "saves": 0,
+     "messages": 0,
+     "engagement_rate": 2.24
     },
     "daily": {
      "dates": [
@@ -759,20 +1117,39 @@
       "followers": 1140,
       "follower_change": 0,
       "impressions": 349,
-      "engagement": 6
+      "engagement": 6,
+      "likes": 4,
+      "comments": 2,
+      "shares": 0,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
      },
      "instagram": {
       "followers": 747,
       "follower_change": 6,
       "impressions": 30707,
-      "engagement": 1224
+      "engagement": 1224,
+      "likes": 345,
+      "comments": 12,
+      "shares": 382,
+      "profile_views": 47,
+      "saves": 0,
+      "messages": 0
      }
     },
     "totals": {
      "followers": 1887,
      "follower_change": 6,
      "impressions": 31056,
-     "engagement": 1230
+     "engagement": 1230,
+     "likes": 349,
+     "comments": 14,
+     "shares": 382,
+     "profile_views": 47,
+     "saves": 0,
+     "messages": 0,
+     "engagement_rate": 3.96
     },
     "daily": {
      "dates": [
@@ -880,8 +1257,25 @@
       "clicks": 16,
       "date": "2026-07-01"
      }
-    ]
-   }
+    ],
+    "leads_by_state": {
+     "VIC": 5,
+     "NSW": 1,
+     "QLD": 3,
+     "SA": 0,
+     "WA": 1,
+     "NZ": 0,
+     "HQ Walk-ins": 0
+    },
+    "brochures_by_model": {
+     "Amaroo": 1
+    },
+    "deposits_flow": {},
+    "handovers_flow": {
+     "VIC": 2
+    }
+   },
+   "metrics_note": null
   }
  ]
 }
