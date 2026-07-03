@@ -230,7 +230,8 @@ document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
   document.querySelectorAll('.pane').forEach(p=>p.classList.remove('show'));
   document.getElementById('pane-'+t.dataset.pane).classList.add('show');
   // charts created while a pane was hidden have zero size — rebuild on reveal
-  requestAnimationFrame(()=>{ if(DATA) render(); });
+  // (synchronous: rAF is suspended in background tabs and never fires there)
+  if(DATA) render();
 });
 
 fetch('data/report.json?v='+Date.now()).then(r=>r.json()).then(d=>{
