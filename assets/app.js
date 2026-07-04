@@ -13,12 +13,17 @@ Promise.all([
 ]).then(([d,demo])=>{
   DATA=d; DEMO=demo;
   const g=$('gen'); if(g) g.textContent='Updated '+d.generated+' · Vista Social + ActiveCampaign';
+  // social-only pages (Wonderland Social, Outbound) only offer months that actually have social data
+  const socialOnly=(PAGE==='wl-social'||PAGE==='ob');
+  const hasSocial=m=>socialOnly?(PAGE==='ob'?!!m.ob:!!m.wl):true;
   sel=d.months.length-1;
-  for(let i=d.months.length-1;i>=0;i--){ if(!d.months[i].partial){ sel=i; break; } }
+  for(let i=d.months.length-1;i>=0;i--){ if(!d.months[i].partial && hasSocial(d.months[i])){ sel=i; break; } }
+  if(!hasSocial(d.months[sel])){ for(let i=d.months.length-1;i>=0;i--){ if(hasSocial(d.months[i])){ sel=i; break; } } }
   // month pills go into every holder on the page (#months and/or .months-holder), kept in sync
   const holders=[...document.querySelectorAll('#months, .months-holder')];
   holders.forEach(h=>{
     d.months.forEach((m,i)=>{
+      if(!hasSocial(m)) return; // hide pre-April months on social-only pages
       const b=document.createElement('button');
       b.className='pill'+(i===sel?' active':'');
       b.dataset.mi=i;
