@@ -3,7 +3,7 @@ const WLC='#C97625', OBC='#8B9B4D', INK='#1D1D1B';
 const CHCOL={facebook:'#4d79c9',instagram:'#c94d8f',youtube:'#c9564d',linkedin:'#4da3c9',tiktok:'#7d6ee0',pinterest:'#b3a13c'};
 const VANIMG={Solara:'assets/img/van-solara.webp',XTR:'assets/img/van-xtr.webp',Hornet:'assets/img/van-hornet.webp',Amaroo:'assets/img/van-amaroo.webp'};
 const fmt=n=>(n==null||isNaN(n))?'–':Math.round(n).toLocaleString('en-AU');
-const charts=[]; let DATA=null, DEMO=null, sel=0;
+const charts=[]; let DATA=null, DEMO=null, sel=0, PARTIAL=false;
 const $=id=>document.getElementById(id);
 const REDUCED=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -61,6 +61,7 @@ function countUp(el){
 function animateKpis(scope){ (scope||document).querySelectorAll('.k .n, .bs .n').forEach(countUp); }
 
 function delta(cur,prev,label){
+  if(PARTIAL) return '<div class="d na">partial month so far</div>';
   if(prev==null||cur==null||prev===0) return '<div class="d na">'+(label||'baseline month')+'</div>';
   const ch=cur-prev,pct=Math.round(ch/Math.abs(prev)*100);
   return `<div class="d ${ch>=0?'up':'down'}">${ch>=0?'▲':'▼'} ${fmt(Math.abs(ch))} (${pct>=0?'+':''}${pct}%)</div>`;
@@ -83,6 +84,7 @@ function render(){
   charts.forEach(c=>c.destroy()); charts.length=0;
   const m=DATA.months[sel], p=sel>0?DATA.months[sel-1]:null;
   const w=m.wl,o=m.ob,a=m.ac, pw=p&&p.wl,po=p&&p.ob,pa=p&&p.ac;
+  PARTIAL=!!m.partial;
   const per=m.label+(m.partial?' — partial month, numbers still accumulating':'');
   const sn=$('subnote'); if(sn) sn.textContent='Reporting period: '+per;
   const leads=sum(a.leads_by_state), pleads=pa?sum(pa.leads_by_state):null;
@@ -180,7 +182,7 @@ function render(){
       barChart('wl-cfg-conv',names,names.map(n=>cf.conversion[n]),names.map(n=>n.includes('Won')||n.includes('Deposit')?'#2e7d52':n.includes('Quote')?WLC:n.includes('Back')?'#b1442f':INK),true);
     }
     if(cf.by_state) barChart('wl-cfg-state',Object.keys(cf.by_state),Object.values(cf.by_state),Object.keys(cf.by_state).map(s=>/no state/i.test(s)?'#b9bcc2':WLC),true);
-    $('wl-cfg-model').innerHTML='<div class="dqcard" style="margin-top:12px"><b>Model breakdown — the one thing the configurator doesn’t hand us cleanly:</b> the Build Your Caravan tool <em>derives</em> the recommended model (Solara / Amaroo / Hornet / XTR) from the customer’s Type, Size, Bed, Lounge and Kitchen choices and sends a per-model quote email, but it never writes that resulting model back to a single field, so a trustworthy by-model split can’t be pulled automatically today. The clean fix is a 15-minute change to the configurator form: save the resulting model into one hidden field (or tag the contact with it) on submit. Once that’s in, this section gets a live Solara/Amaroo/Hornet/XTR breakdown. Ask Claude to spec that change when you’re ready.</div>';
+    $('wl-cfg-model').innerHTML='<div class="dqcard" style="margin-top:12px"><b>Model breakdown — coming, note for now:</b> the configurator <em>does</em> capture the chosen model (there is a "Model" field on the Build Your Caravan form). It just isn’t mapped into the ActiveCampaign feed yet, so the model never reaches the CRM and a Solara / Amaroo / Hornet / XTR split can’t be shown here yet. It’s a small, confirmed fix — map the form’s "Model" field to AC custom field 81 in the configurator feed — <b>flagged, not changed</b>. Once it’s wired, this section fills in automatically.</div>';
 
     /* Sales & conversion (reconciled) */
     $('wl-flow-kpis').innerHTML=
@@ -208,7 +210,7 @@ function render(){
     }
   }
 
-  if(PAGE==='ho'){
+  if($('ho-board')){
     const board=DATA.delivery_board||[];
     const pipeTotal=board.reduce((s,b)=>s+b.count,0);
     const ready=(board.find(b=>/Ready/.test(b.stage))||{}).count||0;

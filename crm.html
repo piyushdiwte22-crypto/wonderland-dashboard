@@ -5,21 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>Wonderland RV · CRM &amp; Sales | Monthly Report</title>
-<link rel="stylesheet" href="assets/style.css?v=10">
+<link rel="stylesheet" href="assets/style.css?v=11">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
 </head>
 <body class="wl-page">
 <div class="topbar"><div class="topbar-in">
   <div class="tb-logo">
-    <img src="assets/img/wl-logo.svg" alt="Wonderland RV">
+    <a href="index.html" class="logohome"><img src="assets/img/wl-logo.svg" alt="Wonderland RV"></a>
     <div><small>Monthly Marketing Report</small></div>
   </div>
   <nav class="navlinks">
-    <a href="index.html">Overview</a>
-    <a href="social.html">Social Media</a>
-    <a href="crm.html" class="cur-wl">CRM &amp; Sales</a>
-    <a href="outbound.html">Outbound RVs</a>
-    <a href="handovers.html">Handovers</a>
+    <div class="drop active"><a href="social.html">Wonderland RV</a>
+      <div class="menu">
+        <a href="index.html">Overview</a>
+        <a href="social.html">Social Media</a>
+        <a href="crm.html" class="cur">CRM &amp; Sales</a>
+      </div>
+    </div>
+    <div class="drop"><a href="outbound.html">Outbound RVs</a>
+      <div class="menu">
+        <a href="outbound.html">Social Media</a>
+      </div>
+    </div>
   </nav>
   <button class="printbtn" onclick="window.print()">Print</button>
 </div></div>
@@ -90,7 +97,21 @@
   </section>
 
   <section>
-    <div class="sec-h"><span class="no">05</span><h2>Data quality watch</h2></div>
+    <div class="sec-h"><span class="no">05</span><h2>Handovers &amp; deliveries</h2></div>
+    <p class="sec-cap">Every chassis-verified van on its way to an owner — from deposit taken this month to the live build order book.</p>
+    <div class="kgrid" id="ho-kpis"></div>
+    <div class="halves" id="ho-detail"></div>
+    <div class="card" style="margin-top:14px"><h3>Delivery pipeline · open chassis-numbered vans by build stage</h3>
+      <div class="boardwrap" id="ho-board"></div></div>
+    <div class="duo">
+      <div class="card"><h3>Handovers and deposits by month</h3><div class="chartbox"><canvas id="ho-trend"></canvas></div></div>
+      <div class="card"><h3>Handovers by state · this month</h3><div class="chartbox"><canvas id="ho-states"></canvas></div></div>
+    </div>
+    <div id="ho-read" class="readcard"></div>
+  </section>
+
+  <section>
+    <div class="sec-h"><span class="no">06</span><h2>Data quality watch</h2></div>
     <div id="wl-dq"></div>
   </section>
 
@@ -100,6 +121,6 @@
   </footer>
 </div>
 <script>const PAGE='wl-crm';</script>
-<script src="assets/app.js?v=10"></script>
+<script src="assets/app.js?v=11"></script>
 </body>
 </html>
