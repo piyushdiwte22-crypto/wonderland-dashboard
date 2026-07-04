@@ -31,6 +31,9 @@ for m in months:
     if not re.match(r"^\d{4}-\d{2}$", mk): errs.append(f"bad month key: {mk}")
     for brand in ["wl", "ob"]:
         b = m.get(brand)
+        if b is None:  # CRM-only month (social tracking began April 2026) — valid
+            if "social_note" not in m: warns.append(f"{mk}: {brand} null but no social_note")
+            continue
         if not b: errs.append(f"{mk}: missing {brand}"); continue
         tot = b.get("totals", {})
         ch = b.get("channels", {})

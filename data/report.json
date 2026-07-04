@@ -1,121 +1,109 @@
 {
- "generated": "04 Jul 2026, 11:34 AM AEST",
- "total_contacts_now": 9867,
+ "generated": "04 Jul 2026, 12:09 PM AEST",
+ "total_contacts_now": 9870,
  "funnel_snapshot": [
   {
    "stage": "Brochure Download",
    "by_state": {
     "VIC": 0,
-    "NSW": 337,
-    "QLD": 171,
+    "NSW": 1175,
+    "QLD": 924,
     "SA": 0,
     "WA": 0,
     "NZ": 0
    },
-   "total": 508
+   "total": 2099
   },
   {
    "stage": "New / To Contact",
    "by_state": {
     "VIC": 2,
-    "NSW": 13,
-    "QLD": 36,
+    "NSW": 43,
+    "QLD": 167,
     "SA": 0,
     "WA": 0,
     "NZ": 0
    },
-   "total": 51
+   "total": 212
   },
   {
    "stage": "In Conversation",
    "by_state": {
-    "VIC": 24,
-    "NSW": 89,
-    "QLD": 134,
-    "SA": 7,
-    "WA": 13,
-    "NZ": 2
+    "VIC": 30,
+    "NSW": 208,
+    "QLD": 305,
+    "SA": 17,
+    "WA": 25,
+    "NZ": 28
    },
-   "total": 269
+   "total": 613
   },
   {
    "stage": "Quote Sent",
    "by_state": {
-    "VIC": 6,
-    "NSW": 12,
-    "QLD": 9,
+    "VIC": 9,
+    "NSW": 24,
+    "QLD": 13,
     "SA": 1,
-    "WA": 2,
+    "WA": 3,
     "NZ": 0
    },
-   "total": 30
+   "total": 50
   },
   {
    "stage": "Pending Decision",
    "by_state": {
-    "VIC": 5,
+    "VIC": 6,
     "NSW": 0,
-    "QLD": 1,
+    "QLD": 2,
     "SA": 2,
-    "WA": 0,
+    "WA": 2,
     "NZ": 0
    },
-   "total": 8
+   "total": 12
   },
   {
    "stage": "Deposit Received",
    "by_state": {
     "VIC": 0,
     "NSW": 3,
-    "QLD": 1,
+    "QLD": 2,
     "SA": 0,
-    "WA": 2,
+    "WA": 3,
     "NZ": 0
    },
-   "total": 6
+   "total": 8
   },
   {
    "stage": "Plans & Specs",
    "by_state": {
-    "VIC": 3,
+    "VIC": 4,
     "NSW": 0,
     "QLD": 0,
-    "SA": 2,
+    "SA": 3,
     "WA": 2,
     "NZ": 0
    },
-   "total": 7
+   "total": 9
   },
   {
    "stage": "Order Finalised",
    "by_state": {
-    "VIC": 9,
-    "NSW": 0,
-    "QLD": 0,
-    "SA": 0,
-    "WA": 4,
+    "VIC": 12,
+    "NSW": 1,
+    "QLD": 1,
+    "SA": 1,
+    "WA": 6,
     "NZ": 0
    },
-   "total": 13
+   "total": 21
   },
   {
    "stage": "In Production",
    "by_state": {
-    "VIC": 2,
+    "VIC": 3,
     "NSW": 0,
-    "QLD": 0,
-    "SA": 0,
-    "WA": 0,
-    "NZ": 0
-   },
-   "total": 2
-  },
-  {
-   "stage": "Handover Booked / Ready",
-   "by_state": {
-    "VIC": 4,
-    "NSW": 0,
-    "QLD": 0,
+    "QLD": 1,
     "SA": 0,
     "WA": 1,
     "NZ": 0
@@ -123,16 +111,28 @@
    "total": 5
   },
   {
-   "stage": "Handover Complete",
+   "stage": "Handover Booked / Ready",
    "by_state": {
-    "VIC": 72,
-    "NSW": 1,
-    "QLD": 2,
-    "SA": 2,
+    "VIC": 5,
+    "NSW": 0,
+    "QLD": 1,
+    "SA": 0,
     "WA": 1,
     "NZ": 0
    },
-   "total": 78
+   "total": 7
+  },
+  {
+   "stage": "Handover Complete",
+   "by_state": {
+    "VIC": 98,
+    "NSW": 3,
+    "QLD": 20,
+    "SA": 6,
+    "WA": 4,
+    "NZ": 0
+   },
+   "total": 131
   }
  ],
  "funnel_states": [
@@ -143,11 +143,1093 @@
   "WA",
   "NZ"
  ],
+ "delivery_board": [
+  {
+   "stage": "Deposit Received",
+   "count": 2,
+   "items": [
+    {
+     "chassis": "WL1270",
+     "name": "Solara Brochure Lead",
+     "state": "NSW"
+    },
+    {
+     "chassis": "WL969",
+     "name": "",
+     "state": "WA"
+    }
+   ]
+  },
+  {
+   "stage": "Plans & Specs",
+   "count": 6,
+   "items": [
+    {
+     "chassis": "WL1282",
+     "name": "DUNN XT2100K-F2",
+     "state": "SA"
+    },
+    {
+     "chassis": "WL1284",
+     "name": "",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1309",
+     "name": "Murfet AM1709R_L",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1317",
+     "name": "XTR- Andreas Sonder",
+     "state": "WA"
+    },
+    {
+     "chassis": "WL1321",
+     "name": "SQUIRE SO22 R C",
+     "state": "SA"
+    },
+    {
+     "chassis": "WL1345",
+     "name": "kim & andrea",
+     "state": "WA"
+    }
+   ]
+  },
+  {
+   "stage": "Order Finalised",
+   "count": 16,
+   "items": [
+    {
+     "chassis": "WL1088",
+     "name": "Boulton HO2206F-B4",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1234",
+     "name": "XT2311K1-F4.3 HADLEY",
+     "state": "WA"
+    },
+    {
+     "chassis": "WL1259",
+     "name": "Healy XT1906QRC",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1264",
+     "name": "Solara Brochure Lead",
+     "state": "NSW"
+    },
+    {
+     "chassis": "WL1268",
+     "name": "Minogue",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1278",
+     "name": "SO1806ML Aiden Brock",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1285",
+     "name": "Darling XT2106",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1292",
+     "name": "Murray AM2100Q-F2.0",
+     "state": "SA"
+    },
+    {
+     "chassis": "WL1303",
+     "name": "HO2106EW",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1310",
+     "name": "Shell HO2106Q-M-SC C",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1316",
+     "name": "HURLEY",
+     "state": "WA"
+    },
+    {
+     "chassis": "WL1318",
+     "name": "XT1906RL Peter & Don",
+     "state": "WA"
+    },
+    {
+     "chassis": "WL1335",
+     "name": "BURKE",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1343",
+     "name": "SCRIVEN AM1806",
+     "state": "WA"
+    },
+    {
+     "chassis": "WL1357",
+     "name": "BIFFIN",
+     "state": "WA"
+    },
+    {
+     "chassis": "WL1358",
+     "name": "Dyson",
+     "state": "WA"
+    }
+   ]
+  },
+  {
+   "stage": "In Production",
+   "count": 5,
+   "items": [
+    {
+     "chassis": "WL1177",
+     "name": "ZILLWOOD",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1258",
+     "name": "Nick Barnett",
+     "state": "WA"
+    },
+    {
+     "chassis": "WL1265",
+     "name": "Carpenter",
+     "state": "QLD"
+    },
+    {
+     "chassis": "WL1273",
+     "name": "CROXFORD AM21000M_L_",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1288",
+     "name": "JOWETT HO2100-M-XLE",
+     "state": "VIC"
+    }
+   ]
+  },
+  {
+   "stage": "Ready / Handover Booked",
+   "count": 6,
+   "items": [
+    {
+     "chassis": "WL1154",
+     "name": "",
+     "state": "WA"
+    },
+    {
+     "chassis": "WL1248",
+     "name": "DINGLEY XT1906",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1253",
+     "name": "KAESTNER HO2311Q-F2.",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1289",
+     "name": "XTR 2206 F3.3",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1290",
+     "name": "\u00a0Andrew & Karen Simp",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1332",
+     "name": "PAGE AM2107EW-F2.4",
+     "state": "VIC"
+    }
+   ]
+  }
+ ],
+ "configurator": {
+  "sessions_alltime": 5514,
+  "submitters_alltime": 1826,
+  "by_state": {
+   "VIC": 446,
+   "NSW": 383,
+   "QLD": 83,
+   "WA": 61,
+   "SA": 22,
+   "TAS": 15,
+   "NT": 2,
+   "NZ": 1,
+   "No state recorded": 813
+  },
+  "conversion": {
+   "In conversation": 90,
+   "Back to market": 62,
+   "Quote sent": 6,
+   "Deposit+ (committed)": 2,
+   "Won / Sold": 1,
+   "New / other": 1
+  }
+ },
  "months": [
+  {
+   "key": "2026-01",
+   "label": "January 2026",
+   "partial": false,
+   "ac": {
+    "new_contacts": 322,
+    "ad_enquiries": 0,
+    "deals_created": 317,
+    "deals_by_type": {
+     "Brochure downloads": 177,
+     "Configurator": 79,
+     "Sales-entered / other": 51,
+     "Shows & events": 9,
+     "Virtual consults": 1
+    },
+    "deals_by_state": {
+     "VIC": 82,
+     "WA": 49,
+     "QLD": 71,
+     "SA": 17,
+     "NSW": 92,
+     "NZ": 6
+    },
+    "leads_by_state": {
+     "VIC": 82,
+     "WA": 49,
+     "QLD": 71,
+     "SA": 17,
+     "NSW": 92,
+     "NZ": 6
+    },
+    "contacts_by_state": {
+     "NSW": 90,
+     "VIC": 73,
+     "QLD": 71,
+     "WA": 44,
+     "SA": 17,
+     "TAS": 7,
+     "NZ": 6,
+     "NT": 2,
+     "No state recorded": 12
+    },
+    "brochures_by_model": {
+     "XTR": 92,
+     "Solara": 83,
+     "Amaroo": 82,
+     "Hornet": 39,
+     "COTY": 13
+    },
+    "configurator_leads": 77,
+    "deposits_flow": {
+     "VIC": 1
+    },
+    "handovers_flow": {
+     "VIC": 12
+    },
+    "deposits_names": [
+     "WL1169 Rossetto"
+    ],
+    "handovers_names": [
+     "WL1122 Biggs",
+     "WL1045 KEOGH",
+     "WL1120 COOK AM2300Q2-F2.4",
+     "WL1121 Higginbottom AM2107F",
+     "WL1117 Wilson AM2206EW-F2.4",
+     "WL1116 ALLMAN",
+     "WL1112 MARTH",
+     "WL1101 LACEY",
+     "WL1137 ANDREWS",
+     "WL1156 LEMON HO2100K-F2.0"
+    ],
+    "emails": {
+     "broadcast_count": 1,
+     "sent": 1600,
+     "avg_open_pct": 47.7,
+     "avg_click_pct": 15.0,
+     "automated_sends": 0,
+     "broadcasts": [
+      {
+       "name": "January Newsletter 2026",
+       "sends": 1600,
+       "opens": 763,
+       "clicks": 240,
+       "date": "2026-01-29"
+      }
+     ]
+    }
+   },
+   "wl": null,
+   "ob": null,
+   "social_note": "Social analytics tracking in Vista began April 2026, so earlier months show CRM only."
+  },
+  {
+   "key": "2026-02",
+   "label": "February 2026",
+   "partial": false,
+   "ac": {
+    "new_contacts": 303,
+    "ad_enquiries": 0,
+    "deals_created": 335,
+    "deals_by_type": {
+     "Brochure downloads": 139,
+     "Sales-entered / other": 113,
+     "Configurator": 45,
+     "Shows & events": 36,
+     "Virtual consults": 2
+    },
+    "deals_by_state": {
+     "SA": 33,
+     "VIC": 148,
+     "QLD": 47,
+     "WA": 54,
+     "NSW": 51,
+     "NZ": 2
+    },
+    "leads_by_state": {
+     "SA": 33,
+     "VIC": 148,
+     "QLD": 47,
+     "WA": 54,
+     "NSW": 51,
+     "NZ": 2
+    },
+    "contacts_by_state": {
+     "VIC": 105,
+     "NSW": 54,
+     "QLD": 51,
+     "WA": 47,
+     "SA": 26,
+     "TAS": 4,
+     "NT": 3,
+     "NZ": 2,
+     "No state recorded": 11
+    },
+    "brochures_by_model": {
+     "Solara": 89,
+     "XTR": 70,
+     "Amaroo": 57,
+     "Hornet": 33,
+     "COTY": 11
+    },
+    "configurator_leads": 45,
+    "deposits_flow": {},
+    "handovers_flow": {
+     "VIC": 1
+    },
+    "deposits_names": [],
+    "handovers_names": [
+     "WL1148 Davey HO2200RCA"
+    ],
+    "emails": {
+     "broadcast_count": 5,
+     "sent": 4002,
+     "avg_open_pct": 44.9,
+     "avg_click_pct": 7.3,
+     "automated_sends": 0,
+     "broadcasts": [
+      {
+       "name": "February Newsletter 2026 ",
+       "sends": 1608,
+       "opens": 814,
+       "clicks": 145,
+       "date": "2026-02-26"
+      },
+      {
+       "name": "Victorian Caravan & Camping Supershow",
+       "sends": 748,
+       "opens": 309,
+       "clicks": 54,
+       "date": "2026-02-12"
+      },
+      {
+       "name": "Victorian Caravan & Camping Supershow - Reminder (FINAL)",
+       "sends": 672,
+       "opens": 231,
+       "clicks": 15,
+       "date": "2026-02-16"
+      },
+      {
+       "name": "Victorian Caravan & Camping Supershow - Final",
+       "sends": 616,
+       "opens": 281,
+       "clicks": 56,
+       "date": "2026-02-12"
+      },
+      {
+       "name": "Come join our NSW Open Day\u202f\u2728 ",
+       "sends": 358,
+       "opens": 160,
+       "clicks": 22,
+       "date": "2026-02-05"
+      }
+     ]
+    }
+   },
+   "wl": null,
+   "ob": null,
+   "social_note": "Social analytics tracking in Vista began April 2026, so earlier months show CRM only."
+  },
+  {
+   "key": "2026-03",
+   "label": "March 2026",
+   "partial": false,
+   "ac": {
+    "new_contacts": 195,
+    "ad_enquiries": 0,
+    "deals_created": 177,
+    "deals_by_type": {
+     "Brochure downloads": 95,
+     "Sales-entered / other": 41,
+     "Configurator": 31,
+     "Shows & events": 8,
+     "Virtual consults": 2
+    },
+    "deals_by_state": {
+     "NSW": 32,
+     "VIC": 50,
+     "WA": 49,
+     "QLD": 28,
+     "SA": 14,
+     "NZ": 4
+    },
+    "leads_by_state": {
+     "NSW": 32,
+     "VIC": 50,
+     "WA": 49,
+     "QLD": 28,
+     "SA": 14,
+     "NZ": 4
+    },
+    "contacts_by_state": {
+     "WA": 50,
+     "VIC": 42,
+     "NSW": 30,
+     "QLD": 29,
+     "SA": 14,
+     "NZ": 4,
+     "TAS": 3,
+     "No state recorded": 23
+    },
+    "brochures_by_model": {
+     "Solara": 50,
+     "XTR": 38,
+     "Amaroo": 37,
+     "Hornet": 26,
+     "COTY": 3
+    },
+    "configurator_leads": 29,
+    "deposits_flow": {},
+    "handovers_flow": {
+     "VIC": 4,
+     "WA": 1
+    },
+    "deposits_names": [],
+    "handovers_names": [
+     "WL1242 XTR",
+     "WL1183 Fletcher AM1709RL",
+     "WL1129 CARNEY HO2100F-B2",
+     "WL1182 Ben Fuller AM2106EW-",
+     "WL1230 Brad Glew HO1906R"
+    ],
+    "emails": {
+     "broadcast_count": 5,
+     "sent": 3110,
+     "avg_open_pct": 39.1,
+     "avg_click_pct": 7.2,
+     "automated_sends": 0,
+     "broadcasts": [
+      {
+       "name": "March Newsletter 2026  ",
+       "sends": 1667,
+       "opens": 737,
+       "clicks": 162,
+       "date": "2026-03-30"
+      },
+      {
+       "name": "VIC - Border Show 2026",
+       "sends": 698,
+       "opens": 294,
+       "clicks": 32,
+       "date": "2026-03-24"
+      },
+      {
+       "name": "VIC - Border Show 2026",
+       "sends": 431,
+       "opens": 69,
+       "clicks": 3,
+       "date": "2026-03-26"
+      },
+      {
+       "name": "WA - Perth Caravan and Camping Show 2026",
+       "sends": 205,
+       "opens": 98,
+       "clicks": 24,
+       "date": "2026-03-16"
+      },
+      {
+       "name": "WA - Perth Caravan and Camping Show 2026",
+       "sends": 109,
+       "opens": 18,
+       "clicks": 2,
+       "date": "2026-03-18"
+      }
+     ]
+    }
+   },
+   "wl": null,
+   "ob": null,
+   "social_note": "Social analytics tracking in Vista began April 2026, so earlier months show CRM only."
+  },
+  {
+   "key": "2026-04",
+   "label": "April 2026",
+   "partial": false,
+   "ac": {
+    "new_contacts": 537,
+    "ad_enquiries": 0,
+    "deals_created": 232,
+    "deals_by_type": {
+     "Brochure downloads": 94,
+     "Configurator": 48,
+     "Shows & events": 44,
+     "Sales-entered / other": 43,
+     "Virtual consults": 3
+    },
+    "deals_by_state": {
+     "NSW": 95,
+     "VIC": 55,
+     "QLD": 48,
+     "WA": 17,
+     "SA": 14,
+     "NZ": 3
+    },
+    "leads_by_state": {
+     "NSW": 95,
+     "VIC": 55,
+     "QLD": 48,
+     "WA": 17,
+     "SA": 14,
+     "NZ": 3
+    },
+    "contacts_by_state": {
+     "VIC": 154,
+     "NSW": 127,
+     "QLD": 67,
+     "WA": 31,
+     "SA": 24,
+     "TAS": 9,
+     "NT": 4,
+     "NZ": 3,
+     "No state recorded": 118
+    },
+    "brochures_by_model": {
+     "XTR": 44,
+     "Solara": 43,
+     "Amaroo": 35,
+     "Hornet": 8,
+     "COTY": 2
+    },
+    "configurator_leads": 47,
+    "deposits_flow": {},
+    "handovers_flow": {
+     "WA": 1,
+     "VIC": 18,
+     "SA": 2
+    },
+    "deposits_names": [],
+    "handovers_names": [
+     "WL1189 Ryan Wilkie",
+     "WL1019 Mike Millott",
+     "WL1115 Agrifridge Pty Ltd",
+     "WL1187 AM2211 KEENAN",
+     "WL1136 HO2200Q-RC- ANDY",
+     "WL1138 McDowell",
+     "WL1162 AM1906 Culph",
+     "WL1164 Jenna Spurling",
+     "WL934 ",
+     "WL1160 4X4 Brothers"
+    ],
+    "emails": {
+     "broadcast_count": 5,
+     "sent": 3064,
+     "avg_open_pct": 41.6,
+     "avg_click_pct": 13.6,
+     "automated_sends": 0,
+     "broadcasts": [
+      {
+       "name": "April Newsletter 2026 ",
+       "sends": 1793,
+       "opens": 821,
+       "clicks": 358,
+       "date": "2026-04-29"
+      },
+      {
+       "name": "NSW - Rosehill Show",
+       "sends": 374,
+       "opens": 156,
+       "clicks": 30,
+       "date": "2026-04-21"
+      },
+      {
+       "name": "NSW Open Day",
+       "sends": 367,
+       "opens": 144,
+       "clicks": 18,
+       "date": "2026-04-17"
+      },
+      {
+       "name": "QLD - Nambour Show",
+       "sends": 312,
+       "opens": 118,
+       "clicks": 8,
+       "date": "2026-04-15"
+      },
+      {
+       "name": "NSW - Rosehill Show",
+       "sends": 218,
+       "opens": 37,
+       "clicks": 3,
+       "date": "2026-04-27"
+      }
+     ]
+    }
+   },
+   "wl": {
+    "channels": {
+     "youtube": {
+      "followers": 681,
+      "follower_change": 5,
+      "impressions": 3626,
+      "engagement": 30,
+      "likes": 18,
+      "comments": 0,
+      "shares": 12,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
+     },
+     "linkedin": {
+      "followers": 154,
+      "follower_change": 4,
+      "impressions": 44,
+      "engagement": 2,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
+     },
+     "tiktok": {
+      "followers": 445,
+      "follower_change": 2,
+      "impressions": 2301,
+      "engagement": 32,
+      "likes": 29,
+      "comments": 2,
+      "shares": 1,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
+     },
+     "facebook": {
+      "followers": 24417,
+      "follower_change": 62,
+      "impressions": 682131,
+      "engagement": 467,
+      "likes": 466,
+      "comments": 1,
+      "shares": 0,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
+     },
+     "instagram": {
+      "followers": 8429,
+      "follower_change": 66,
+      "impressions": 111639,
+      "engagement": 1387,
+      "likes": 965,
+      "comments": 53,
+      "shares": 132,
+      "profile_views": 1010,
+      "saves": 0,
+      "messages": 0
+     },
+     "pinterest": {
+      "followers": 18,
+      "follower_change": 1,
+      "impressions": 22292,
+      "engagement": 1096,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
+     }
+    },
+    "totals": {
+     "followers": 34144,
+     "follower_change": 140,
+     "impressions": 822033,
+     "engagement": 3014,
+     "likes": 1478,
+     "comments": 56,
+     "shares": 145,
+     "profile_views": 1010,
+     "saves": 0,
+     "messages": 0,
+     "engagement_rate": 0.37
+    },
+    "daily": {
+     "dates": [
+      "04/01",
+      "04/02",
+      "04/03",
+      "04/04",
+      "04/05",
+      "04/06",
+      "04/07",
+      "04/08",
+      "04/09",
+      "04/10",
+      "04/11",
+      "04/12",
+      "04/13",
+      "04/14",
+      "04/15",
+      "04/16",
+      "04/17",
+      "04/18",
+      "04/19",
+      "04/20",
+      "04/21",
+      "04/22",
+      "04/23",
+      "04/24",
+      "04/25",
+      "04/26",
+      "04/27",
+      "04/28",
+      "04/29",
+      "04/30"
+     ],
+     "impressions": [
+      24531,
+      16848,
+      23024,
+      27522,
+      32093,
+      28916,
+      27996,
+      25798,
+      26494,
+      38657,
+      17769,
+      24627,
+      25233,
+      25498,
+      21947,
+      22082,
+      25727,
+      26644,
+      27715,
+      26926,
+      25301,
+      27322,
+      27782,
+      47108,
+      38306,
+      31205,
+      32436,
+      27542,
+      23239,
+      25745
+     ],
+     "engagement": [
+      57,
+      94,
+      88,
+      69,
+      67,
+      89,
+      84,
+      99,
+      142,
+      109,
+      68,
+      58,
+      128,
+      86,
+      66,
+      101,
+      107,
+      119,
+      90,
+      72,
+      106,
+      95,
+      93,
+      64,
+      64,
+      59,
+      285,
+      147,
+      142,
+      166
+     ]
+    }
+   },
+   "ob": {
+    "channels": {
+     "facebook": {
+      "followers": 1121,
+      "follower_change": 9,
+      "impressions": 342359,
+      "engagement": 99,
+      "likes": 97,
+      "comments": 2,
+      "shares": 0,
+      "profile_views": 0,
+      "saves": 0,
+      "messages": 0
+     },
+     "instagram": {
+      "followers": 619,
+      "follower_change": 3,
+      "impressions": 25997,
+      "engagement": 269,
+      "likes": 214,
+      "comments": 6,
+      "shares": 15,
+      "profile_views": 69,
+      "saves": 0,
+      "messages": 0
+     }
+    },
+    "totals": {
+     "followers": 1740,
+     "follower_change": 12,
+     "impressions": 368356,
+     "engagement": 368,
+     "likes": 311,
+     "comments": 8,
+     "shares": 15,
+     "profile_views": 69,
+     "saves": 0,
+     "messages": 0,
+     "engagement_rate": 0.1
+    },
+    "daily": {
+     "dates": [
+      "04/01",
+      "04/02",
+      "04/03",
+      "04/04",
+      "04/05",
+      "04/06",
+      "04/07",
+      "04/08",
+      "04/09",
+      "04/10",
+      "04/11",
+      "04/12",
+      "04/13",
+      "04/14",
+      "04/15",
+      "04/16",
+      "04/17",
+      "04/18",
+      "04/19",
+      "04/20",
+      "04/21",
+      "04/22",
+      "04/23",
+      "04/24",
+      "04/25",
+      "04/26",
+      "04/27",
+      "04/28",
+      "04/29",
+      "04/30"
+     ],
+     "impressions": [
+      13963,
+      13258,
+      13502,
+      11119,
+      11905,
+      12228,
+      11559,
+      10415,
+      15220,
+      10229,
+      13925,
+      12685,
+      11736,
+      11498,
+      10244,
+      12525,
+      12353,
+      13592,
+      13661,
+      12383,
+      13873,
+      13507,
+      10991,
+      10968,
+      10491,
+      15262,
+      11178,
+      9677,
+      11288,
+      13121
+     ],
+     "engagement": [
+      21,
+      48,
+      19,
+      7,
+      5,
+      18,
+      17,
+      6,
+      8,
+      3,
+      13,
+      5,
+      9,
+      17,
+      5,
+      9,
+      5,
+      6,
+      3,
+      1,
+      4,
+      13,
+      12,
+      8,
+      20,
+      40,
+      5,
+      6,
+      9,
+      26
+     ]
+    }
+   }
+  },
   {
    "key": "2026-05",
    "label": "May 2026",
    "partial": false,
+   "ac": {
+    "new_contacts": 236,
+    "ad_enquiries": 0,
+    "deals_created": 215,
+    "deals_by_type": {
+     "Brochure downloads": 79,
+     "Shows & events": 59,
+     "Configurator": 43,
+     "Sales-entered / other": 30,
+     "Virtual consults": 4
+    },
+    "deals_by_state": {
+     "NSW": 95,
+     "VIC": 39,
+     "SA": 13,
+     "QLD": 46,
+     "WA": 22
+    },
+    "leads_by_state": {
+     "NSW": 95,
+     "VIC": 39,
+     "SA": 13,
+     "QLD": 46,
+     "WA": 22
+    },
+    "contacts_by_state": {
+     "NSW": 94,
+     "QLD": 52,
+     "VIC": 34,
+     "WA": 25,
+     "SA": 13,
+     "TAS": 5,
+     "NT": 1,
+     "No state recorded": 12
+    },
+    "brochures_by_model": {
+     "XTR": 34,
+     "Solara": 31,
+     "Amaroo": 24,
+     "Hornet": 11,
+     "COTY": 2
+    },
+    "configurator_leads": 42,
+    "deposits_flow": {
+     "NSW": 1
+    },
+    "handovers_flow": {
+     "VIC": 6,
+     "NSW": 2
+    },
+    "deposits_names": [
+     "WL1270 Solara Brochure Lead"
+    ],
+    "handovers_names": [
+     "WL1186 AM2106",
+     "WL1206 HO2206EW-F4.3  Ana &",
+     "WL1081 Foden",
+     "WL1203 Polly & Chris Porter",
+     "WL1170 XTR",
+     "WL1217 DEIMEL",
+     "WL1070 XTR Brochure Lead",
+     "WL1236 Mansfield SO1806"
+    ],
+    "emails": {
+     "broadcast_count": 4,
+     "sent": 4552,
+     "avg_open_pct": 37.6,
+     "avg_click_pct": 10.0,
+     "automated_sends": 0,
+     "broadcasts": [
+      {
+       "name": "Demo 24/25 Plate Sale",
+       "sends": 2496,
+       "opens": 1213,
+       "clicks": 368,
+       "date": "2026-05-01"
+      },
+      {
+       "name": "Demo 24/25 Plate Sale",
+       "sends": 1336,
+       "opens": 218,
+       "clicks": 57,
+       "date": "2026-05-05"
+      },
+      {
+       "name": "VIC - Bendigo Show",
+       "sends": 367,
+       "opens": 149,
+       "clicks": 16,
+       "date": "2026-05-27"
+      },
+      {
+       "name": "QLD - Mackay Outdoor Adventure plus Home & Lifestyle Expo!",
+       "sends": 353,
+       "opens": 131,
+       "clicks": 12,
+       "date": "2026-05-21"
+      }
+     ]
+    }
+   },
    "wl": {
     "channels": {
      "youtube": {
@@ -473,142 +1555,124 @@
       25
      ]
     }
-   },
-   "ac": {
-    "new_contacts": 236,
-    "ad_enquiries": 0,
-    "deals_created": 220,
-    "deals_by_type": {
-     "Brochure downloads": 79,
-     "Shows & events": 59,
-     "Configurator": 43,
-     "Sales-entered / other": 35,
-     "Virtual consults": 4
-    },
-    "campaigns": [
-     {
-      "name": "VIC - Bendigo Show",
-      "sends": 367,
-      "opens": 149,
-      "clicks": 16,
-      "date": "2026-05-27"
-     },
-     {
-      "name": "QLD - Mackay Outdoor Adventure plus Home & Lifestyle Expo!",
-      "sends": 353,
-      "opens": 131,
-      "clicks": 12,
-      "date": "2026-05-21"
-     },
-     {
-      "name": "Demo 24/25 Plate Sale",
-      "sends": 1336,
-      "opens": 218,
-      "clicks": 57,
-      "date": "2026-05-05"
-     },
-     {
-      "name": "Demo 24/25 Plate Sale",
-      "sends": 2496,
-      "opens": 1213,
-      "clicks": 368,
-      "date": "2026-05-01"
-     }
-    ],
-    "leads_by_state": {
-     "VIC": 39,
-     "NSW": 95,
-     "QLD": 46,
-     "SA": 13,
-     "WA": 22,
-     "NZ": 0,
-     "HQ Walk-ins": 5
-    },
-    "brochures_by_model": {
-     "XTR": 34,
-     "Solara": 31,
-     "Amaroo": 24,
-     "Hornet": 11,
-     "COTY": 2
-    },
-    "deposits_flow": {
-     "NSW": 1
-    },
-    "handovers_flow": {
-     "VIC": 2
-    },
-    "emails": {
-     "broadcast_count": 4,
-     "sent": 4552,
-     "avg_open_pct": 37.6,
-     "avg_click_pct": 10.0,
-     "automated_sends": 0,
-     "broadcasts": [
-      {
-       "name": "Demo 24/25 Plate Sale",
-       "sends": 2496,
-       "opens": 1213,
-       "clicks": 368,
-       "date": "2026-05-01"
-      },
-      {
-       "name": "Demo 24/25 Plate Sale",
-       "sends": 1336,
-       "opens": 218,
-       "clicks": 57,
-       "date": "2026-05-05"
-      },
-      {
-       "name": "VIC - Bendigo Show",
-       "sends": 367,
-       "opens": 149,
-       "clicks": 16,
-       "date": "2026-05-27"
-      },
-      {
-       "name": "QLD - Mackay Outdoor Adventure plus Home & Lifestyle Expo!",
-       "sends": 353,
-       "opens": 131,
-       "clicks": 12,
-       "date": "2026-05-21"
-      }
-     ]
-    },
-    "contacts_by_state": {
-     "NSW": 91,
-     "QLD": 46,
-     "VIC": 31,
-     "WA": 24,
-     "SA": 13,
-     "TAS": 5,
-     "NT": 1,
-     "No state recorded": 25
-    },
-    "deals_by_state": {
-     "VIC": 39,
-     "NSW": 95,
-     "QLD": 46,
-     "SA": 13,
-     "WA": 22,
-     "NZ": 0,
-     "HQ Walk-ins": 5
-    },
-    "deposits_names": [
-     "WL1270 - Solara Brochure "
-    ],
-    "handovers_names": [
-     "WL1186 AM2106",
-     "WL1206 HO2206EW-F4.3  Ana"
-    ],
-    "configurator_note": "unreliable",
-    "configurator_leads": 41
-   },
-   "metrics_note": "saves and messages tracked from June 2026"
+   }
   },
   {
    "key": "2026-06",
    "label": "June 2026",
    "partial": false,
+   "ac": {
+    "new_contacts": 227,
+    "ad_enquiries": 40,
+    "deals_created": 273,
+    "deals_by_type": {
+     "Brochure downloads": 72,
+     "Campaign offers": 72,
+     "Shows & events": 51,
+     "Configurator": 45,
+     "Sales-entered / other": 25,
+     "Ad enquiries": 7,
+     "Virtual consults": 1
+    },
+    "deals_by_state": {
+     "QLD": 103,
+     "NSW": 47,
+     "VIC": 86,
+     "WA": 31,
+     "SA": 5,
+     "NZ": 1
+    },
+    "leads_by_state": {
+     "QLD": 103,
+     "NSW": 47,
+     "VIC": 86,
+     "WA": 31,
+     "SA": 5,
+     "NZ": 1
+    },
+    "contacts_by_state": {
+     "QLD": 95,
+     "NSW": 44,
+     "VIC": 31,
+     "WA": 27,
+     "TAS": 6,
+     "SA": 5,
+     "No state recorded": 19
+    },
+    "brochures_by_model": {
+     "Solara": 47,
+     "Amaroo": 33,
+     "XTR": 31,
+     "Hornet": 14
+    },
+    "configurator_leads": 41,
+    "deposits_flow": {
+     "WA": 2,
+     "SA": 1
+    },
+    "handovers_flow": {
+     "VIC": 8
+    },
+    "deposits_names": [
+     "WL969 ",
+     "WL1277 Miller AM2107EWF",
+     "WL1320 Sutcliffe AM1709"
+    ],
+    "handovers_names": [
+     "WL1035 ",
+     "WL1196 LOVE AM2311Q-F4.3",
+     "WL1243 Rennae & Mark Ruggie",
+     "WL899 Della-Mina AM1709R_L",
+     "WL1280 SANDY XTR",
+     "WL1241 AM1709RL ROGERS",
+     "WL1124 STROTHER AM1709RL",
+     "WL1251 THYNE AM2107"
+    ],
+    "emails": {
+     "broadcast_count": 5,
+     "sent": 8729,
+     "avg_open_pct": 44.8,
+     "avg_click_pct": 6.5,
+     "automated_sends": 2217,
+     "broadcasts": [
+      {
+       "name": "June Newsletter",
+       "sends": 2661,
+       "opens": 1073,
+       "clicks": 147,
+       "date": "2026-06-26"
+      },
+      {
+       "name": "EOFYS 2026 - Amaroo",
+       "sends": 2619,
+       "opens": 1108,
+       "clicks": 128,
+       "date": "2026-06-12"
+      },
+      {
+       "name": "May Newsletter 2026 ",
+       "sends": 2577,
+       "opens": 1382,
+       "clicks": 255,
+       "date": "2026-06-02"
+      },
+      {
+       "name": "QLD - Let's Go Queensland Caravan & Camping Supershow (Copy) (Copy)",
+       "sends": 509,
+       "opens": 204,
+       "clicks": 20,
+       "date": "2026-06-01"
+      },
+      {
+       "name": "QLD - Let's Go Queensland Caravan & Camping Supershow",
+       "sends": 363,
+       "opens": 146,
+       "clicks": 17,
+       "date": "2026-06-01"
+      }
+     ]
+    }
+   },
    "wl": {
     "channels": {
      "youtube": {
@@ -1085,218 +2149,69 @@
       "saves": null
      }
     ]
-   },
-   "ac": {
-    "new_contacts": 227,
-    "ad_enquiries": 40,
-    "deals_created": 278,
-    "deals_by_type": {
-     "Brochure downloads": 72,
-     "Campaign offers": 72,
-     "Shows & events": 51,
-     "Configurator": 45,
-     "Sales-entered / other": 30,
-     "Ad enquiries": 7,
-     "Virtual consults": 1
-    },
-    "campaigns": [
-     {
-      "name": "About Solara - Construction Focus",
-      "sends": 2217,
-      "opens": 962,
-      "clicks": 214,
-      "date": "2026-06-30"
-     },
-     {
-      "name": " Sales Email #3 \u2013 Your Wonderland RV Order Confirmation",
-      "sends": 26,
-      "opens": 21,
-      "clicks": 1,
-      "date": "2026-06-29"
-     },
-     {
-      "name": " Sales Email #7 \u2013 Happy Handover Day!",
-      "sends": 13,
-      "opens": 10,
-      "clicks": 7,
-      "date": "2026-06-28"
-     },
-     {
-      "name": " Sales Email #6 \u2013 It's Ready",
-      "sends": 13,
-      "opens": 10,
-      "clicks": 9,
-      "date": "2026-06-28"
-     },
-     {
-      "name": "June Newsletter",
-      "sends": 2661,
-      "opens": 1068,
-      "clicks": 146,
-      "date": "2026-06-26"
-     },
-     {
-      "name": "June Newsletter test",
-      "sends": 7,
-      "opens": 7,
-      "clicks": 3,
-      "date": "2026-06-26"
-     },
-     {
-      "name": " Sales Email #1 \u2013 Built for Adventure Crafted for Comfort",
-      "sends": 15,
-      "opens": 12,
-      "clicks": 8,
-      "date": "2026-06-16"
-     },
-     {
-      "name": "EOFYS 2026 - Amaroo",
-      "sends": 2619,
-      "opens": 1108,
-      "clicks": 128,
-      "date": "2026-06-12"
-     },
-     {
-      "name": "EOFYS 2026 (Copy)",
-      "sends": 3,
-      "opens": 3,
-      "clicks": 1,
-      "date": "2026-06-12"
-     },
-     {
-      "name": "May Newsletter 2026 ",
-      "sends": 2577,
-      "opens": 1382,
-      "clicks": 255,
-      "date": "2026-06-02"
-     },
-     {
-      "name": "QLD - Let's Go Queensland Caravan & Camping Supershow",
-      "sends": 363,
-      "opens": 146,
-      "clicks": 17,
-      "date": "2026-06-01"
-     },
-     {
-      "name": "QLD - Let's Go Queensland Caravan & Camping Supershow (Copy)",
-      "sends": 19,
-      "opens": 5,
-      "clicks": 0,
-      "date": "2026-06-01"
-     },
-     {
-      "name": "QLD - Let's Go Queensland Caravan & Camping Supershow (Copy) (Copy)",
-      "sends": 509,
-      "opens": 204,
-      "clicks": 20,
-      "date": "2026-06-01"
-     }
-    ],
-    "leads_by_state": {
-     "VIC": 86,
-     "NSW": 48,
-     "QLD": 104,
-     "SA": 5,
-     "WA": 31,
-     "NZ": 1,
-     "HQ Walk-ins": 3
-    },
-    "brochures_by_model": {
-     "Solara": 47,
-     "Amaroo": 33,
-     "XTR": 31,
-     "Hornet": 14
-    },
-    "deposits_flow": {
-     "WA": 1,
-     "SA": 1
-    },
-    "handovers_flow": {
-     "VIC": 6
-    },
-    "emails": {
-     "broadcast_count": 5,
-     "sent": 8729,
-     "avg_open_pct": 44.8,
-     "avg_click_pct": 6.5,
-     "automated_sends": 2313,
-     "broadcasts": [
-      {
-       "name": "June Newsletter",
-       "sends": 2661,
-       "opens": 1071,
-       "clicks": 146,
-       "date": "2026-06-26"
-      },
-      {
-       "name": "EOFYS 2026 - Amaroo",
-       "sends": 2619,
-       "opens": 1108,
-       "clicks": 128,
-       "date": "2026-06-12"
-      },
-      {
-       "name": "May Newsletter 2026 ",
-       "sends": 2577,
-       "opens": 1382,
-       "clicks": 255,
-       "date": "2026-06-02"
-      },
-      {
-       "name": "QLD - Let's Go Queensland Caravan & Camping Supershow (Copy) (Copy)",
-       "sends": 509,
-       "opens": 204,
-       "clicks": 20,
-       "date": "2026-06-01"
-      },
-      {
-       "name": "QLD - Let's Go Queensland Caravan & Camping Supershow",
-       "sends": 363,
-       "opens": 146,
-       "clicks": 17,
-       "date": "2026-06-01"
-      }
-     ]
-    },
-    "contacts_by_state": {
-     "QLD": 95,
-     "NSW": 41,
-     "VIC": 30,
-     "WA": 27,
-     "TAS": 6,
-     "SA": 5,
-     "No state recorded": 23
-    },
-    "deals_by_state": {
-     "VIC": 86,
-     "NSW": 48,
-     "QLD": 104,
-     "SA": 5,
-     "WA": 31,
-     "NZ": 1,
-     "HQ Walk-ins": 3
-    },
-    "deposits_names": [
-     "WL969 ",
-     "WL1277 Miller AM2107EWF"
-    ],
-    "handovers_names": [
-     "WL1035 ",
-     "WL1196 LOVE AM2311Q-F4.3",
-     "WL1243 Rennae & Mark Rugg",
-     "WL899 Della-Mina AM1709R",
-     "WL1280 SANDY XTR",
-     "WL1241 AM1709RL ROGERS"
-    ],
-    "configurator_note": "unreliable",
-    "configurator_leads": 41
-   },
-   "metrics_note": null
+   }
   },
   {
    "key": "2026-07",
    "label": "July 2026 (to 3 Jul)",
    "partial": true,
+   "ac": {
+    "new_contacts": 44,
+    "ad_enquiries": 11,
+    "deals_created": 11,
+    "deals_by_type": {
+     "Configurator": 5,
+     "Ad enquiries": 3,
+     "Sales-entered / other": 1,
+     "Campaign offers": 1,
+     "Brochure downloads": 1
+    },
+    "deals_by_state": {
+     "NSW": 2,
+     "VIC": 5,
+     "QLD": 3,
+     "WA": 1
+    },
+    "leads_by_state": {
+     "NSW": 2,
+     "VIC": 5,
+     "QLD": 3,
+     "WA": 1
+    },
+    "contacts_by_state": {
+     "QLD": 5,
+     "NSW": 4,
+     "VIC": 3,
+     "WA": 1,
+     "NZ": 1,
+     "TAS": 1,
+     "No state recorded": 29
+    },
+    "brochures_by_model": {
+     "XTR": 3,
+     "Amaroo": 2,
+     "Solara": 1
+    },
+    "configurator_leads": 5,
+    "deposits_flow": {},
+    "handovers_flow": {
+     "VIC": 3
+    },
+    "deposits_names": [],
+    "handovers_names": [
+     "WL1209 David Campbell -  St",
+     "WL1266 KIDSON",
+     "WL1254 RANDALL HO2300RC"
+    ],
+    "emails": {
+     "broadcast_count": 0,
+     "sent": 0,
+     "avg_open_pct": 0,
+     "avg_click_pct": 0,
+     "automated_sends": 6542,
+     "broadcasts": []
+    }
+   },
    "wl": {
     "channels": {
      "youtube": {
@@ -1460,338 +2375,7 @@
       0
      ]
     }
-   },
-   "ac": {
-    "new_contacts": 41,
-    "ad_enquiries": 11,
-    "deals_created": 10,
-    "deals_by_type": {
-     "Configurator": 5,
-     "Ad enquiries": 3,
-     "Campaign offers": 1,
-     "Brochure downloads": 1
-    },
-    "campaigns": [
-     {
-      "name": "Stock Clearance | Thank you",
-      "sends": 23,
-      "opens": 13,
-      "clicks": 1,
-      "date": "2026-07-03"
-     },
-     {
-      "name": "About Solara - Layout Focus",
-      "sends": 1919,
-      "opens": 732,
-      "clicks": 143,
-      "date": "2026-07-02"
-     },
-     {
-      "name": "Paid Ad - Meta & Google | Thank you for your inquiry | Wonderland RV",
-      "sends": 16,
-      "opens": 11,
-      "clicks": 2,
-      "date": "2026-07-02"
-     },
-     {
-      "name": "About Solara - Detail Focus ",
-      "sends": 2001,
-      "opens": 791,
-      "clicks": 139,
-      "date": "2026-07-02"
-     },
-     {
-      "name": " Sales Email #5 \u2013 Book your Handover",
-      "sends": 30,
-      "opens": 22,
-      "clicks": 12,
-      "date": "2026-07-02"
-     },
-     {
-      "name": "Thanks for your interest in the Amaroo EOFY offer",
-      "sends": 78,
-      "opens": 57,
-      "clicks": 51,
-      "date": "2026-07-02"
-     },
-     {
-      "name": "About Solara - Travel & Terrain Focus",
-      "sends": 2133,
-      "opens": 851,
-      "clicks": 96,
-      "date": "2026-07-01"
-     },
-     {
-      "name": " Sales Email #2 \u2013 Let's Plan your Perfect Wonderland",
-      "sends": 10,
-      "opens": 7,
-      "clicks": 16,
-      "date": "2026-07-01"
-     },
-     {
-      "name": " Sales Email #8 \u2013 How was your Experience?",
-      "sends": 12,
-      "opens": 12,
-      "clicks": 7,
-      "date": "2026-07-01"
-     },
-     {
-      "name": "Thank you \u2013 Newsletter Subscription ",
-      "sends": 489,
-      "opens": 301,
-      "clicks": 98,
-      "date": "2026-07-01"
-     },
-     {
-      "name": " Sales Email #4 \u2013 Get Ready for Your Wonderland RV Adventure!",
-      "sends": 29,
-      "opens": 26,
-      "clicks": 16,
-      "date": "2026-07-01"
-     }
-    ],
-    "leads_by_state": {
-     "VIC": 5,
-     "NSW": 1,
-     "QLD": 3,
-     "SA": 0,
-     "WA": 1,
-     "NZ": 0,
-     "HQ Walk-ins": 0
-    },
-    "brochures_by_model": {
-     "XTR": 2,
-     "Amaroo": 2,
-     "Solara": 1
-    },
-    "deposits_flow": {},
-    "handovers_flow": {
-     "VIC": 1
-    },
-    "emails": {
-     "broadcast_count": 0,
-     "sent": 0,
-     "avg_open_pct": 0,
-     "avg_click_pct": 0,
-     "automated_sends": 6740,
-     "broadcasts": []
-    },
-    "contacts_by_state": {
-     "QLD": 5,
-     "NSW": 3,
-     "VIC": 2,
-     "WA": 1,
-     "TAS": 1,
-     "No state recorded": 29
-    },
-    "deals_by_state": {
-     "VIC": 5,
-     "NSW": 1,
-     "QLD": 3,
-     "SA": 0,
-     "WA": 1,
-     "NZ": 0,
-     "HQ Walk-ins": 0
-    },
-    "deposits_names": [],
-    "handovers_names": [
-     "WL1209 David Campbell -  "
-    ],
-    "configurator_note": "unreliable",
-    "configurator_leads": 4
-   },
-   "metrics_note": null
+   }
   }
- ],
- "data_quality": {
-  "mis_staged_money_stage": {
-   "count": 14,
-   "sample": [
-    "Configurator:\u00a0Danielle Old \u2192 Handover Complete",
-    "Wl1178 -Rosehill lead \u2192 Handover Complete",
-    "Francesco & Candice Ienco \u2192 Handover Complete",
-    "Philip Andrew Clark \u2192 Handover Complete",
-    "B2ME TEST DEAL \u2192 Handover Complete",
-    "BARRY \u2192 Handover Complete"
-   ]
-  },
-  "configurator": {
-   "deals_total": 224,
-   "automation39_entries": 1504,
-   "real_submissions_alltime_approx": 56,
-   "no_name_deals": 37,
-   "duplicate_deals": 45
-  },
-  "note": "Configurator > Create Deal (automation 39) fires far more often than real submissions and creates deals with blank names and duplicates; several lead records sit in Deposit/Handover stages. Deposits and handovers on this dashboard only count deals carrying a WL chassis number."
- },
- "delivery_board": [
-  {
-   "stage": "Deposit Received",
-   "count": 2,
-   "items": [
-    {
-     "chassis": "WL1270",
-     "name": "Solara Brochure Lead",
-     "state": "NSW"
-    },
-    {
-     "chassis": "WL969",
-     "name": "",
-     "state": "WA"
-    }
-   ]
-  },
-  {
-   "stage": "Plans & Specs",
-   "count": 4,
-   "items": [
-    {
-     "chassis": "WL1282",
-     "name": "DUNN XT2100K-F2",
-     "state": "SA"
-    },
-    {
-     "chassis": "WL1309",
-     "name": "Murfet AM1709R_L",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1317",
-     "name": "XTR- Andreas Sonder",
-     "state": "WA"
-    },
-    {
-     "chassis": "WL1345",
-     "name": "kim & andrea",
-     "state": "WA"
-    }
-   ]
-  },
-  {
-   "stage": "Order Finalised",
-   "count": 10,
-   "items": [
-    {
-     "chassis": "WL1268",
-     "name": "Minogue",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1278",
-     "name": "SO1806ML Aiden Brockma",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1285",
-     "name": "Darling XT2106",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1310",
-     "name": "Shell HO2106Q-M-SC CUS",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1316",
-     "name": "HURLEY",
-     "state": "WA"
-    },
-    {
-     "chassis": "WL1321",
-     "name": "SQUIRE SO22RCA",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1335",
-     "name": "BURKE",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1343",
-     "name": "SCRIVEN AM1806",
-     "state": "WA"
-    },
-    {
-     "chassis": "WL1357",
-     "name": "BIFFIN",
-     "state": "WA"
-    },
-    {
-     "chassis": "WL1358",
-     "name": "Dyson",
-     "state": "WA"
-    }
-   ]
-  },
-  {
-   "stage": "In Production",
-   "count": 2,
-   "items": [
-    {
-     "chassis": "WL1273",
-     "name": "CROXFORD AM21000M_L_XL",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1288",
-     "name": "JOWETT HO2100-M-XLE",
-     "state": "VIC"
-    }
-   ]
-  },
-  {
-   "stage": "Ready / Handover Booked",
-   "count": 5,
-   "items": [
-    {
-     "chassis": "WL1154",
-     "name": "",
-     "state": "WA"
-    },
-    {
-     "chassis": "WL1248",
-     "name": "DINGLEY XT1906",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1283",
-     "name": "ROSS Solara 1806Q-M-L",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1290",
-     "name": "\u00a0Andrew & Karen Simpso",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1332",
-     "name": "PAGE AM2107EW-F2.4",
-     "state": "VIC"
-    }
-   ]
-  }
- ],
- "configurator": {
-  "sessions_alltime": 5514,
-  "submitters_alltime": 1826,
-  "by_state": {
-   "VIC": 446,
-   "NSW": 383,
-   "QLD": 83,
-   "WA": 61,
-   "SA": 22,
-   "TAS": 15,
-   "NT": 2,
-   "NZ": 1,
-   "No state recorded": 813
-  },
-  "conversion": {
-   "In conversation": 90,
-   "Back to market": 62,
-   "Quote sent": 6,
-   "Deposit+ (committed)": 2,
-   "Won / Sold": 1,
-   "New / other": 1
-  }
- }
+ ]
 }

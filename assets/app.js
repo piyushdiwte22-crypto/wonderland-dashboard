@@ -83,7 +83,9 @@ function goalBand(id,t,pt){
 function render(){
   charts.forEach(c=>c.destroy()); charts.length=0;
   const m=DATA.months[sel], p=sel>0?DATA.months[sel-1]:null;
-  const w=m.wl,o=m.ob,a=m.ac, pw=p&&p.wl,po=p&&p.ob,pa=p&&p.ac;
+  const NOSOCIAL=!m.wl;
+  const EMPTY={totals:{},channels:{},daily:{dates:[],impressions:[],engagement:[]}};
+  const w=m.wl||EMPTY,o=m.ob||EMPTY,a=m.ac, pw=(p&&p.wl)||null,po=(p&&p.ob)||null,pa=p&&p.ac;
   PARTIAL=!!m.partial;
   const per=m.label+(m.partial?' — partial month, numbers still accumulating':'');
   const sn=$('subnote'); if(sn) sn.textContent='Reporting period: '+per;
@@ -122,6 +124,10 @@ function render(){
   }
 
   if($('wl-social-kpis')){
+   if(NOSOCIAL){
+    ['wl-social-kpis','wl-table','wl-posts','wl-audience'].forEach(id=>{if($(id))$(id).innerHTML='';});
+    if($('wl-ov')) $('wl-ov').innerHTML='<div class="pendingcard" style="grid-column:1/-1">'+(m.social_note||'Social analytics is not available for this month.')+' The CRM &amp; Sales page has full data from January.</div>';
+   } else {
     if($('wl-ov')) $('wl-ov').innerHTML=
       k(fmt(w.totals.impressions),'Impressions',delta(w.totals.impressions,pw&&pw.totals.impressions),'acc')+
       k('+'+fmt(w.totals.follower_change),'New followers',delta(w.totals.follower_change,pw&&pw.totals.follower_change))+
@@ -134,6 +140,7 @@ function render(){
     chanTable('wl-table',w.channels);
     postsTable('wl-posts',w.top_posts);
     audience(w);
+   }
   }
   if($('wl-email-kpis')){
     if($('crm-ov')) $('crm-ov').innerHTML=
