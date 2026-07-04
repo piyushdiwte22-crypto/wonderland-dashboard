@@ -165,7 +165,7 @@ a.postlink:hover{color:var(--wl);border-color:var(--wl)}
 .ovhero .kgrid{margin-top:30px}
 .ovhero .k{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.16)}
 .ovhero .k .n{color:#fff}.ovhero .k .l{color:#d7d1c9}
-.ovhero .k.acc{background:var(--wl);border-color:var(--wl)}.ovhero .k.acc .l{color:#fbe7d6}
+.ovhero .k.acc{background:var(--wl);border-color:var(--wl)}.ovhero .k.acc .n{color:#fff}.ovhero .k.acc .l{color:#3d2208}
 .brandlink{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);background:#fff;overflow:hidden;transition:border-color .15s}
 .brandlink:hover{border-color:var(--wl)}
 .brandlink .im{height:180px;background-size:cover;background-position:center}
