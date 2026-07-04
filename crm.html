@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>Wonderland RV · CRM &amp; Sales | Monthly Report</title>
-<link rel="stylesheet" href="assets/style.css?v=13">
+<link rel="stylesheet" href="assets/style.css?v=14">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
 </head>
 <body class="wl-page">
@@ -15,15 +15,15 @@
     <div><small>Monthly Marketing Report</small></div>
   </div>
   <nav class="navlinks">
-    <div class="drop active"><a href="social.html">Wonderland RV</a>
-      <div class="menu">
+    <div class="drop active"><a href="social.html" aria-haspopup="true" aria-expanded="false">Wonderland RV</a>
+      <div class="menu" role="menu">
         <a href="index.html">Overview</a>
         <a href="social.html">Social Media</a>
         <a href="crm.html" class="cur">CRM &amp; Sales</a>
       </div>
     </div>
-    <div class="drop"><a href="outbound.html">Outbound RVs</a>
-      <div class="menu">
+    <div class="drop"><a href="outbound.html" aria-haspopup="true" aria-expanded="false">Outbound RVs</a>
+      <div class="menu" role="menu">
         <a href="outbound.html">Social Media</a>
       </div>
     </div>
@@ -55,7 +55,7 @@
     <div class="sec-h"><span class="no">01</span><h2>Email marketing</h2></div>
     <div class="kgrid" id="wl-email-kpis"></div>
     <div class="card" style="margin-top:12px"><h3>Broadcast campaigns this month</h3><table id="wl-camps"></table>
-      <div class="footnote">Broadcast sends only. Automated confirmations and follow-ups are excluded from the averages and shown in the Automated card above.</div></div>
+      <div class="footnote">Broadcast sends only. Automated confirmations and follow-ups are excluded from the averages and shown in the Automated card above. Benchmark: industry email open rate is ~25–35% and click ~2–3% — Wonderland runs well above open-rate benchmark.</div></div>
   </section>
 
   <section>
@@ -63,7 +63,7 @@
     <div class="kgrid" id="wl-crm-kpis"></div>
     <div class="duo">
       <div class="card"><h3>New leads by state · contact records</h3><div class="chartbox"><canvas id="wl-states"></canvas></div>
-        <div class="footnote">State comes from the enquiry form's State field, normalised. "Other / blank" are enquiries that skipped the field (being cleaned up — see the data quality note below).</div></div>
+        <div class="footnote">State comes from the enquiry form's State field, normalised. Where a contact's State is blank, we fall back to the deal's sales-pipeline state; the small "No state recorded" bar is what's left. See the data quality note below.</div></div>
       <div class="card"><h3>New sales deals by pipeline</h3><div class="chartbox"><canvas id="wl-dealstates"></canvas></div></div>
     </div>
     <div class="duo">
@@ -93,6 +93,7 @@
       <div style="overflow-x:auto"><table id="wl-funnel"></table></div>
       <div class="footnote" id="wl-funnel-note"></div>
     </div>
+    <div class="footnote" id="wl-flow-note"></div>
     <div id="wl-read" class="readcard"></div>
   </section>
 
@@ -121,6 +122,6 @@
   </footer>
 </div>
 <script>const PAGE='wl-crm';</script>
-<script src="assets/app.js?v=13"></script>
+<script src="assets/app.js?v=14"></script>
 </body>
 </html>

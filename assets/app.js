@@ -1,10 +1,11 @@
 /* Shared data + render logic. Each page defines PAGE = 'ov' | 'wl' | 'ob'. */
-const WLC='#C97625', OBC='#8B9B4D', INK='#1D1D1B';
+const WLC='#DB7627', OBC='#8B9B4D', INK='#1D1D1B';
 const CHCOL={facebook:'#4d79c9',instagram:'#c94d8f',youtube:'#c9564d',linkedin:'#4da3c9',tiktok:'#7d6ee0',pinterest:'#b3a13c'};
 const VANIMG={Solara:'assets/img/van-solara.webp',XTR:'assets/img/van-xtr.webp',Hornet:'assets/img/van-hornet.webp',Amaroo:'assets/img/van-amaroo.webp'};
 const fmt=n=>(n==null||isNaN(n))?'–':Math.round(n).toLocaleString('en-AU');
 const charts=[]; let DATA=null, DEMO=null, sel=0, PARTIAL=false;
 const $=id=>document.getElementById(id);
+if(window.Chart){ Chart.defaults.animation=false; Chart.defaults.font.family="Gordita, Calibri, sans-serif"; Chart.defaults.font.size=12; Chart.defaults.color="#707070"; }
 const REDUCED=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 Promise.all([
@@ -118,14 +119,27 @@ function render(){
       k(fmt(o.totals.messages||null),'Messages received','');
     const topState=Object.entries(a.leads_by_state||{}).sort((x,y)=>y[1]-x[1])[0];
     const wlCh=Object.entries(w.channels).sort((x,y)=>y[1].impressions-x[1].impressions)[0];
-    const peakI=w.daily.impressions.length?Math.max(...w.daily.impressions):0;
-    const peakD=w.daily.dates[w.daily.impressions.indexOf(peakI)];
+    const chShare=wlCh&&w.totals.impressions?Math.round(wlCh[1].impressions/w.totals.impressions*100):0;
     const topPost=(w.top_posts||[])[0];
-    $('ov-headlines').innerHTML=
-      `<li><strong>Wonderland RV</strong> reached ${fmt(w.totals.impressions)} impressions; top channel was ${wlCh?wlCh[0]:'–'} and the peak day was ${peakD||'–'} (${fmt(peakI)} impressions).</li>`+
-      (topPost?`<li><strong>Top post:</strong> "${topPost.msg}" (${topPost.network} ${topPost.type}) — ${fmt(topPost.impressions)} impressions, ${fmt(topPost.shares)} shares, ${fmt(topPost.saves)} saves.</li>`:'')+
-      `<li class="ob"><strong>Outbound RVs</strong> reached ${fmt(o.totals.impressions)} impressions and added ${fmt(o.totals.follower_change)} followers at a ${o.totals.engagement_rate}% engagement rate.</li>`+
-      `<li class="crm"><strong>Sales:</strong> ${fmt(leads)} leads created${topState?' ('+topState[0]+' leading with '+fmt(topState[1])+')':''}, ${fmt(deposits)} deposits received and ${fmt(handovers)} handovers completed.</li>`;
+    // interpretive deltas vs prior month
+    const impCur=w.totals.impressions, impPrev=pw&&pw.totals.impressions;
+    const impMove=(impPrev&&!PARTIAL)?` (${impCur>=impPrev?'up':'down'} ${Math.abs(Math.round((impCur-impPrev)/impPrev*100))}% on ${p.label.split(' (')[0]})`:'';
+    const dep2lead=leads?Math.round(deposits/leads*100):0;
+    const heads=[];
+    heads.push(`<li><strong>Wonderland RV</strong> reached ${fmt(impCur)} impressions${impMove}. ${wlCh?wlCh[0][0].toUpperCase()+wlCh[0].slice(1)+' drove '+chShare+'% of reach':''}${w.totals.engagement_rate?`, at a ${w.totals.engagement_rate}% engagement rate`:''}.</li>`);
+    if(topPost) heads.push(`<li><strong>Top post:</strong> "${topPost.msg}" (${topPost.network} ${topPost.type}) — ${fmt(topPost.impressions)} impressions, ${fmt(topPost.shares)} shares, ${fmt(topPost.saves)} saves. Reels with saves are the clearest buying-intent signal.</li>`);
+    heads.push(`<li class="ob"><strong>Outbound RVs</strong> reached ${fmt(o.totals.impressions)} impressions, added ${fmt(o.totals.follower_change)} followers, at ${o.totals.engagement_rate}% engagement${o.totals.engagement_rate>w.totals.engagement_rate?' — punching above Wonderland on a smaller audience':''}.</li>`);
+    heads.push(`<li class="crm"><strong>Sales:</strong> ${fmt(leads)} leads${topState&&topState[0]!=='No state recorded'?' ('+topState[0]+' leading with '+fmt(topState[1])+')':''}, ${fmt(deposits)} deposits, ${fmt(handovers)} handovers${dep2lead?' — '+dep2lead+'% of this month\\u2019s leads reached a deposit stage':''}.</li>`);
+    // conditional flags — surface things worth a director's attention
+    const flags=[];
+    if(!PARTIAL && !NOSOCIAL){
+      if(w.totals.engagement_rate<0.5) flags.push(`Wonderland engagement rate is ${w.totals.engagement_rate}% — below a healthy ~1%; reach is strong but content isn\\u2019t pulling interaction. Worth testing more Reels/questions.`);
+      if(pw&&!PARTIAL&&(pw.totals.engagement_rate-w.totals.engagement_rate)>0.3) flags.push(`Engagement rate fell ${(pw.totals.engagement_rate-w.totals.engagement_rate).toFixed(2)}pt vs ${p.label.split(' (')[0]} — check what changed in the content mix.`);
+    }
+    const em=a.emails||{};
+    if(em.sent && em.avg_open_pct<40) flags.push(`Email open rate ${em.avg_open_pct}% is below the ~40% the list usually does — subject lines or send timing may need a look.`);
+    if(handovers>0 && deposits===0) flags.push(`${fmt(handovers)} handovers but 0 deposits recorded this month — deposits advance fast through the pipeline, so this reflects the counting method, not a stall (see CRM \\u2192 Sales).`);
+    $('ov-headlines').innerHTML=heads.join('')+flags.map(f=>`<li style="border-left-color:#b1442f"><strong>Worth a look:</strong> ${f}</li>`).join('');
   }
 
   if($('wl-social-kpis')){
@@ -145,6 +159,7 @@ function render(){
     chanTable('wl-table',w.channels);
     postsTable('wl-posts',w.top_posts);
     audience(w);
+    socialTrend('wl-trend');
    }
   }
   if($('wl-email-kpis')){
@@ -207,18 +222,23 @@ function render(){
       `<div class="flownames"><h4>Deposits · chassis-verified</h4>${(a.deposits_names||[]).map(n=>'<span class="tag">'+n+'</span>').join('')||'<span class="footnote">none this month</span>'}</div>`+
       `<div class="flownames"><h4>Handovers · chassis-verified</h4>${(a.handovers_names||[]).map(n=>'<span class="tag">'+n+'</span>').join('')||'<span class="footnote">none this month</span>'}</div>`;
     funnelTable();
-    /* THE READ — auto insight */
+    if($('wl-flow-note')) $('wl-flow-note').innerHTML='Deposits and handovers count only chassis-numbered (WL####) deals, so mis-staged lead records cannot inflate them. "Deposits received this month" counts deals sitting at the Deposit Received stage — deals advance to build quickly, so this is a conservative floor and undercounts true deposits; "Handovers completed" counts distinct vans reaching Handover Complete this month.';
+    /* THE READ — strategic insight */
     const conv=(snap('In Conversation')||{}).total||0, quo=(snap('Quote Sent')||{}).total||0;
-    const topC=Object.entries(cst).filter(x=>x[0]!=='Other/blank').sort((x,y)=>y[1]-x[1])[0];
-    $('wl-read').innerHTML=`<b>The read</b>${fmt(conv)} deals sit in In Conversation against ${fmt(quo)} at Quote Sent${quo?` (${Math.round(conv/quo)} conversations per quote)`:''} — moving that middle along is the biggest sales lever. ${topC?topC[0]+' led lead acquisition with '+fmt(topC[1])+' new contacts.':''} Deposits and handovers above count only chassis-numbered deals, so lead records mis-staged in the pipeline cannot inflate them.`;
-    /* Data quality watch */
+    const ratio=quo?Math.round(conv/quo):conv;
+    const topC=Object.entries(cst).filter(x=>x[0]!=='No state recorded').sort((x,y)=>y[1]-x[1])[0];
+    $('wl-read').innerHTML=`<b>The read</b>${fmt(conv)} deals are stuck in In Conversation against just ${fmt(quo)} at Quote Sent — a ${ratio}:1 backlog. That middle of the funnel is the single biggest lever this month: the question for sales is whether quotes are slow to go out, or leads are stalling before they ask for one. ${topC?topC[0]+' generated the most leads ('+fmt(topC[1])+'), so that\\u2019s where quote follow-up will move the most metal.':''}`;
+    /* Data quality watch — always render */
     const dq=DATA.data_quality;
-    if(dq){
+    if(dq && (dq.configurator||dq.mis_staged_money_stage)){
       const c=dq.configurator||{};
-      $('wl-dq').innerHTML=`<div class="dqcard"><b>Known CRM data issues (aggregates on this page are already corrected for them):</b><ul>`+
-        `<li><b>Configurator automation is over-firing:</b> "Configurator &gt; Create Deal" has run ${fmt(c.automation39_entries)} times against roughly ${fmt(c.real_submissions_alltime_approx)} real submissions, creating ${fmt(c.deals_total)} deals — including ${fmt(c.no_name_deals)} with no name and ${fmt(c.duplicate_deals)} duplicates. Configurator lead and deal counts are unreliable until the automation trigger is fixed in ActiveCampaign.</li>`+
-        `<li><b>${fmt(dq.mis_staged_money_stage.count)} lead records sit in money stages</b> (Deposit Received / Handover Complete etc.) without a chassis number, e.g. ${dq.mis_staged_money_stage.sample.slice(0,3).map(s=>'"'+s+'"').join(', ')}. These should be moved back to an early stage.</li>`+
+      $('wl-dq').innerHTML=`<div class="dqcard"><b>Known CRM data issues — flagged for the team (the numbers on this page are already corrected for them):</b><ul>`+
+        (c.automation39_entries?`<li><b>Configurator automation over-firing</b> [owner: AC admin / agency · fix: tighten automation 39 trigger]: "Configurator &gt; Create Deal" ran ${fmt(c.automation39_entries)} times against ~${fmt(c.real_submissions_alltime_approx)} real submissions, creating ${fmt(c.deals_total)} deals incl. ${fmt(c.no_name_deals)} no-name and ${fmt(c.duplicate_deals)} duplicates. A clean-up list of exact deal IDs has been prepared.</li>`:'')+
+        (dq.mis_staged_money_stage?`<li><b>${fmt(dq.mis_staged_money_stage.count)} lead records mis-staged</b> in money stages without a chassis, e.g. ${(dq.mis_staged_money_stage.sample||[]).slice(0,3).map(s=>'"'+s+'"').join(', ')} [action: move back to an early stage].</li>`:'')+
+        `<li><b>Configurator model not synced to AC</b> [fix: map the form "Model" field to AC field 81] — blocks the Solara/Amaroo/Hornet/XTR configurator split.</li>`+
         `</ul></div>`;
+    } else {
+      $('wl-dq').innerHTML='<div class="dqcard" style="border-color:#bcd6bf;background:#f2f8f3"><b style="color:#2e6b3e">No new CRM data issues flagged this month.</b> Chassis-verified counting and state-fallback logic are in place; the configurator model-sync fix is still outstanding.</div>';
     }
   }
 
@@ -245,7 +265,7 @@ function render(){
         {label:'Handovers',data:DATA.months.map(x=>sum(x.ac.handovers_flow)),backgroundColor:INK},
         {label:'Deposits',data:DATA.months.map(x=>sum(x.ac.deposits_flow)),backgroundColor:WLC}]},
       options:{maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{color:'#2c2f34',boxWidth:12}}},
-        scales:{x:{ticks:{color:'#8a8f96'},grid:{display:false}},y:{ticks:{color:'#8a8f96',precision:0},grid:{color:'#ececee'}}}}}));
+        scales:{x:{ticks:{color:'#707070'},grid:{display:false}},y:{ticks:{color:'#707070',precision:0},grid:{color:'#ececee'}}}}}));
     const hs=a.handovers_flow||{};
     barChart('ho-states',Object.keys(hs).length?Object.keys(hs):['—'],Object.keys(hs).length?Object.values(hs):[0],Object.keys(hs).map(()=>WLC),true);
     $('ho-read').innerHTML=`<b>The read</b>${fmt(pipeTotal)} chassis-numbered vans are on the delivery journey right now: ${board.map(b=>b.count+' at '+b.stage.toLowerCase()).join(', ')}. ${fmt(handovers)} handed over in ${m.label.split(' (')[0]}${ready?', and '+fmt(ready)+' are ready or booked, so next month\\u2019s handover number is already visible':''}.`;
@@ -339,23 +359,37 @@ function chanTable(id,ch){
     <tbody>${rows}<tr class="totrow"><td>Total</td><td class="num">${fmt(t.followers)}</td><td class="num">${t.follower_change>0?'+':''}${fmt(t.follower_change)}</td><td class="num">${fmt(t.impressions)}</td><td class="num">${fmt(t.engagement)}</td><td class="num">${fmt(t.likes)}</td><td class="num">${fmt(t.saves)}</td><td class="num">${fmt(t.messages)}</td><td class="num">${fmt(t.profile_views)}</td></tr></tbody>`;
 }
 function campTable(id,camps){
-  if(!camps||!camps.length){$(id).innerHTML='<tbody><tr><td style="color:#8a8f96">No campaign sends recorded this month</td></tr></tbody>';return;}
+  if(!camps||!camps.length){$(id).innerHTML='<tbody><tr><td style="color:#707070">No campaign sends recorded this month</td></tr></tbody>';return;}
   const rows=camps.sort((a,b)=>b.sends-a.sends).slice(0,10).map(c=>{
     const or_=c.sends?Math.round(c.opens/c.sends*100):0, cr=c.sends?Math.round(c.clicks/c.sends*100):0;
     return `<tr><td>${c.name}</td><td class="num">${fmt(c.sends)}</td><td class="num">${or_}%</td><td class="num">${cr}%</td></tr>`;}).join('');
   $(id).innerHTML=`<thead><tr><th>Campaign</th><th class="num">Sends</th><th class="num">Open rate</th><th class="num">Click rate</th></tr></thead><tbody>${rows}</tbody>`;
 }
+function socialTrend(id){
+  const el=$(id); if(!el) return;
+  const ms=DATA.months.filter(m=>m.wl);
+  const labels=ms.map(m=>m.label.split(' ')[0].slice(0,3));
+  charts.push(new Chart(el,{type:'bar',
+    data:{labels,datasets:[
+      {type:'bar',label:'Impressions',data:ms.map(m=>m.wl.totals.impressions),backgroundColor:WLC+'cc',yAxisID:'y',order:2},
+      {type:'line',label:'Total followers',data:ms.map(m=>m.wl.totals.followers),borderColor:INK,backgroundColor:INK,borderWidth:2,pointRadius:3,yAxisID:'y1',order:1,tension:.3}
+    ]},
+    options:{maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{color:'#2c2f34',boxWidth:12}}},
+      scales:{x:{grid:{display:false}},
+        y:{position:'left',ticks:{callback:v=>v>=1000?(v/1000)+'k':v},grid:{color:'#ececee'},title:{display:true,text:'Impressions'}},
+        y1:{position:'right',grid:{display:false},title:{display:true,text:'Followers'}}}}}));
+}
 function lineChart(id,daily,color){
   charts.push(new Chart($(id),{type:'line',
     data:{labels:daily.dates,datasets:[{data:daily.impressions,borderColor:color,backgroundColor:color+'26',fill:true,tension:.35,pointRadius:0,borderWidth:2}]},
     options:{maintainAspectRatio:false,plugins:{legend:{display:false}},
-      scales:{x:{ticks:{color:'#8a8f96',maxTicksLimit:8},grid:{display:false}},y:{ticks:{color:'#8a8f96'},grid:{color:'#ececee'}}}}}));
+      scales:{x:{ticks:{color:'#707070',maxTicksLimit:8},grid:{display:false}},y:{ticks:{color:'#707070'},grid:{color:'#ececee'}}}}}));
 }
 function barChart(id,labels,vals,cols,horizontal){
   charts.push(new Chart($(id),{type:'bar',
     data:{labels:labels.map(s=>s[0].toUpperCase()+s.slice(1)),datasets:[{data:vals,backgroundColor:cols}]},
     options:{indexAxis:horizontal?'y':'x',maintainAspectRatio:false,plugins:{legend:{display:false}},
-      scales:{x:{ticks:{color:'#8a8f96'},grid:{color:horizontal?'#ececee':'transparent'}},y:{ticks:{color:'#8a8f96'},grid:{color:horizontal?'transparent':'#ececee'}}}}}));
+      scales:{x:{ticks:{color:'#707070'},grid:{color:horizontal?'#ececee':'transparent'}},y:{ticks:{color:'#707070'},grid:{color:horizontal?'transparent':'#ececee'}}}}}));
 }
 function donut(id,types,cols){
   const names=Object.keys(types||{});

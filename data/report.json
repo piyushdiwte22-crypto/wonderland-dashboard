@@ -1,5 +1,5 @@
 {
- "generated": "04 Jul 2026, 12:09 PM AEST",
+ "generated": "04 Jul 2026, 04:22 PM AEST",
  "total_contacts_now": 9870,
  "funnel_snapshot": [
   {
@@ -1237,9 +1237,9 @@
       "follower_change": 29,
       "impressions": 13570,
       "engagement": 167,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
+      "likes": 124,
+      "comments": 6,
+      "shares": 25,
       "profile_views": 0,
       "saves": 0,
       "messages": 0
@@ -1249,7 +1249,7 @@
       "follower_change": 4,
       "impressions": 149,
       "engagement": 15,
-      "likes": 0,
+      "likes": 9,
       "comments": 0,
       "shares": 0,
       "profile_views": 0,
@@ -1261,9 +1261,9 @@
       "follower_change": 25,
       "impressions": 9427,
       "engagement": 221,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
+      "likes": 175,
+      "comments": 11,
+      "shares": 24,
       "profile_views": 0,
       "saves": 0,
       "messages": 0
@@ -1273,24 +1273,24 @@
       "follower_change": 20,
       "impressions": 715342,
       "engagement": 503,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
+      "likes": 494,
+      "comments": 7,
+      "shares": 2,
       "profile_views": 0,
       "saves": 0,
-      "messages": 0
+      "messages": 20
      },
      "instagram": {
       "followers": 8631,
       "follower_change": 206,
       "impressions": 147178,
       "engagement": 1906,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "profile_views": 0,
-      "saves": 0,
-      "messages": 0
+      "likes": 1111,
+      "comments": 113,
+      "shares": 215,
+      "profile_views": 1330,
+      "saves": 112,
+      "messages": 35
      },
      "pinterest": {
       "followers": 16,
@@ -1310,12 +1310,12 @@
      "follower_change": 284,
      "impressions": 904073,
      "engagement": 3697,
-     "likes": 0,
-     "comments": 0,
-     "shares": 0,
-     "profile_views": 0,
-     "saves": 0,
-     "messages": 0,
+     "likes": 1913,
+     "comments": 137,
+     "shares": 266,
+     "profile_views": 1330,
+     "saves": 112,
+     "messages": 55,
      "engagement_rate": 0.41
     },
     "daily": {
@@ -1424,24 +1424,24 @@
       "follower_change": 8,
       "impressions": 389915,
       "engagement": 72,
-      "likes": 0,
-      "comments": 0,
+      "likes": 70,
+      "comments": 2,
       "shares": 0,
       "profile_views": 0,
       "saves": 0,
-      "messages": 0
+      "messages": 1
      },
      "instagram": {
       "followers": 684,
       "follower_change": 64,
       "impressions": 22552,
       "engagement": 402,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "profile_views": 0,
-      "saves": 0,
-      "messages": 0
+      "likes": 288,
+      "comments": 16,
+      "shares": 33,
+      "profile_views": 86,
+      "saves": 17,
+      "messages": 3
      }
     },
     "totals": {
@@ -1449,12 +1449,12 @@
      "follower_change": 72,
      "impressions": 412467,
      "engagement": 474,
-     "likes": 0,
-     "comments": 0,
-     "shares": 0,
-     "profile_views": 0,
-     "saves": 0,
-     "messages": 0,
+     "likes": 358,
+     "comments": 18,
+     "shares": 33,
+     "profile_views": 86,
+     "saves": 17,
+     "messages": 4,
      "engagement_rate": 0.11
     },
     "daily": {
@@ -2377,5 +2377,25 @@
     }
    }
   }
- ]
+ ],
+ "data_quality": {
+  "mis_staged_money_stage": {
+   "count": 13,
+   "sample": [
+    "Configurator:\u00a0Danielle Old",
+    "Wl1178 -Rosehill lead",
+    "Francesco & Candice Ienco",
+    "Philip Andrew Clark",
+    "B2ME TEST DEAL",
+    "BARRY"
+   ]
+  },
+  "configurator": {
+   "deals_total": 224,
+   "automation39_entries": 1504,
+   "real_submissions_alltime_approx": 56,
+   "no_name_deals": 41,
+   "duplicate_deals": 45
+  }
+ }
 }
