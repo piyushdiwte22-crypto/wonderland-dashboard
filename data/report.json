@@ -1,5 +1,5 @@
 {
- "generated": "04 Jul 2026, 02:48 AM AEST",
+ "generated": "04 Jul 2026, 11:34 AM AEST",
  "total_contacts_now": 9867,
  "funnel_snapshot": [
   {
@@ -575,14 +575,14 @@
      ]
     },
     "contacts_by_state": {
-     "NSW": 90,
-     "QLD": 45,
-     "Other/blank": 35,
-     "VIC": 24,
+     "NSW": 91,
+     "QLD": 46,
+     "VIC": 31,
      "WA": 24,
-     "SA": 12,
+     "SA": 13,
      "TAS": 5,
-     "NT": 1
+     "NT": 1,
+     "No state recorded": 25
     },
     "deals_by_state": {
      "VIC": 39,
@@ -1259,13 +1259,13 @@
      ]
     },
     "contacts_by_state": {
-     "QLD": 85,
-     "Other/blank": 41,
-     "NSW": 38,
-     "WA": 26,
-     "VIC": 26,
+     "QLD": 95,
+     "NSW": 41,
+     "VIC": 30,
+     "WA": 27,
      "TAS": 6,
-     "SA": 5
+     "SA": 5,
+     "No state recorded": 23
     },
     "deals_by_state": {
      "VIC": 86,
@@ -1577,12 +1577,12 @@
      "broadcasts": []
     },
     "contacts_by_state": {
-     "Other/blank": 29,
      "QLD": 5,
      "NSW": 3,
      "VIC": 2,
      "WA": 1,
-     "TAS": 1
+     "TAS": 1,
+     "No state recorded": 29
     },
     "deals_by_state": {
      "VIC": 5,
@@ -1775,14 +1775,15 @@
   "sessions_alltime": 5514,
   "submitters_alltime": 1826,
   "by_state": {
-   "VIC": 395,
-   "NSW": 379,
-   "Other": 94,
-   "QLD": 82,
-   "WA": 58,
-   "SA": 20,
+   "VIC": 446,
+   "NSW": 383,
+   "QLD": 83,
+   "WA": 61,
+   "SA": 22,
    "TAS": 15,
-   "NZ": 1
+   "NT": 2,
+   "NZ": 1,
+   "No state recorded": 813
   },
   "conversion": {
    "In conversation": 90,

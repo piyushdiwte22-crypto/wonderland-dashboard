@@ -157,7 +157,8 @@ function render(){
       k(fmt(sum(a.brochures_by_model)),'Brochure downloads',delta(sum(a.brochures_by_model),pa&&sum(pa.brochures_by_model)))+
       k(fmt(DATA.total_contacts_now),'Total CRM contacts','<div class="d na">live database size</div>','dark');
     const cst=a.contacts_by_state||a.leads_by_state||{};
-    barChart('wl-states',Object.keys(cst),Object.values(cst),Object.keys(cst).map(()=>WLC),true);
+    const stCol=s=>/no state/i.test(s)?'#b9bcc2':WLC;
+    barChart('wl-states',Object.keys(cst),Object.values(cst),Object.keys(cst).map(stCol),true);
     const dst=a.deals_by_state||a.leads_by_state||{};
     barChart('wl-dealstates',Object.keys(dst),Object.values(dst),Object.keys(dst).map(()=>INK),true);
     donut('wl-sources',a.deals_by_type,['#C97625','#1D1D1B','#8B9B4D','#4d79c9','#c94d8f','#999']);
@@ -178,7 +179,7 @@ function render(){
       const names=order.filter(n=>cf.conversion[n]!=null);
       barChart('wl-cfg-conv',names,names.map(n=>cf.conversion[n]),names.map(n=>n.includes('Won')||n.includes('Deposit')?'#2e7d52':n.includes('Quote')?WLC:n.includes('Back')?'#b1442f':INK),true);
     }
-    if(cf.by_state) barChart('wl-cfg-state',Object.keys(cf.by_state),Object.values(cf.by_state),Object.keys(cf.by_state).map(()=>WLC),true);
+    if(cf.by_state) barChart('wl-cfg-state',Object.keys(cf.by_state),Object.values(cf.by_state),Object.keys(cf.by_state).map(s=>/no state/i.test(s)?'#b9bcc2':WLC),true);
     $('wl-cfg-model').innerHTML='<div class="dqcard" style="margin-top:12px"><b>Model breakdown — the one thing the configurator doesn’t hand us cleanly:</b> the Build Your Caravan tool <em>derives</em> the recommended model (Solara / Amaroo / Hornet / XTR) from the customer’s Type, Size, Bed, Lounge and Kitchen choices and sends a per-model quote email, but it never writes that resulting model back to a single field, so a trustworthy by-model split can’t be pulled automatically today. The clean fix is a 15-minute change to the configurator form: save the resulting model into one hidden field (or tag the contact with it) on submit. Once that’s in, this section gets a live Solara/Amaroo/Hornet/XTR breakdown. Ask Claude to spec that change when you’re ready.</div>';
 
     /* Sales & conversion (reconciled) */
