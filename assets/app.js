@@ -180,7 +180,7 @@ function render(){
     campTable('wl-camps',em.broadcasts||a.campaigns);
     /* Leads acquisition */
     $('wl-crm-kpis').innerHTML=
-      k(fmt(a.new_leads),'New leads · state-verified',delta(a.new_leads,pa&&pa.new_leads)+(a.excluded_no_state?'<div class="d na">'+fmt(a.new_contacts)+' created, '+a.excluded_no_state+' no-state junk excluded</div>':''),'acc')+
+      k(fmt(a.new_leads),'New leads · state-verified',delta(a.new_leads,pa&&pa.new_leads)+((a.excluded_no_state||a.excluded_internal)?'<div class="d na">'+fmt(a.new_contacts)+' created, '+((a.excluded_no_state||0)+(a.excluded_internal||0))+' excluded (no-state + staff)</div>':''),'acc')+
       k(fmt(leads),'New sales deals',delta(leads,pleads))+
       k(fmt(a.ad_enquiries),'Meta / Google ad enquiries',delta(a.ad_enquiries,pa&&pa.ad_enquiries))+
       k(fmt(sum(a.brochures_by_model)),'Brochure downloads',delta(sum(a.brochures_by_model),pa&&sum(pa.brochures_by_model)))+

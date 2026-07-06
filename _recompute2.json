@@ -1,0 +1,108 @@
+{
+ "2026-01": {
+  "raw_total": 321,
+  "verified_leads": 296,
+  "excluded_no_state": 25,
+  "excluded_internal": 0,
+  "by_state": {
+   "NSW": 87,
+   "QLD": 72,
+   "VIC": 63,
+   "WA": 42,
+   "SA": 17,
+   "TAS": 7,
+   "NZ": 6,
+   "NT": 2
+  }
+ },
+ "2026-02": {
+  "raw_total": 300,
+  "verified_leads": 240,
+  "excluded_no_state": 60,
+  "excluded_internal": 0,
+  "by_state": {
+   "VIC": 79,
+   "NSW": 52,
+   "QLD": 43,
+   "WA": 38,
+   "SA": 19,
+   "TAS": 4,
+   "NT": 3,
+   "NZ": 2
+  }
+ },
+ "2026-03": {
+  "raw_total": 199,
+  "verified_leads": 147,
+  "excluded_no_state": 52,
+  "excluded_internal": 0,
+  "by_state": {
+   "WA": 36,
+   "VIC": 32,
+   "NSW": 30,
+   "QLD": 28,
+   "SA": 13,
+   "TAS": 4,
+   "NZ": 4
+  }
+ },
+ "2026-04": {
+  "raw_total": 515,
+  "verified_leads": 343,
+  "excluded_no_state": 171,
+  "excluded_internal": 1,
+  "by_state": {
+   "VIC": 111,
+   "NSW": 96,
+   "QLD": 59,
+   "WA": 32,
+   "SA": 26,
+   "TAS": 11,
+   "NZ": 4,
+   "NT": 4
+  }
+ },
+ "2026-05": {
+  "raw_total": 259,
+  "verified_leads": 221,
+  "excluded_no_state": 38,
+  "excluded_internal": 0,
+  "by_state": {
+   "NSW": 108,
+   "QLD": 45,
+   "WA": 25,
+   "VIC": 24,
+   "SA": 13,
+   "TAS": 5,
+   "NT": 1
+  }
+ },
+ "2026-06": {
+  "raw_total": 223,
+  "verified_leads": 184,
+  "excluded_no_state": 39,
+  "excluded_internal": 0,
+  "by_state": {
+   "QLD": 84,
+   "NSW": 36,
+   "VIC": 27,
+   "WA": 26,
+   "TAS": 6,
+   "SA": 5
+  }
+ },
+ "2026-07": {
+  "raw_total": 68,
+  "verified_leads": 31,
+  "excluded_no_state": 4,
+  "excluded_internal": 33,
+  "by_state": {
+   "NSW": 10,
+   "QLD": 10,
+   "VIC": 8,
+   "WA": 1,
+   "NZ": 1,
+   "TAS": 1
+  }
+ }
+}

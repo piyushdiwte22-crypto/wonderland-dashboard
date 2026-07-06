@@ -460,7 +460,8 @@
      ]
     },
     "new_leads": 296,
-    "excluded_no_state": 25
+    "excluded_no_state": 25,
+    "excluded_internal": 0
    },
    "wl": null,
    "ob": null,
@@ -568,7 +569,8 @@
      ]
     },
     "new_leads": 240,
-    "excluded_no_state": 60
+    "excluded_no_state": 60,
+    "excluded_internal": 0
    },
    "wl": null,
    "ob": null,
@@ -680,7 +682,8 @@
      ]
     },
     "new_leads": 147,
-    "excluded_no_state": 52
+    "excluded_no_state": 52,
+    "excluded_internal": 0
    },
    "wl": null,
    "ob": null,
@@ -718,7 +721,7 @@
      "NZ": 3
     },
     "contacts_by_state": {
-     "VIC": 112,
+     "VIC": 111,
      "NSW": 96,
      "QLD": 59,
      "WA": 32,
@@ -798,8 +801,9 @@
       }
      ]
     },
-    "new_leads": 344,
-    "excluded_no_state": 171
+    "new_leads": 343,
+    "excluded_no_state": 171,
+    "excluded_internal": 1
    },
    "wl": {
     "channels": {
@@ -1232,7 +1236,8 @@
      ]
     },
     "new_leads": 221,
-    "excluded_no_state": 38
+    "excluded_no_state": 38,
+    "excluded_internal": 0
    },
    "wl": {
     "channels": {
@@ -1676,7 +1681,8 @@
      ]
     },
     "new_leads": 184,
-    "excluded_no_state": 39
+    "excluded_no_state": 39,
+    "excluded_internal": 0
    },
    "wl": {
     "channels": {
@@ -2184,9 +2190,9 @@
      "WA": 1
     },
     "contacts_by_state": {
-     "NSW": 12,
-     "QLD": 11,
-     "VIC": 10,
+     "NSW": 10,
+     "QLD": 10,
+     "VIC": 8,
      "WA": 1,
      "NZ": 1,
      "TAS": 1
@@ -2215,8 +2221,9 @@
      "automated_sends": 6542,
      "broadcasts": []
     },
-    "new_leads": 36,
-    "excluded_no_state": 32
+    "new_leads": 31,
+    "excluded_no_state": 4,
+    "excluded_internal": 33
    },
    "wl": {
     "channels": {
@@ -2404,17 +2411,38 @@
    "duplicate_deals": 45
   },
   "leads_no_state_excluded": {
-   "note": "Contacts with no recognised state (field 27 blank) are excluded from monthly 'New leads' and from state breakdowns. These are near-all spam/bot form-fills and legacy/API imports, not real leads (state is required on every genuine lead form). Country is not collected on any form, so it is not used as a signal.",
+   "note": "Monthly 'New leads' = contacts created that month with a recognised AU/NZ state AND not an internal address. Excluded: (1) no recognised state (near-all spam/bot form-fills + legacy imports; country isn't collected on any form); (2) staff/self addresses (@wonderlandrv.com, anything with 'piyush'). None are real leads.",
    "excluded_by_month": {
-    "January 2026": 25,
-    "February 2026": 60,
-    "March 2026": 52,
-    "April 2026": 171,
-    "May 2026": 38,
-    "June 2026": 39,
-    "July 2026 (to 3 Jul)": 32
+    "January 2026": {
+     "no_state": 25,
+     "staff_self": 0
+    },
+    "February 2026": {
+     "no_state": 60,
+     "staff_self": 0
+    },
+    "March 2026": {
+     "no_state": 52,
+     "staff_self": 0
+    },
+    "April 2026": {
+     "no_state": 171,
+     "staff_self": 1
+    },
+    "May 2026": {
+     "no_state": 38,
+     "staff_self": 0
+    },
+    "June 2026": {
+     "no_state": 39,
+     "staff_self": 0
+    },
+    "July 2026 (to 3 Jul)": {
+     "no_state": 4,
+     "staff_self": 33
+    }
    },
-   "total_2026_excluded": 417
+   "total_2026_excluded": 423
   }
  }
 }
