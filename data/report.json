@@ -361,8 +361,7 @@
    "SA": 22,
    "TAS": 15,
    "NT": 2,
-   "NZ": 1,
-   "No state recorded": 813
+   "NZ": 1
   },
   "conversion": {
    "In conversation": 90,
@@ -379,7 +378,7 @@
    "label": "January 2026",
    "partial": false,
    "ac": {
-    "new_contacts": 322,
+    "new_contacts": 321,
     "ad_enquiries": 0,
     "deals_created": 317,
     "deals_by_type": {
@@ -406,15 +405,14 @@
      "NZ": 6
     },
     "contacts_by_state": {
-     "NSW": 90,
-     "VIC": 73,
-     "QLD": 71,
-     "WA": 44,
+     "NSW": 87,
+     "QLD": 72,
+     "VIC": 63,
+     "WA": 42,
      "SA": 17,
      "TAS": 7,
      "NZ": 6,
-     "NT": 2,
-     "No state recorded": 12
+     "NT": 2
     },
     "brochures_by_model": {
      "XTR": 92,
@@ -460,7 +458,9 @@
        "date": "2026-01-29"
       }
      ]
-    }
+    },
+    "new_leads": 296,
+    "excluded_no_state": 25
    },
    "wl": null,
    "ob": null,
@@ -471,7 +471,7 @@
    "label": "February 2026",
    "partial": false,
    "ac": {
-    "new_contacts": 303,
+    "new_contacts": 300,
     "ad_enquiries": 0,
     "deals_created": 335,
     "deals_by_type": {
@@ -498,15 +498,14 @@
      "NZ": 2
     },
     "contacts_by_state": {
-     "VIC": 105,
-     "NSW": 54,
-     "QLD": 51,
-     "WA": 47,
-     "SA": 26,
+     "VIC": 79,
+     "NSW": 52,
+     "QLD": 43,
+     "WA": 38,
+     "SA": 19,
      "TAS": 4,
      "NT": 3,
-     "NZ": 2,
-     "No state recorded": 11
+     "NZ": 2
     },
     "brochures_by_model": {
      "Solara": 89,
@@ -567,7 +566,9 @@
        "date": "2026-02-05"
       }
      ]
-    }
+    },
+    "new_leads": 240,
+    "excluded_no_state": 60
    },
    "wl": null,
    "ob": null,
@@ -578,7 +579,7 @@
    "label": "March 2026",
    "partial": false,
    "ac": {
-    "new_contacts": 195,
+    "new_contacts": 199,
     "ad_enquiries": 0,
     "deals_created": 177,
     "deals_by_type": {
@@ -605,14 +606,13 @@
      "NZ": 4
     },
     "contacts_by_state": {
-     "WA": 50,
-     "VIC": 42,
+     "WA": 36,
+     "VIC": 32,
      "NSW": 30,
-     "QLD": 29,
-     "SA": 14,
-     "NZ": 4,
-     "TAS": 3,
-     "No state recorded": 23
+     "QLD": 28,
+     "SA": 13,
+     "TAS": 4,
+     "NZ": 4
     },
     "brochures_by_model": {
      "Solara": 50,
@@ -678,7 +678,9 @@
        "date": "2026-03-18"
       }
      ]
-    }
+    },
+    "new_leads": 147,
+    "excluded_no_state": 52
    },
    "wl": null,
    "ob": null,
@@ -689,7 +691,7 @@
    "label": "April 2026",
    "partial": false,
    "ac": {
-    "new_contacts": 537,
+    "new_contacts": 515,
     "ad_enquiries": 0,
     "deals_created": 232,
     "deals_by_type": {
@@ -716,15 +718,14 @@
      "NZ": 3
     },
     "contacts_by_state": {
-     "VIC": 154,
-     "NSW": 127,
-     "QLD": 67,
-     "WA": 31,
-     "SA": 24,
-     "TAS": 9,
-     "NT": 4,
-     "NZ": 3,
-     "No state recorded": 118
+     "VIC": 112,
+     "NSW": 96,
+     "QLD": 59,
+     "WA": 32,
+     "SA": 26,
+     "TAS": 11,
+     "NZ": 4,
+     "NT": 4
     },
     "brochures_by_model": {
      "XTR": 44,
@@ -796,7 +797,9 @@
        "date": "2026-04-27"
       }
      ]
-    }
+    },
+    "new_leads": 344,
+    "excluded_no_state": 171
    },
    "wl": {
     "channels": {
@@ -1130,7 +1133,7 @@
    "label": "May 2026",
    "partial": false,
    "ac": {
-    "new_contacts": 236,
+    "new_contacts": 259,
     "ad_enquiries": 0,
     "deals_created": 215,
     "deals_by_type": {
@@ -1155,14 +1158,13 @@
      "WA": 22
     },
     "contacts_by_state": {
-     "NSW": 94,
-     "QLD": 52,
-     "VIC": 34,
+     "NSW": 108,
+     "QLD": 45,
      "WA": 25,
+     "VIC": 24,
      "SA": 13,
      "TAS": 5,
-     "NT": 1,
-     "No state recorded": 12
+     "NT": 1
     },
     "brochures_by_model": {
      "XTR": 34,
@@ -1228,7 +1230,9 @@
        "date": "2026-05-21"
       }
      ]
-    }
+    },
+    "new_leads": 221,
+    "excluded_no_state": 38
    },
    "wl": {
     "channels": {
@@ -1562,7 +1566,7 @@
    "label": "June 2026",
    "partial": false,
    "ac": {
-    "new_contacts": 227,
+    "new_contacts": 223,
     "ad_enquiries": 40,
     "deals_created": 273,
     "deals_by_type": {
@@ -1591,13 +1595,12 @@
      "NZ": 1
     },
     "contacts_by_state": {
-     "QLD": 95,
-     "NSW": 44,
-     "VIC": 31,
-     "WA": 27,
+     "QLD": 84,
+     "NSW": 36,
+     "VIC": 27,
+     "WA": 26,
      "TAS": 6,
-     "SA": 5,
-     "No state recorded": 19
+     "SA": 5
     },
     "brochures_by_model": {
      "Solara": 47,
@@ -1671,7 +1674,9 @@
        "date": "2026-06-01"
       }
      ]
-    }
+    },
+    "new_leads": 184,
+    "excluded_no_state": 39
    },
    "wl": {
     "channels": {
@@ -2156,7 +2161,7 @@
    "label": "July 2026 (to 3 Jul)",
    "partial": true,
    "ac": {
-    "new_contacts": 44,
+    "new_contacts": 68,
     "ad_enquiries": 11,
     "deals_created": 11,
     "deals_by_type": {
@@ -2179,13 +2184,12 @@
      "WA": 1
     },
     "contacts_by_state": {
-     "QLD": 5,
-     "NSW": 4,
-     "VIC": 3,
+     "NSW": 12,
+     "QLD": 11,
+     "VIC": 10,
      "WA": 1,
      "NZ": 1,
-     "TAS": 1,
-     "No state recorded": 29
+     "TAS": 1
     },
     "brochures_by_model": {
      "XTR": 3,
@@ -2210,7 +2214,9 @@
      "avg_click_pct": 0,
      "automated_sends": 6542,
      "broadcasts": []
-    }
+    },
+    "new_leads": 36,
+    "excluded_no_state": 32
    },
    "wl": {
     "channels": {
@@ -2396,6 +2402,19 @@
    "real_submissions_alltime_approx": 56,
    "no_name_deals": 41,
    "duplicate_deals": 45
+  },
+  "leads_no_state_excluded": {
+   "note": "Contacts with no recognised state (field 27 blank) are excluded from monthly 'New leads' and from state breakdowns. These are near-all spam/bot form-fills and legacy/API imports, not real leads (state is required on every genuine lead form). Country is not collected on any form, so it is not used as a signal.",
+   "excluded_by_month": {
+    "January 2026": 25,
+    "February 2026": 60,
+    "March 2026": 52,
+    "April 2026": 171,
+    "May 2026": 38,
+    "June 2026": 39,
+    "July 2026 (to 3 Jul)": 32
+   },
+   "total_2026_excluded": 417
   }
  }
 }

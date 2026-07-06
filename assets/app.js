@@ -106,7 +106,7 @@ function render(){
       k(fmt(leads),'Sales leads created',delta(leads,pleads))+
       k(fmt(deposits),'Deposits received',delta(deposits,pa&&sum(pa.deposits_flow)))+
       k(fmt(handovers),'Handovers completed',delta(handovers,pa&&sum(pa.handovers_flow)))+
-      k(fmt(a.new_contacts),'New CRM contacts',delta(a.new_contacts,pa&&pa.new_contacts));
+      k(fmt(a.new_leads),'New leads',delta(a.new_leads,pa&&pa.new_leads));
     $('ov-wl').innerHTML=
       k(fmt(w.totals.impressions),'Impressions',delta(w.totals.impressions,pw&&pw.totals.impressions))+
       k('+'+fmt(w.totals.follower_change),'Followers',delta(w.totals.follower_change,pw&&pw.totals.follower_change))+
@@ -164,7 +164,7 @@ function render(){
   }
   if($('wl-email-kpis')){
     if($('crm-ov')) $('crm-ov').innerHTML=
-      k(fmt(a.new_contacts),'New leads',delta(a.new_contacts,pa&&pa.new_contacts),'acc')+
+      k(fmt(a.new_leads),'New leads',delta(a.new_leads,pa&&pa.new_leads),'acc')+
       k(fmt(leads),'New sales deals',delta(leads,pleads))+
       k(fmt(a.configurator_leads),'Configurator leads',delta(a.configurator_leads,pa&&pa.configurator_leads))+
       k(fmt(deposits),'Deposits',delta(deposits,pa&&sum(pa.deposits_flow)))+
@@ -180,7 +180,7 @@ function render(){
     campTable('wl-camps',em.broadcasts||a.campaigns);
     /* Leads acquisition */
     $('wl-crm-kpis').innerHTML=
-      k(fmt(a.new_contacts),'New leads · contacts created',delta(a.new_contacts,pa&&pa.new_contacts),'acc')+
+      k(fmt(a.new_leads),'New leads · state-verified',delta(a.new_leads,pa&&pa.new_leads)+(a.excluded_no_state?'<div class="d na">'+fmt(a.new_contacts)+' created, '+a.excluded_no_state+' no-state junk excluded</div>':''),'acc')+
       k(fmt(leads),'New sales deals',delta(leads,pleads))+
       k(fmt(a.ad_enquiries),'Meta / Google ad enquiries',delta(a.ad_enquiries,pa&&pa.ad_enquiries))+
       k(fmt(sum(a.brochures_by_model)),'Brochure downloads',delta(sum(a.brochures_by_model),pa&&sum(pa.brochures_by_model)))+
