@@ -1,138 +1,150 @@
 {
- "generated": "04 Jul 2026, 04:22 PM AEST",
- "total_contacts_now": 9870,
+ "generated": "03 Aug 2026, 12:29 PM AEST",
+ "total_contacts_now": 10076,
  "funnel_snapshot": [
   {
    "stage": "Brochure Download",
    "by_state": {
     "VIC": 0,
-    "NSW": 1175,
-    "QLD": 924,
+    "NSW": 1174,
+    "QLD": 846,
     "SA": 0,
-    "WA": 0,
+    "WA": 2,
     "NZ": 0
    },
-   "total": 2099
+   "total": 2022
   },
   {
    "stage": "New / To Contact",
    "by_state": {
-    "VIC": 2,
-    "NSW": 43,
-    "QLD": 167,
-    "SA": 0,
-    "WA": 0,
+    "VIC": 4,
+    "NSW": 18,
+    "QLD": 4,
+    "SA": 1,
+    "WA": 1,
     "NZ": 0
    },
-   "total": 212
+   "total": 28
   },
   {
    "stage": "In Conversation",
    "by_state": {
     "VIC": 30,
-    "NSW": 208,
-    "QLD": 305,
-    "SA": 17,
-    "WA": 25,
+    "NSW": 235,
+    "QLD": 328,
+    "SA": 10,
+    "WA": 24,
     "NZ": 28
    },
-   "total": 613
+   "total": 655
   },
   {
    "stage": "Quote Sent",
    "by_state": {
     "VIC": 9,
-    "NSW": 24,
-    "QLD": 13,
-    "SA": 1,
-    "WA": 3,
+    "NSW": 23,
+    "QLD": 12,
+    "SA": 0,
+    "WA": 7,
     "NZ": 0
    },
-   "total": 50
+   "total": 51
   },
   {
    "stage": "Pending Decision",
    "by_state": {
-    "VIC": 6,
+    "VIC": 17,
     "NSW": 0,
-    "QLD": 2,
+    "QLD": 3,
     "SA": 2,
-    "WA": 2,
+    "WA": 4,
     "NZ": 0
    },
-   "total": 12
+   "total": 26
   },
   {
    "stage": "Deposit Received",
    "by_state": {
     "VIC": 0,
-    "NSW": 3,
-    "QLD": 2,
+    "NSW": 4,
+    "QLD": 4,
     "SA": 0,
-    "WA": 3,
-    "NZ": 0
-   },
-   "total": 8
-  },
-  {
-   "stage": "Plans & Specs",
-   "by_state": {
-    "VIC": 4,
-    "NSW": 0,
-    "QLD": 0,
-    "SA": 3,
-    "WA": 2,
+    "WA": 1,
     "NZ": 0
    },
    "total": 9
   },
   {
-   "stage": "Order Finalised",
+   "stage": "Plans & Specs",
    "by_state": {
-    "VIC": 12,
-    "NSW": 1,
-    "QLD": 1,
-    "SA": 1,
-    "WA": 6,
+    "VIC": 2,
+    "NSW": 0,
+    "QLD": 0,
+    "SA": 0,
+    "WA": 1,
     "NZ": 0
    },
-   "total": 21
+   "total": 3
+  },
+  {
+   "stage": "Order Finalised",
+   "by_state": {
+    "VIC": 6,
+    "NSW": 1,
+    "QLD": 1,
+    "SA": 3,
+    "WA": 7,
+    "NZ": 0
+   },
+   "total": 18
   },
   {
    "stage": "In Production",
    "by_state": {
     "VIC": 3,
     "NSW": 0,
-    "QLD": 1,
-    "SA": 0,
-    "WA": 1,
+    "QLD": 0,
+    "SA": 1,
+    "WA": 0,
     "NZ": 0
    },
-   "total": 5
+   "total": 4
   },
   {
    "stage": "Handover Booked / Ready",
    "by_state": {
-    "VIC": 5,
+    "VIC": 11,
     "NSW": 0,
-    "QLD": 1,
+    "QLD": 2,
     "SA": 0,
-    "WA": 1,
+    "WA": 2,
     "NZ": 0
    },
-   "total": 7
+   "total": 15
   },
   {
    "stage": "Handover Complete",
    "by_state": {
     "VIC": 98,
-    "NSW": 3,
-    "QLD": 20,
-    "SA": 6,
-    "WA": 4,
+    "NSW": 4,
+    "QLD": 21,
+    "SA": 5,
+    "WA": 3,
     "NZ": 0
    },
    "total": 131
+  },
+  {
+   "stage": "Back to Market",
+   "by_state": {
+    "VIC": 2097,
+    "NSW": 234,
+    "QLD": 158,
+    "SA": 394,
+    "WA": 427,
+    "NZ": 132
+   },
+   "total": 3442
   }
  ],
  "funnel_states": [
@@ -146,28 +158,23 @@
  "delivery_board": [
   {
    "stage": "Deposit Received",
-   "count": 2,
+   "count": 1,
    "items": [
     {
      "chassis": "WL1270",
      "name": "Solara Brochure Lead",
      "state": "NSW"
-    },
-    {
-     "chassis": "WL969",
-     "name": "",
-     "state": "WA"
     }
    ]
   },
   {
    "stage": "Plans & Specs",
-   "count": 6,
+   "count": 3,
    "items": [
     {
-     "chassis": "WL1282",
-     "name": "DUNN XT2100K-F2",
-     "state": "SA"
+     "chassis": "WL1309",
+     "name": "Murfet AM1709R_L",
+     "state": "VIC"
     },
     {
      "chassis": "WL1284",
@@ -175,96 +182,16 @@
      "state": "VIC"
     },
     {
-     "chassis": "WL1309",
-     "name": "Murfet AM1709R_L",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1317",
-     "name": "XTR- Andreas Sonder",
-     "state": "WA"
-    },
-    {
-     "chassis": "WL1321",
-     "name": "SQUIRE SO22 R C",
-     "state": "SA"
-    },
-    {
-     "chassis": "WL1345",
-     "name": "kim & andrea",
+     "chassis": "WL1320",
+     "name": "Sutcliffe AM1709",
      "state": "WA"
     }
    ]
   },
   {
    "stage": "Order Finalised",
-   "count": 16,
+   "count": 15,
    "items": [
-    {
-     "chassis": "WL1088",
-     "name": "Boulton HO2206F-B4",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1234",
-     "name": "XT2311K1-F4.3 HADLEY",
-     "state": "WA"
-    },
-    {
-     "chassis": "WL1259",
-     "name": "Healy XT1906QRC",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1264",
-     "name": "Solara Brochure Lead",
-     "state": "NSW"
-    },
-    {
-     "chassis": "WL1268",
-     "name": "Minogue",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1278",
-     "name": "SO1806ML Aiden Brock",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1285",
-     "name": "Darling XT2106",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1292",
-     "name": "Murray AM2100Q-F2.0",
-     "state": "SA"
-    },
-    {
-     "chassis": "WL1303",
-     "name": "HO2106EW",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1310",
-     "name": "Shell HO2106Q-M-SC C",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1316",
-     "name": "HURLEY",
-     "state": "WA"
-    },
-    {
-     "chassis": "WL1318",
-     "name": "XT1906RL Peter & Don",
-     "state": "WA"
-    },
-    {
-     "chassis": "WL1335",
-     "name": "BURKE",
-     "state": "VIC"
-    },
     {
      "chassis": "WL1343",
      "name": "SCRIVEN AM1806",
@@ -276,51 +203,106 @@
      "state": "WA"
     },
     {
-     "chassis": "WL1358",
-     "name": "Dyson",
+     "chassis": "WL1316",
+     "name": "HURLEY",
      "state": "WA"
+    },
+    {
+     "chassis": "WL1345",
+     "name": "kim & andrea",
+     "state": "WA"
+    },
+    {
+     "chassis": "WL1321",
+     "name": "SQUIRE SO22RCA",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1268",
+     "name": "Minogue",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1303",
+     "name": "HO2106EW",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1310",
+     "name": "Shell HO2106Q-M-SC CUS",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1282",
+     "name": "DUNN XT2100K-F2",
+     "state": "SA"
+    },
+    {
+     "chassis": "WL1277",
+     "name": "Miller AM2107EWF",
+     "state": "SA"
+    },
+    {
+     "chassis": "WL1317",
+     "name": "XTR- Andreas Sonder",
+     "state": "WA"
+    },
+    {
+     "chassis": "WL1088",
+     "name": "Boulton HO2206F-B4",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1318",
+     "name": "XT1906RL Peter & Donna",
+     "state": "WA"
+    },
+    {
+     "chassis": "WL1292",
+     "name": "Murray AM2100Q-F2.0",
+     "state": "SA"
+    },
+    {
+     "chassis": "WL1264",
+     "name": "Solara Brochure Lead",
+     "state": "NSW"
     }
    ]
   },
   {
    "stage": "In Production",
-   "count": 5,
+   "count": 3,
    "items": [
-    {
-     "chassis": "WL1177",
-     "name": "ZILLWOOD",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1258",
-     "name": "Nick Barnett",
-     "state": "WA"
-    },
-    {
-     "chassis": "WL1265",
-     "name": "Carpenter",
-     "state": "QLD"
-    },
-    {
-     "chassis": "WL1273",
-     "name": "CROXFORD AM21000M_L_",
-     "state": "VIC"
-    },
     {
      "chassis": "WL1288",
      "name": "JOWETT HO2100-M-XLE",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1291",
+     "name": "Woodcock XT2100K-F2.0",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1177",
+     "name": "ZILLWOOD",
      "state": "VIC"
     }
    ]
   },
   {
    "stage": "Ready / Handover Booked",
-   "count": 6,
+   "count": 12,
    "items": [
     {
-     "chassis": "WL1154",
-     "name": "",
-     "state": "WA"
+     "chassis": "WL1290",
+     "name": ": Andrew & Karen Simps",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1144",
+     "name": "AM1806 BRUCE",
+     "state": "VIC"
     },
     {
      "chassis": "WL1248",
@@ -328,8 +310,38 @@
      "state": "VIC"
     },
     {
-     "chassis": "WL1253",
-     "name": "KAESTNER HO2311Q-F2.",
+     "chassis": "WL1273",
+     "name": "CROXFORD AM21000M_L_XL",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1246",
+     "name": "VIC STOCK VAN",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL969",
+     "name": "",
+     "state": "WA"
+    },
+    {
+     "chassis": "WL1237",
+     "name": " Alec Konynenburg",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1258",
+     "name": "Nick Barnett",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1259",
+     "name": "Healy XT1906QRC",
+     "state": "VIC"
+    },
+    {
+     "chassis": "WL1234",
+     "name": "XT2311K1-F4.3 HADLEY",
      "state": "VIC"
     },
     {
@@ -338,38 +350,32 @@
      "state": "VIC"
     },
     {
-     "chassis": "WL1290",
-     "name": "\u00a0Andrew & Karen Simp",
-     "state": "VIC"
-    },
-    {
-     "chassis": "WL1332",
-     "name": "PAGE AM2107EW-F2.4",
-     "state": "VIC"
+     "chassis": "WL1265",
+     "name": "Carpenter",
+     "state": "QLD"
     }
    ]
   }
  ],
  "configurator": {
   "sessions_alltime": 5514,
-  "submitters_alltime": 1826,
+  "submitters_alltime": 66,
   "by_state": {
-   "VIC": 446,
-   "NSW": 383,
-   "QLD": 83,
-   "WA": 61,
-   "SA": 22,
-   "TAS": 15,
-   "NT": 2,
-   "NZ": 1
+   "VIC": 27,
+   "WA": 24,
+   "SA": 3,
+   "NSW": 3,
+   "TAS": 2,
+   "QLD": 2,
+   "NT": 1
   },
   "conversion": {
-   "In conversation": 90,
-   "Back to market": 62,
-   "Quote sent": 6,
-   "Deposit+ (committed)": 2,
-   "Won / Sold": 1,
-   "New / other": 1
+   "In conversation": 336,
+   "Back to market": 319,
+   "Quote sent": 13,
+   "Won / Sold": 8,
+   "New / other": 8,
+   "Deposit+ (committed)": 7
   }
  },
  "months": [
@@ -560,7 +566,7 @@
        "date": "2026-02-12"
       },
       {
-       "name": "Come join our NSW Open Day\u202f\u2728 ",
+       "name": "Come join our NSW Open Day ✨ ",
        "sends": 358,
        "opens": 160,
        "clicks": 22,
@@ -2164,134 +2170,160 @@
   },
   {
    "key": "2026-07",
-   "label": "July 2026 (to 3 Jul)",
-   "partial": true,
+   "label": "July 2026",
+   "partial": false,
    "ac": {
-    "new_contacts": 68,
-    "ad_enquiries": 11,
-    "deals_created": 11,
+    "new_contacts": 231,
+    "ad_enquiries": 33,
+    "deals_created": 191,
     "deals_by_type": {
-     "Configurator": 5,
-     "Ad enquiries": 3,
-     "Sales-entered / other": 1,
-     "Campaign offers": 1,
-     "Brochure downloads": 1
+     "Other": 79,
+     "Brochure downloads": 52,
+     "Configurator": 41,
+     "Ad enquiries": 16,
+     "Virtual consults": 3
     },
     "deals_by_state": {
-     "NSW": 2,
-     "VIC": 5,
-     "QLD": 3,
-     "WA": 1
+     "VIC": 77,
+     "WA": 38,
+     "QLD": 34,
+     "NSW": 28,
+     "SA": 7,
+     "HQ Walk-ins": 6,
+     "NZ": 1
     },
     "leads_by_state": {
-     "NSW": 2,
-     "VIC": 5,
-     "QLD": 3,
-     "WA": 1
+     "VIC": 77,
+     "WA": 38,
+     "QLD": 34,
+     "NSW": 28,
+     "SA": 7,
+     "HQ Walk-ins": 6,
+     "NZ": 1
     },
     "contacts_by_state": {
-     "NSW": 10,
-     "QLD": 10,
-     "VIC": 8,
-     "WA": 1,
-     "NZ": 1,
-     "TAS": 1
+     "NSW": 43,
+     "QLD": 40,
+     "WA": 27,
+     "VIC": 27,
+     "SA": 8,
+     "NT": 7,
+     "NZ": 4,
+     "TAS": 2
     },
     "brochures_by_model": {
-     "XTR": 3,
-     "Amaroo": 2,
-     "Solara": 1
+     "Solara": 48,
+     "XTR": 46,
+     "Amaroo": 25,
+     "Hornet": 18
     },
-    "configurator_leads": 5,
-    "deposits_flow": {},
+    "configurator_leads": 39,
+    "deposits_flow": {
+     "VIC": 2
+    },
     "handovers_flow": {
-     "VIC": 3
+     "VIC": 5,
+     "NSW": 1
     },
-    "deposits_names": [],
+    "deposits_names": [
+     "WL1237  Alec Konynenburg",
+     "WL1246 VIC STOCK VAN"
+    ],
     "handovers_names": [
-     "WL1209 David Campbell -  St",
+     "WL833 Zach Bowden",
+     "WL1258 Nick Barnett",
+     "WL1253 KAESTNER HO2311Q-F2.2",
+     "WL1254 RANDALL HO2300RC",
      "WL1266 KIDSON",
-     "WL1254 RANDALL HO2300RC"
+     "WL1209 David Campbell -  Stock"
     ],
     "emails": {
-     "broadcast_count": 0,
-     "sent": 0,
-     "avg_open_pct": 0,
-     "avg_click_pct": 0,
-     "automated_sends": 6542,
-     "broadcasts": []
+     "broadcast_count": 1,
+     "sent": 2718,
+     "avg_open_pct": 35.2,
+     "avg_click_pct": 9.3,
+     "automated_sends": 2392,
+     "broadcasts": [
+      {
+       "name": "July Newsletter 2026 ",
+       "sends": 2718,
+       "opens": 957,
+       "clicks": 254,
+       "date": "2026-07-31"
+      }
+     ]
     },
-    "new_leads": 31,
-    "excluded_no_state": 4,
+    "new_leads": 158,
+    "excluded_no_state": 40,
     "excluded_internal": 33
    },
    "wl": {
     "channels": {
      "youtube": {
-      "followers": 738,
-      "follower_change": 0,
-      "impressions": 0,
-      "engagement": 0,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
+      "followers": 781,
+      "follower_change": 37,
+      "impressions": 44523,
+      "engagement": 388,
+      "likes": 336,
+      "comments": 9,
+      "shares": 43,
       "profile_views": 0,
       "saves": 0,
       "messages": 0
      },
      "linkedin": {
-      "followers": 164,
-      "follower_change": 0,
-      "impressions": 53,
-      "engagement": 1,
-      "likes": 1,
-      "comments": 0,
+      "followers": 178,
+      "follower_change": 14,
+      "impressions": 2300,
+      "engagement": 426,
+      "likes": 90,
+      "comments": 2,
       "shares": 0,
       "profile_views": 0,
       "saves": 0,
       "messages": 0
      },
      "tiktok": {
-      "followers": 507,
-      "follower_change": 0,
-      "impressions": 364,
-      "engagement": 12,
-      "likes": 9,
-      "comments": 0,
-      "shares": 3,
-      "profile_views": 0,
+      "followers": 559,
+      "follower_change": 52,
+      "impressions": 19640,
+      "engagement": 549,
+      "likes": 456,
+      "comments": 29,
+      "shares": 65,
+      "profile_views": 155,
       "saves": 0,
       "messages": 0
      },
      "facebook": {
-      "followers": 24460,
-      "follower_change": 0,
-      "impressions": 36707,
-      "engagement": 25,
-      "likes": 23,
-      "comments": 2,
-      "shares": 0,
+      "followers": 24514,
+      "follower_change": 72,
+      "impressions": 637133,
+      "engagement": 468,
+      "likes": 322,
+      "comments": 95,
+      "shares": 51,
       "profile_views": 0,
       "saves": 0,
-      "messages": 0
+      "messages": 11
      },
      "instagram": {
-      "followers": 9186,
-      "follower_change": 26,
-      "impressions": 84170,
-      "engagement": 2680,
-      "likes": 876,
-      "comments": 18,
-      "shares": 776,
-      "profile_views": 680,
-      "saves": 0,
-      "messages": 0
+      "followers": 10473,
+      "follower_change": 1446,
+      "impressions": 1067525,
+      "engagement": 32993,
+      "likes": 14737,
+      "comments": 455,
+      "shares": 7318,
+      "profile_views": 9194,
+      "saves": 2945,
+      "messages": 11
      },
      "pinterest": {
-      "followers": 18,
-      "follower_change": 0,
-      "impressions": 0,
-      "engagement": 0,
+      "followers": 19,
+      "follower_change": 1,
+      "impressions": 27462,
+      "engagement": 1360,
       "likes": 0,
       "comments": 0,
       "shares": 0,
@@ -2301,114 +2333,433 @@
      }
     },
     "totals": {
-     "followers": 35073,
-     "follower_change": 26,
-     "impressions": 121294,
-     "engagement": 2718,
-     "likes": 909,
-     "comments": 20,
-     "shares": 779,
-     "profile_views": 680,
-     "saves": 0,
-     "messages": 0,
-     "engagement_rate": 2.24
+     "followers": 36524,
+     "follower_change": 1622,
+     "impressions": 1798583,
+     "engagement": 36184,
+     "likes": 15941,
+     "comments": 590,
+     "shares": 7477,
+     "profile_views": 9349,
+     "saves": 2945,
+     "messages": 22,
+     "engagement_rate": 2.01
     },
     "daily": {
      "dates": [
       "07/01",
       "07/02",
-      "07/03"
+      "07/03",
+      "07/04",
+      "07/05",
+      "07/06",
+      "07/07",
+      "07/08",
+      "07/09",
+      "07/10",
+      "07/11",
+      "07/12",
+      "07/13",
+      "07/14",
+      "07/15",
+      "07/16",
+      "07/17",
+      "07/18",
+      "07/19",
+      "07/20",
+      "07/21",
+      "07/22",
+      "07/23",
+      "07/24",
+      "07/25",
+      "07/26",
+      "07/27",
+      "07/28",
+      "07/29",
+      "07/30",
+      "07/31"
      ],
      "impressions": [
-      40076,
-      81218,
-      0
+      40888,
+      83865,
+      64161,
+      73286,
+      78637,
+      49335,
+      62828,
+      51586,
+      46067,
+      45202,
+      59103,
+      63482,
+      40176,
+      60451,
+      38099,
+      51815,
+      56140,
+      55543,
+      44859,
+      42018,
+      47329,
+      37592,
+      57694,
+      50988,
+      41847,
+      50160,
+      51081,
+      60045,
+      74366,
+      68644,
+      151296
      ],
      "engagement": [
-      407,
-      2310,
-      1
+      423,
+      2351,
+      1797,
+      1945,
+      1698,
+      885,
+      1074,
+      772,
+      848,
+      753,
+      1177,
+      1495,
+      641,
+      812,
+      496,
+      708,
+      1141,
+      1116,
+      979,
+      697,
+      584,
+      715,
+      837,
+      596,
+      824,
+      1138,
+      1139,
+      1250,
+      1898,
+      1867,
+      3528
      ]
+    },
+    "top_posts": [
+     {
+      "msg": "Four kids, 6pm, everyone hungry, tired and over each other",
+      "network": "instagram",
+      "type": "Reel",
+      "date": "31 Jul",
+      "link": "https://www.instagram.com/reel/DbbgVtRDRd5/",
+      "impressions": 126392,
+      "engagement": 2557,
+      "likes": 1059,
+      "shares": 1090,
+      "saves": 384
+     },
+     {
+      "msg": "Luxury the whole family actually gets to enjoy",
+      "network": "instagram",
+      "type": "Reel",
+      "date": "5 Jul",
+      "link": "https://www.instagram.com/reel/DaYnEWcDIZ5/",
+      "impressions": 88990,
+      "engagement": 2374,
+      "likes": 1258,
+      "shares": 737,
+      "saves": 341
+     },
+     {
+      "msg": "The XTR, built for you and three kids",
+      "network": "instagram",
+      "type": "Reel",
+      "date": "17 Jul",
+      "link": "https://www.instagram.com/reel/Da4vOapjBZq/",
+      "impressions": 72858,
+      "engagement": 2425,
+      "likes": 931,
+      "shares": 978,
+      "saves": 476
+     },
+     {
+      "msg": "Couple chasing the quiet life, or a family chasing the kids around the",
+      "network": "instagram",
+      "type": "Reel",
+      "date": "3 Jul",
+      "link": "https://www.instagram.com/reel/DaUrLG8mNyU/",
+      "impressions": 62264,
+      "engagement": 292,
+      "likes": 207,
+      "shares": 34,
+      "saves": 42
+     },
+     {
+      "msg": "This XTR might just be the perfect caravan for your family of five",
+      "network": "instagram",
+      "type": "Reel",
+      "date": "12 Jul",
+      "link": "https://www.instagram.com/reel/DaqlFnlknXY/",
+      "impressions": 45538,
+      "engagement": 1617,
+      "likes": 742,
+      "shares": 633,
+      "saves": 194
+     },
+     {
+      "msg": "The Amaroo 19’6 off-road caravan, built for you and three kids",
+      "network": "instagram",
+      "type": "Reel",
+      "date": "30 Jul",
+      "link": "https://www.instagram.com/reel/DbY6jL9TRJF/",
+      "impressions": 16346,
+      "engagement": 295,
+      "likes": 129,
+      "shares": 126,
+      "saves": 37
+     }
+    ],
+    "tiktok_audience": {
+     "impressions_sampled": 13202,
+     "countries": [
+      {
+       "c": "Australia",
+       "pct": 77.4
+      },
+      {
+       "c": "United States",
+       "pct": 9.1
+      },
+      {
+       "c": "New Zealand",
+       "pct": 3.1
+      },
+      {
+       "c": "Other",
+       "pct": 10.1
+      }
+     ],
+     "gender": {
+      "male": 54.7,
+      "female": 45.3
+     },
+     "new_viewers_pct": 36.8,
+     "non_follower_pct": 91.1
     }
    },
    "ob": {
     "channels": {
      "facebook": {
-      "followers": 1140,
-      "follower_change": 0,
-      "impressions": 349,
-      "engagement": 6,
-      "likes": 4,
-      "comments": 2,
-      "shares": 0,
+      "followers": 1150,
+      "follower_change": 11,
+      "impressions": 13208,
+      "engagement": 78,
+      "likes": 76,
+      "comments": 0,
+      "shares": 2,
       "profile_views": 0,
       "saves": 0,
       "messages": 0
      },
      "instagram": {
-      "followers": 747,
-      "follower_change": 6,
-      "impressions": 30707,
-      "engagement": 1224,
-      "likes": 345,
-      "comments": 12,
-      "shares": 382,
-      "profile_views": 47,
-      "saves": 0,
-      "messages": 0
+      "followers": 1239,
+      "follower_change": 485,
+      "impressions": 612904,
+      "engagement": 23973,
+      "likes": 8111,
+      "comments": 256,
+      "shares": 6511,
+      "profile_views": 595,
+      "saves": 2562,
+      "messages": 3
      }
     },
     "totals": {
-     "followers": 1887,
-     "follower_change": 6,
-     "impressions": 31056,
-     "engagement": 1230,
-     "likes": 349,
-     "comments": 14,
-     "shares": 382,
-     "profile_views": 47,
-     "saves": 0,
-     "messages": 0,
-     "engagement_rate": 3.96
+     "followers": 2389,
+     "follower_change": 496,
+     "impressions": 626112,
+     "engagement": 24051,
+     "likes": 8187,
+     "comments": 256,
+     "shares": 6513,
+     "profile_views": 595,
+     "saves": 2562,
+     "messages": 3,
+     "engagement_rate": 3.84
     },
     "daily": {
      "dates": [
       "07/01",
       "07/02",
-      "07/03"
+      "07/03",
+      "07/04",
+      "07/05",
+      "07/06",
+      "07/07",
+      "07/08",
+      "07/09",
+      "07/10",
+      "07/11",
+      "07/12",
+      "07/13",
+      "07/14",
+      "07/15",
+      "07/16",
+      "07/17",
+      "07/18",
+      "07/19",
+      "07/20",
+      "07/21",
+      "07/22",
+      "07/23",
+      "07/24",
+      "07/25",
+      "07/26",
+      "07/27",
+      "07/28",
+      "07/29",
+      "07/30",
+      "07/31"
      ],
      "impressions": [
       5190,
-      25866,
-      0
+      51463,
+      29483,
+      30255,
+      42479,
+      18766,
+      18881,
+      12279,
+      13244,
+      14036,
+      22830,
+      34479,
+      10264,
+      14557,
+      9463,
+      9086,
+      23169,
+      17654,
+      13194,
+      7465,
+      9287,
+      10975,
+      14666,
+      9106,
+      9378,
+      11417,
+      7414,
+      8507,
+      11792,
+      26266,
+      109067
      ],
      "engagement": [
-      240,
-      990,
-      0
+      238,
+      2212,
+      1493,
+      1437,
+      1506,
+      771,
+      727,
+      469,
+      563,
+      539,
+      904,
+      1351,
+      469,
+      515,
+      318,
+      298,
+      862,
+      816,
+      761,
+      314,
+      366,
+      520,
+      554,
+      323,
+      393,
+      537,
+      344,
+      362,
+      547,
+      870,
+      2672
      ]
-    }
+    },
+    "top_posts": [
+     {
+      "msg": "Three bunks down the back, and not one argument about who sleeps where",
+      "network": "instagram",
+      "type": "Reel",
+      "date": "1 Jul",
+      "link": "https://www.instagram.com/reel/DaPiZZJDnNG/",
+      "impressions": 3139,
+      "engagement": 100,
+      "likes": 64,
+      "shares": 22,
+      "saves": 10
+     },
+     {
+      "msg": "Looking for an off-road caravan built for two",
+      "network": "facebook",
+      "type": "Reel",
+      "date": "16 Jul",
+      "link": "https://www.facebook.com/237207802819331_122233592696288079",
+      "impressions": 1765,
+      "engagement": 8,
+      "likes": 8,
+      "shares": 0,
+      "saves": null
+     },
+     {
+      "msg": "Luxury the whole family actually gets to enjoy",
+      "network": "facebook",
+      "type": "Reel",
+      "date": "5 Jul",
+      "link": "https://www.facebook.com/237207802819331_122232436202288079",
+      "impressions": 1295,
+      "engagement": 5,
+      "likes": 5,
+      "shares": 0,
+      "saves": null
+     },
+     {
+      "msg": "The Amaroo 19'6 off-road caravan, built for you and three kids",
+      "network": "facebook",
+      "type": "Reel",
+      "date": "30 Jul",
+      "link": "https://www.facebook.com/237207802819331_122234984894288079",
+      "impressions": 1166,
+      "engagement": 8,
+      "likes": 8,
+      "shares": 0,
+      "saves": null
+     }
+    ]
    }
   }
  ],
  "data_quality": {
   "mis_staged_money_stage": {
-   "count": 13,
+   "count": 44,
    "sample": [
-    "Configurator:\u00a0Danielle Old",
-    "Wl1178 -Rosehill lead",
-    "Francesco & Candice Ienco",
+    "Configurator: Danielle Old",
+    "Mackay",
+    "Hornet 19'06 - WALKIN",
+    "Mackay",
     "Philip Andrew Clark",
-    "B2ME TEST DEAL",
-    "BARRY"
+    "Francesco & Candice Ienco"
    ]
   },
   "configurator": {
-   "deals_total": 224,
-   "automation39_entries": 1504,
+   "deals_total": 998,
+   "automation39_entries": 1569,
    "real_submissions_alltime_approx": 56,
-   "no_name_deals": 41,
-   "duplicate_deals": 45
+   "no_name_deals": 220,
+   "duplicate_deals": 254
   },
   "leads_no_state_excluded": {
    "note": "Monthly 'New leads' = contacts created that month with a recognised AU/NZ state AND not an internal address. Excluded: (1) no recognised state (near-all spam/bot form-fills + legacy imports; country isn't collected on any form); (2) staff/self addresses (@wonderlandrv.com, anything with 'piyush'). None are real leads.",
@@ -2437,12 +2788,15 @@
      "no_state": 39,
      "staff_self": 0
     },
-    "July 2026 (to 3 Jul)": {
-     "no_state": 4,
+    "July 2026": {
+     "no_state": 40,
      "staff_self": 33
     }
    },
-   "total_2026_excluded": 423
-  }
+   "total_2026_excluded": 459
+  },
+  "deposits_handovers_method": "From July 2026 these are counted from actual stage-change events (/dealActivities, dataType=d_stageid, cdate in month), deduped by chassis. The previous method (deals currently in the stage with mdate in the month) is unreliable: 47 Handover Complete deals were bulk-modified on 1-3 Aug 2026, which overwrote the July mdate signal and would have reported 0 deposits / 1 handover. Back-test on June: the event method returns 6 deposits (the 3 stored plus 3 VIC the mdate method missed) and 7 handovers vs 8 stored. Earlier months were left as recorded and are likely undercounted.",
+  "configurator_submitters_correction": "submitters_alltime recomputed as 66 (was 1826). The documented method GET /contactTags?filters[tag]=31 is silently ignored by the AC API and returns every contactTag row (24,584 across all tags). Verified correct filter: GET /contacts?tagid=31.",
+  "deals_by_type_note": "July uses the documented 5-bucket classifier (Ad enquiries / Configurator / Brochure downloads / Virtual consults / Other). Jan-Jun rows carry extra buckets (Campaign offers, Shows & events, Sales-entered / other) from an earlier undocumented classifier, so the type split is not directly comparable across the June/July boundary."
  }
 }
